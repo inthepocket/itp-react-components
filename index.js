@@ -5,6 +5,7 @@ const Ora = require('ora');
 const fs = require('fs');
 const path = require('path');
 const createPackageJSON = require('./lib/createPackageJSON');
+const copyTemplates = require('./lib/copyTemplates');
 const installNPMPackages = require('./lib/installNPMPackages');
 
 const appName = process.argv[2];
@@ -52,6 +53,7 @@ const run = async() => {
   // copy templates
   spinner.text = 'copying templates';
   spinner.start();
+  copyTemplates({ appDir, templateDir });
   spinner.stopAndPersist({ symbol: '✓' });
 
   console.log(' ');
