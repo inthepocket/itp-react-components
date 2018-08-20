@@ -1,0 +1,16 @@
+{
+  "name": "create-itp-react-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "In The Pocket",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "ora": "^3.0.0",
+    "shelljs": "^0.8.2"
+  }
+}
