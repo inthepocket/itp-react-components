@@ -11,6 +11,7 @@ const installNPMPackages = require('./lib/installNPMPackages');
 const appName = process.argv[2];
 const appDir = `${process.cwd()}/${appName}`;
 const templateDir = path.resolve(__dirname, 'templates');
+const overridesDir = path.resolve(__dirname, 'overrides');
 let spinner = new Ora({
   spinner: 'monkey',
 });
@@ -26,10 +27,16 @@ const run = async() => {
   shell.mkdir(appDir);
   shell.cd(appDir);
 
+  // copy templates
+  spinner.text = 'copying templates';
+  spinner.start();
+  copyTemplates({ appDir, templateDir });
+  spinner.stopAndPersist({ symbol: '✓' });
+
   // create package.json
   spinner.text = 'creating package.json';
   spinner.start();
-  await createPackageJSON({ appName, templateDir });
+  await createPackageJSON({ appName, overridesDir });
   spinner.stopAndPersist({ symbol: '✓' });
 
   // install npm packages
@@ -37,10 +44,13 @@ const run = async() => {
   spinner.start();
   await installNPMPackages({
     npmPackages: [
+      'react',
+      'react-dom',
       //'itp-react-scripts',
       'redux',
       'react-redux',
       'redux-saga',
+      'docz',
     ],
   });
   spinner.stopAndPersist({ symbol: '✓' });
@@ -48,12 +58,6 @@ const run = async() => {
   // install design system
   spinner.text = 'installing design system';
   spinner.start();
-  spinner.stopAndPersist({ symbol: '✓' });
-
-  // copy templates
-  spinner.text = 'copying templates';
-  spinner.start();
-  copyTemplates({ appDir, templateDir });
   spinner.stopAndPersist({ symbol: '✓' });
 
   console.log(' ');
