@@ -1,0 +1,27 @@
+---
+name: ITP App
+menu: Docs
+---
+
+# ITP App
+
+> This is an example code snippet which you can copy and supports fenced MD code blocks
+
+```js
+(async () => {
+  const res = await (await fetch('https://jsonplaceholder.typicode.com/todos/1')).json();
+  return res;
+})
+```
+
+## Example Component
+
+import { Playground, PropsTable } from 'docz'
+// https://github.com/pedronauck/docz/issues/225
+import Header from '../../src/common/components/atoms/Header';
+
+<Playground>
+  <Header title="In The Pocket" />
+</Playground>
+
+<PropsTable of={Header}/>
