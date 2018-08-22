@@ -14,7 +14,6 @@ const initGit = require('./lib/initGit');
 const appName = process.argv[2];
 const appDir = `${process.cwd()}/${appName}`;
 const templateDir = path.resolve(__dirname, 'templates');
-const overridesDir = path.resolve(__dirname, 'overrides');
 let spinner = new Ora({
   spinner: 'monkey',
 });
