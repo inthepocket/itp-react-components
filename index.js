@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const shell = require('shelljs');
 const chalk = require('chalk');
-const Ora = require('ora');
 const fs = require('fs');
 const path = require('path');
 const createReactApp = require('./lib/createReactApp');
@@ -14,37 +13,33 @@ const initGit = require('./lib/initGit');
 const appName = process.argv[2];
 const appDir = `${process.cwd()}/${appName}`;
 const templateDir = path.resolve(__dirname, 'templates');
-let spinner = new Ora({
-  spinner: 'monkey',
-});
+
+const logTitle = (title) => {
+  console.log(' ');
+  console.log(chalk.inverse(title));
+};
 
 const run = async() => {
   shell.exec('clear');
   console.log(chalk.white.bgBlue.bold(`Create ITP React App: ${appName}`));
   console.log('Learn more about create-itp-react-app at https://github.com/');
-  console.log(' ');
 
   // remove application dir
   shell.rm('-rf', appDir);
 
   // create React App
-  console.log(chalk.inverse('Create React App'));
+  logTitle('Create React App');
   await createReactApp({ appName });
-  //spinner.stopAndPersist({ symbol: '✓' });
 
   shell.cd(appDir);
 
   // cleanup React App
-  spinner.text = chalk.inverse('cleanup React App');
-  spinner.start();
+  logTitle('Cleanup React App');
   await cleanupReactApp({ appDir });
-  spinner.stopAndPersist({ symbol: '✓' });
 
   // copy templates
-  spinner.text = 'copying templates';
-  spinner.start();
+  logTitle('Copying templates');
   await copyTemplates({ appDir, templateDir });
-  spinner.stopAndPersist({ symbol: '✓' });
 
   // update local packages package.json
   await updatePackageJSON({
@@ -64,7 +59,7 @@ const run = async() => {
   });
 
   // install docz
-  console.log(chalk.inverse('Installing docs'));
+  logTitle('Installing docs');
   await updatePackageJSON({
     appDir: `${appDir}/docs`,
     updateJSON: packageJSON => ({
@@ -85,24 +80,24 @@ const run = async() => {
   });
 
   // install npm packages
-  console.log(chalk.inverse('Installing npm packages'));
+  logTitle('Installing npm packages');
   await installNPMPackages({
     appDir,
     dir: appDir,
     npmPackages: [
       //'itp-react-scripts',
+      'normalize.css',
       'prop-types',
-      'redux',
       'react-redux',
       'redux-saga',
+      'redux',
       'src/common',
       'src/core',
     ],
   });
 
   // update package.json
-  spinner.text = 'updating package.json';
-  spinner.start();
+  logTitle('Updating package.json');
   await updatePackageJSON({
     appDir,
     updateJSON: packageJSON => ({
@@ -116,10 +111,9 @@ const run = async() => {
       },
     }),
   });
-  spinner.stopAndPersist({ symbol: '✓' });
 
   // init git
-  console.log(chalk.inverse('Initializing git'));
+  logTitle('Initializing git');
   await initGit();
 
   console.log(' ');
