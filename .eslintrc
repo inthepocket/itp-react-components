@@ -1,0 +1,12 @@
+{
+    "extends": "./node_modules/@inthepocket/itp-react-scripts/dist/config/eslintrc.js",
+    "rules": {
+        "react/prop-types": "off",
+        "prefer-destructuring": "off",
+        "react/destructuring-assignment": "off"
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    }
+}

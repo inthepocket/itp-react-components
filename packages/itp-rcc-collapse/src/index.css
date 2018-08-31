@@ -1,0 +1,23 @@
+.rc-collapse > .rc-collapse-item > .rc-collapse-header {
+  cursor: pointer;
+}
+
+.rc-collapse-content {
+  overflow: hidden;
+}
+
+.rc-collapse-content-active {
+  overflow: visible;
+}
+
+.rc-collapse-content-inactive {
+  display: none;
+}
+
+.rc-collapse-anim {
+  overflow: hidden;
+}
+
+.rc-collapse-anim-active {
+  transition: height 0.2s ease-out;
+}
