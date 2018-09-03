@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const shell = require('shelljs');
 const chalk = require('chalk');
-const fs = require('fs');
 const path = require('path');
 const createReactApp = require('./lib/createReactApp');
 const cleanupReactApp = require('./lib/cleanupReactApp');
@@ -11,6 +10,15 @@ const installNPMPackages = require('./lib/installNPMPackages');
 const initGit = require('./lib/initGit');
 
 const appName = process.argv[2];
+
+if (typeof appName === 'undefined') {
+  console.error(chalk.red.bold('Define an appname as seconds argument.'));
+  console.error(chalk.red.bold('Like: create-itp-react-app <APPNAME>.'));
+  console.error(chalk.red.bold('Terminating this process..'));
+
+  process.exit();
+}
+
 const appDir = `${process.cwd()}/${appName}`;
 const templateDir = path.resolve(__dirname, 'templates');
 
@@ -85,7 +93,7 @@ const run = async() => {
     appDir,
     dir: appDir,
     npmPackages: [
-      //'itp-react-scripts',
+      // 'itp-react-scripts',
       'normalize.css',
       'prop-types',
       'react-redux',
