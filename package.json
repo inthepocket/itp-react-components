@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "itp-react-scripts lint"
   },
   "author": "In The Pocket",
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
     "shelljs": "^0.8.2"
+  },
+  "devDependencies": {
+    "@inthepocket/itp-react-scripts": "^0.44.2"
   }
 }
