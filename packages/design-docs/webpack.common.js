@@ -3,7 +3,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-module.exports = {
+module.exports = ({plugins = [], cssStyleLoader}) => ({
   entry: {app: path.join(__dirname, 'src/index.js')},
   module: {
     rules: [
@@ -14,11 +14,24 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          cssStyleLoader,
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+          },
+        ],
+        exclude: /node_modules/,
       },
       {
         test: /\.md$/,
         use: ['catalog/loader', 'raw-loader'],
+        exclude: /node_modules/,
       },
     ],
   },
@@ -33,9 +46,10 @@ module.exports = {
         to: path.resolve(__dirname, 'dist'),
       },
     ]),
+    ...plugins,
   ],
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-}
+})
