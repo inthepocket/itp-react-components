@@ -1,0 +1,41 @@
+{
+  "name": "@inthepocket/itp-rcc-collapse",
+  "version": "0.0.1",
+  "description": "ITP Collapse base component",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "webpack --config webpack.dev.config.js",
+    "watch": "npm run build -- --watch",
+    "transpile": "webpack --config webpack.prod.config.js",
+    "postinstall": "npm run build",
+    "prepublishOnly": "npm run transpile",
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "itp"
+  ],
+  "author": {
+    "email": "hello@inthepocket.com",
+    "name": "In The Pocket NV",
+    "url": "https://inthepocket.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.7",
+    "webpack-merge": "^4.1.4"
+  },
+  "peerDependencies": {
+    "react": "^16.4.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.6.2",
+    "rc-collapse": "^1.10.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

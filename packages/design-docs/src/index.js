@@ -40,6 +40,18 @@ ReactDOM.render(
           },
         ],
       },
+      {
+        title: 'itp-rcc-button',
+        pages: [
+          {
+            title: 'Base Example',
+            styles: ['/index.css'],
+            content: pageLoader('pages/itp-rcc-button.md'),
+            path: '/components/itp-rcc-button/base',
+            imports: {Button: require('../../itp-rcc-button/src/index.js')},
+          },
+        ],
+      },
     ]}
   />,
   document.getElementById('root'),

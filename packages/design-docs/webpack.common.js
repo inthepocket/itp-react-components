@@ -22,9 +22,9 @@ module.exports = ({plugins = [], cssStyleLoader}) => ({
               importLoaders: 1,
             },
           },
-          {
-            loader: 'postcss-loader',
-          },
+          // {
+          //   loader: 'postcss-loader',
+          // },
         ],
         exclude: /node_modules/,
       },
