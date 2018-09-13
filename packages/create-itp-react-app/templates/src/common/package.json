@@ -1,0 +1,9 @@
+{
+  "name": "itp-create-react-app-common",
+  "version": "0.1.0",
+  "author": "In The Pocket",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*"
+  }
+}
