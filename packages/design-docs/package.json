@@ -1,9 +1,8 @@
 {
-  "name": "design-docs",
+  "name": "@inthepocket/design-docs",
   "version": "0.0.1",
   "private": true,
-  "description": "ITP example site",
-  "main": "index.js",
+  "description": "ITP React component docs",
   "scripts": {
     "start": "webpack-dev-server --open  --config webpack.dev.config.js",
     "build": "webpack --config webpack.prod.config.js",
@@ -12,7 +11,8 @@
   },
   "keywords": [
     "react",
-    "itp"
+    "itp",
+    "design-docs"
   ],
   "author": {
     "email": "hello@inthepocket.com",
@@ -20,31 +20,28 @@
     "url": "https://inthepocket.com"
   },
   "license": "MIT",
-  "devDependencies": {
-    "babel-plugin-styled-components": "^1.5.1",
-    "copy-webpack-plugin": "^4.5.2",
-    "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.4.2",
-    "postcss": "^7.0.2",
-    "postcss-custom-properties": "^7.0.0",
-    "postcss-import": "^12.0.0",
-    "postcss-nested-import": "^0.1.0",
-    "precss": "^3.1.2",
-    "raw-loader": "^0.5.1",
-    "stylelint": "^9.5.0",
-    "stylelint-config-standard": "^18.2.0",
-    "webpack": "^4.17.1",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.7",
-    "webpack-merge": "^4.1.4"
-  },
   "peerDependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   },
+  "devDependencies": {
+    "stylelint": "^9.5.0",
+    "stylelint-config-standard": "^18.2.0"
+  },
   "dependencies": {
     "@inthepocket/itp-rcc-collapse": "^0.0.1",
     "catalog": "^3.5.5",
-    "styled-components": "^3.4.5"
+    "copy-webpack-plugin": "^4.5.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "postcss": "^7.0.2",
+    "postcss-import": "^12.0.0",
+    "postcss-nested-import": "^0.1.0",
+    "precss": "^3.1.2",
+    "raw-loader": "^0.5.1",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8",
+    "webpack-merge": "^4.1.4"
   }
 }

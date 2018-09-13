@@ -4,9 +4,6 @@
       "react",
       "stage-0",
       "catalog/babel"
-    ],
-    "plugins": [
-      "styled-components"
     ]
   }
   
