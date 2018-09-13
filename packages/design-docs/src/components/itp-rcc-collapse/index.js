@@ -1,7 +1,6 @@
 import React from 'react'
 import UnstyledCollapse from './UnstyledCollapse'
 import WithHintTextCollapse from './withHintTextCollapse'
-import StyledComponentExamples from './styledComponents'
 
 const ItpRcCollapseExample = () => (
   <div style={{margin: '0 30px 0 40px'}}>
@@ -11,7 +10,6 @@ const ItpRcCollapseExample = () => (
     <UnstyledCollapse />
     <h3>More Complex Collapse example</h3>
     <WithHintTextCollapse />
-    <StyledComponentExamples />
   </div>
 )
 

@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "itp-react-scripts lint",
+    "lint:fix": "npm run lint -- --fix",
     "precommit": "itp-react-scripts precommit",
     "commit": "git-cz"
   },
