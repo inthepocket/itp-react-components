@@ -1,0 +1,55 @@
+.collapse-styled {
+  font-family: sans-serif;
+  line-height: 1.44;
+  color: var(--color-primary);
+}
+
+.collapse-styled .collapse-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.collapse-styled .collapse-controls {
+  display: flex;
+  align-items: center;
+}
+
+.collapse-styled .collapse-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  background-color: var(--color-tertiary);
+  border-radius: 24px;
+}
+
+.collapse-styled .collapse-content {
+  padding: 25px 10px;
+}
+
+.collapse-styled > .rc-collapse-item > .rc-collapse-header:focus {
+  border-radius: 2px;
+  outline: none;
+  box-shadow: 0 0 0 1px var(--color-tertiary);
+}
+
+.collapse-styled .collapse-icon-container svg {
+  transition: transform 150ms ease;
+  transform: rotate(360deg);
+  fill: var(--color-secondary);
+}
+
+.collapse-styled .rc-collapse-item-active .collapse-icon-container {
+  background-color: var(--color-secondary);
+}
+
+.collapse-styled .rc-collapse-item-active .collapse-icon-container svg {
+  transition: transform 150ms ease;
+  transform: rotate(180deg);
+  fill: var(--color-tertiary);
+}
