@@ -7,10 +7,10 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Included components](#included-components)
-- [Create ITP React App](#create-itp-react-app)
-- [Design docs](#design-docs)
+  - [Create ITP React App](#create-itp-react-app)
+  - [Design docs](#design-docs)
   - [itp-rcc-collapse](#itp-rcc-collapse)
-  - [You want to contribute?](#you-want-to-contribute)
+- [You want to contribute?](#you-want-to-contribute)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -23,16 +23,16 @@
 
 # Included components
 
-# [Create ITP React App](/packages/create-itp-react-app/README.md)
+## [Create ITP React App](/packages/create-itp-react-app/README.md)
 
 A generator for all our ITP React Projects
 
-# [Design docs](/packages/design-docs/README.md)
+## [Design docs](/packages/design-docs/README.md)
 
 All the different components have an example page in the design docs.
 
 ## [itp-rcc-collapse](/packages/itp-rcc-collapse/README.md)
 
-## You want to contribute?
+# You want to contribute?
 
 When checking out the repo, make sure to install lerna and run `lerna bootstrap --hoist` to have everything up and running.
