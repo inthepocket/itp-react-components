@@ -1,5 +1,5 @@
 {
-  "name": "@inthepocket/itp-rcc-collapse",
+  "name": "@inthepocket/itp-rcc-button",
   "version": "0.0.1",
   "description": "ITP Collapse base component",
   "main": "lib/index.js",
@@ -7,7 +7,6 @@
     "build": "webpack --config webpack.dev.config.js",
     "watch": "npm run build -- --watch",
     "transpile": "webpack --config webpack.prod.config.js",
-    "postinstall": "npm run build",
     "prepublishOnly": "npm run transpile",
     "test": "jest"
   },

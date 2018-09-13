@@ -7,6 +7,7 @@ import './Button.css'
 export const ButtonColor = {
   primary: 'primary',
   secondary: 'secondary',
+  tertiary: 'tertiary',
 }
 
 class Button extends PureComponent {

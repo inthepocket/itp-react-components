@@ -48,7 +48,7 @@ ReactDOM.render(
             styles: ['/index.css'],
             content: pageLoader('pages/itp-rcc-button.md'),
             path: '/components/itp-rcc-button/base',
-            imports: {Button: require('../../itp-rcc-button/src/index.js')},
+            imports: {Button: require('./components/itp-rcc-button/index.js')},
           },
         ],
       },

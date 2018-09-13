@@ -16,9 +16,15 @@ try {
 
 // REMOVE-THIS-LATER overwrite with defaults for now..
 defaultStyle = {
-  'color-primary': '#000',
-  'color-secondary': '#fff',
-  'color-tertiary': '#10069f',
+  colorPrimary: '#9E9E9E',
+  colorPrimary400: '#BDBDBD',
+  colorPrimary600: '#757575',
+  colorSecondary: '#2196F3',
+  colorSecondary400: '#42A5F5',
+  colorSecondary600: '#1E88E5',
+  colorTertiary: '#00BCD4',
+  colorTertiary400: '#26C6DA',
+  colorTertiary600: '#00ACC1',
 }
 // REMOVE-THIS-LATER end of overwrite with defaults for now..
 
