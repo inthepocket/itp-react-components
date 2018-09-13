@@ -1,9 +1,7 @@
-/* @import '../../../themes/baseTheme.css'; */
-
 .collapse-styled {
   font-family: sans-serif;
   line-height: 1.44;
-  color: var(--color);
+  color: var(--color-primary);
 }
 
 .collapse-styled .collapse-header {
@@ -11,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  border-bottom: 1px solid var(--mainColor);
+  border-bottom: 1px solid var(--color-primary);
 }
 
 .collapse-styled .collapse-controls {
@@ -26,7 +24,7 @@
   width: 24px;
   height: 24px;
   margin-left: 8px;
-  background-color: var(--mainColor);
+  background-color: var(--color-tertiary);
   border-radius: 24px;
 }
 
@@ -37,21 +35,21 @@
 .collapse-styled > .rc-collapse-item > .rc-collapse-header:focus {
   border-radius: 2px;
   outline: none;
-  box-shadow: 0 0 0 1px var(--mainColor);
+  box-shadow: 0 0 0 1px var(--color-tertiary);
 }
 
 .collapse-styled .collapse-icon-container svg {
   transition: transform 150ms ease;
   transform: rotate(360deg);
-  fill: var(--darkColor);
+  fill: var(--color-secondary);
 }
 
 .collapse-styled .rc-collapse-item-active .collapse-icon-container {
-  background-color: var(--focusLight);
+  background-color: var(--color-secondary);
 }
 
 .collapse-styled .rc-collapse-item-active .collapse-icon-container svg {
   transition: transform 150ms ease;
   transform: rotate(180deg);
-  fill: var(--focusDark);
+  fill: var(--color-tertiary);
 }

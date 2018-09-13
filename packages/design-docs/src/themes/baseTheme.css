@@ -1,7 +1,0 @@
-@import './variables.css': root {
-  --color: $color;
-  --mainColor: $mainColor;
-  --darkColor: $darkColor;
-  --focusLight: $focusLight;
-  --focusDark: $focusDark;
-}
