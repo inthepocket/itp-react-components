@@ -17,7 +17,7 @@
   "author": "hello@inthepocket.com",
   "license": "MIT",
   "devDependencies": {
-    "@inthepocket/itp-react-scripts": "^0.44.1",
+    "@inthepocket/itp-react-scripts": "^0.44.2",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-env": "^2.4.1",

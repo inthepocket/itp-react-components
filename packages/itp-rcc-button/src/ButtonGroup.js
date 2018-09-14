@@ -1,3 +1,5 @@
+// Inspired by ant-design/button-group
+// https://github.com/ant-design/ant-design/blob/master/components/button/button.tsx
 import React from 'react'
 import classNames from 'classnames'
 

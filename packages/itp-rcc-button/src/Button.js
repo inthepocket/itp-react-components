@@ -1,3 +1,5 @@
+// Inspired by ant-design/button
+// https://github.com/ant-design/ant-design/blob/master/components/button/button.tsx
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
@@ -15,18 +17,43 @@ function insertSpace(child) {
 }
 
 export default class Button extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      loading: props.loading,
-    }
+  static defaultProps = {
+    className: undefined,
+    color: undefined,
+    type: undefined,
+    shape: undefined,
+    size: undefined,
+    htmlType: undefined,
+    onClick: () => {},
+    prefixCls: '',
+    icon: undefined,
+    loading: false,
+    ghost: false,
+    block: false,
+  }
 
-    this.handleClick.bind(this)
+  static propTypes = {
+    color: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+    type: PropTypes.oneOf(['default', 'primary', 'ghost', 'dashed', 'danger']),
+    shape: PropTypes.oneOf(['circle', 'circle-outline']),
+    size: PropTypes.oneOf(['large', 'default', 'small']),
+    htmlType: PropTypes.oneOf(['submit', 'button', 'reset']),
+    onClick: PropTypes.func,
+    prefixCls: PropTypes.string,
+    loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
+    className: PropTypes.string,
+    icon: PropTypes.string,
+    ghost: PropTypes.bool,
+    block: PropTypes.bool,
+  }
+
+  state = {
+    loading: this.props.loading,
   }
 
   componentWillReceiveProps(nextProps) {
-    const currentLoading = this.props.loading
-    const loading = nextProps.loading
+    const {loading: currentLoading} = this.props
+    const {loading} = nextProps
 
     if (currentLoading) {
       clearTimeout(this.delayTimeout)
@@ -34,6 +61,7 @@ export default class Button extends Component {
 
     if (typeof loading !== 'boolean' && loading && loading.delay) {
       this.delayTimeout = window.setTimeout(
+        // eslint-disable-line no-undef
         () => this.setState({loading}),
         loading.delay,
       )
@@ -48,7 +76,7 @@ export default class Button extends Component {
     }
   }
 
-  handleClick(e) {
+  handleClick = e => {
     const {onClick} = this.props
     if (onClick) {
       onClick(e)
@@ -145,34 +173,4 @@ export default class Button extends Component {
       </button>
     )
   }
-}
-
-Button.defaultProps = {
-  className: undefined,
-  color: undefined,
-  type: undefined,
-  shape: undefined,
-  size: undefined,
-  htmlType: undefined,
-  onClick: () => {},
-  prefixCls: '',
-  icon: undefined,
-  loading: false,
-  ghost: false,
-  block: false,
-}
-
-Button.propTypes = {
-  color: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
-  type: PropTypes.oneOf(['default', 'primary', 'ghost', 'dashed', 'danger']),
-  shape: PropTypes.oneOf(['circle', 'circle-outline']),
-  size: PropTypes.oneOf(['large', 'default', 'small']),
-  htmlType: PropTypes.oneOf(['submit', 'button', 'reset']),
-  onClick: PropTypes.func,
-  prefixCls: PropTypes.string,
-  loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
-  className: PropTypes.string,
-  icon: PropTypes.string,
-  ghost: PropTypes.bool,
-  block: PropTypes.bool,
 }
