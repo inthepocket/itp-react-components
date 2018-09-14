@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const path = require('path');
 const createReactApp = require('./lib/createReactApp');
 const cleanupReactApp = require('./lib/cleanupReactApp');
-const updatePackageJSON = require('./lib/updatePackageJSON');
+const updateJSON = require('./lib/updateJSON');
 const copyTemplates = require('./lib/copyTemplates');
 const installNPMPackages = require('./lib/installNPMPackages');
 const initGit = require('./lib/initGit');
@@ -50,16 +50,16 @@ const run = async() => {
   await copyTemplates({ appDir, templateDir });
 
   // update local packages package.json
-  await updatePackageJSON({
-    appDir: `${appDir}/src/common`,
+  await updateJSON({
+    file: path.join(appDir, 'src', 'common', 'package.json'),
     updateJSON: packageJSON => ({
       ...packageJSON,
       name: `${appName}-common`,
     }),
   });
 
-  await updatePackageJSON({
-    appDir: `${appDir}/src/core`,
+  await updateJSON({
+    file: path.join(appDir, 'src', 'core', 'package.json'),
     updateJSON: packageJSON => ({
       ...packageJSON,
       name: `${appName}-core`,
@@ -68,8 +68,8 @@ const run = async() => {
 
   // install docz
   logTitle('Installing docs');
-  await updatePackageJSON({
-    appDir: `${appDir}/docs`,
+  await updateJSON({
+    file: path.join(appDir, 'docs', 'package.json'),
     updateJSON: packageJSON => ({
       ...packageJSON,
       name: `${appName}-docs`,
@@ -88,7 +88,7 @@ const run = async() => {
   });
 
   // install npm packages
-  logTitle('Installing npm packages');
+  logTitle('Installing npm dependencies');
   await installNPMPackages({
     appDir,
     dir: appDir,
@@ -104,10 +104,24 @@ const run = async() => {
     ],
   });
 
+  logTitle('Installing npm dev dependencies');
+  await installNPMPackages({
+    appDir,
+    dir: appDir,
+    npmPackages: [
+      'css',
+      'shelljs',
+      'to-css',
+    ],
+    options: {
+      devDependencies: true
+    }
+  });
+
   // update package.json
   logTitle('Updating package.json');
-  await updatePackageJSON({
-    appDir,
+  await updateJSON({
+    file: path.join(appDir, 'package.json'),
     updateJSON: packageJSON => ({
       ...packageJSON,
       author: 'In The Pocket',
@@ -116,6 +130,19 @@ const run = async() => {
         ...packageJSON.scripts,
         'docz:start': 'cd docs && npm run start',
         'docz:build': 'cd docs && npm run build',
+      },
+    }),
+  });
+
+  // update .sketchxport config
+  logTitle('Updating .sketchxport config');
+  await updateJSON({
+    file: path.join(appDir, '.sketchxport', 'config.json'),
+    updateJSON: configJSON => ({
+      ...configJSON,
+      repo: {
+        ...configJSON.repo,
+        uri: configJSON.repo.uri.replace('<repo-slug-here>', appName),
       },
     }),
   });
