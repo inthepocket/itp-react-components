@@ -1146,11 +1146,11 @@ a[disabled] {
   background-size: 56px;
 }
 a.ant-btn {
-  line-height: 30px;
+  line-height: 32px;
 }
 a.ant-btn-lg {
-  line-height: 38px;
+  line-height: 40px;
 }
 a.ant-btn-sm {
-  line-height: 22px;
+  line-height: 24px;
 }
