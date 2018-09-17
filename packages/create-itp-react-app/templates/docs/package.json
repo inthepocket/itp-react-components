@@ -1,0 +1,11 @@
+{
+  "name": "itp-create-react-app-docs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "docz dev",
+    "build": "docz build"
+  },
+  "author": "In The Pocket",
+  "license": "MIT"
+}
