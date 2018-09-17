@@ -6,7 +6,7 @@ const createReactApp = require('./lib/createReactApp');
 const createDocumentationApp = require('./lib/createDocumentationApp');
 const injectProjectName = require('./lib/injectProjectName');
 const cleanupReactApp = require('./lib/cleanupReactApp');
-const copyTemplates = require('./lib/copyTemplates');
+const copyDir = require('./lib/copyDir');
 const installNPMPackages = require('./lib/installNPMPackages');
 const initGit = require('./lib/initGit');
 const appendToFile = require('./lib/appendToFile');
@@ -23,7 +23,7 @@ if (typeof appName === 'undefined') {
 }
 
 const appDir = `${process.cwd()}/${appName}`;
-const templateDir = path.resolve(__dirname, 'templates');
+const appTemplateDir = path.resolve(__dirname, 'templates', 'app');
 
 const logTitle = title => {
   console.log(' ');
@@ -49,8 +49,8 @@ const run = async () => {
   await cleanupReactApp({ appDir });
 
   // copy templates
-  logTitle('Copying templates');
-  await copyTemplates({ appDir, templateDir });
+  logTitle('Copying app templates');
+  await copyDir({ targetDir: appDir, srcDir: appTemplateDir });
 
   logTitle('Inject project name');
   await injectProjectName({ appDir, appName });
