@@ -1,21 +1,23 @@
 ## Generated project structure
 
-- docs
-- src
-  - app
-    - screens
-  - common (import from generated-project-name/common)
-    - assets
-    - components
-      - atoms
-      - molecules
-      - organisms
-    - primitives
-  - core (import from generated-project-name/core)
-    - actions
-    - lib
-    - reducers
-    - sagas
+```
+├── docs
+└── src
+    ├── app
+    │   └── screens
+    ├── common (import from generated-project-name/common)
+    │   ├── assets
+    │   ├── components
+    │   │   ├── atoms
+    │   │   ├── molecules
+    │   │   └── organisms
+    │   └── primitives
+    └── core (import from generated-project-name/core)
+        ├── actions
+        ├── lib
+        ├── reducers
+        └── sagas
+```        
 
 ### Local packages
 
