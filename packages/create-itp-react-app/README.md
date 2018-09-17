@@ -17,7 +17,7 @@
         ├── lib
         ├── reducers
         └── sagas
-```        
+```
 
 ### Local packages
 

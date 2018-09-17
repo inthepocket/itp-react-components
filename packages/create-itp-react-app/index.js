@@ -3,7 +3,7 @@ const shell = require('shelljs')
 const chalk = require('chalk')
 const path = require('path')
 const createReactApp = require('./lib/createReactApp')
-const createDocumentionApp = require('./lib/createDocumentionApp')
+const createDocumentationApp = require('./lib/createDocumentationApp')
 const injectProjectName = require('./lib/injectProjectName')
 const cleanupReactApp = require('./lib/cleanupReactApp')
 const copyTemplates = require('./lib/copyTemplates')
@@ -75,7 +75,7 @@ const run = async () => {
   // install design-docs
   logTitle('Installing design-docs')
   const designDocsName = 'design-docs'
-  await createDocumentionApp({name: designDocsName})
+  await createDocumentationApp({name: designDocsName})
   await updateJSON({
     file: path.join(appDir, designDocsName, 'package.json'),
     updateJSON: packageJSON => ({
@@ -89,19 +89,6 @@ const run = async () => {
     fileName: '.gitignore',
     data: `docs/node_modules\n.eslintcache`,
   })
-
-  // install docz packages
-  // TODO JDI
-  // await installNPMPackages({
-  //   appDir,
-  //   dir: path.join(appDir, ''),
-  //   npmPackages: [
-  //     'docz',
-  //     'react',
-  //     '../src/common',
-  //     '@inthepocket/itp-rcc-collapse'
-  //   ],
-  // });
 
   // install npm packages
   logTitle('Installing npm dependencies')
@@ -124,7 +111,13 @@ const run = async () => {
   await installNPMPackages({
     appDir,
     dir: appDir,
-    npmPackages: ['change-case', 'css', 'shelljs', 'to-css', '@inthepocket/itp-react-scripts'],
+    npmPackages: [
+      'change-case',
+      'css',
+      'shelljs',
+      'to-css',
+      '@inthepocket/itp-react-scripts',
+    ],
     options: {
       devDependencies: true,
     },

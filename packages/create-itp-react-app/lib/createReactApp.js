@@ -1,5 +1,5 @@
-const shell = require('shelljs');
-const {CREATE_REACT_APP_VERSION} = require('../config.json');
+const shell = require('shelljs')
+const {CREATE_REACT_APP_VERSION} = require('../config.json')
 
 /**
  * Create React App
