@@ -1,13 +1,13 @@
 :root {
-  --colorPrimary900: #000;
-  --colorPrimary800: #111;
-  --colorPrimary700: #222;
-  --colorPrimary600: #333;
-  --colorPrimary500: #444;
-  --colorPrimary400: #555;
-  --colorPrimary300: #666;
-  --colorPrimary200: #777;
-  --colorPrimary100: #888;
+  --colorPrimary900: #10069f;
+  --colorPrimary800: #10069e;
+  --colorPrimary700: #10069d;
+  --colorPrimary600: #10069c;
+  --colorPrimary500: #10069b;
+  --colorPrimary400: #10069a;
+  --colorPrimary300: #100699;
+  --colorPrimary200: #100698;
+  --colorPrimary100: #100697;
   --colorSecondary900: #fff;
   --colorSecondary800: #efefef;
   --colorSecondary700: #eee;
@@ -17,13 +17,13 @@
   --colorSecondary300: #ccc;
   --colorSecondary200: #bcbcbc;
   --colorSecondary100: #bbb;
-  --colorTertiary900: #10069f;
-  --colorTertiary800: #10069e;
-  --colorTertiary700: #10069d;
-  --colorTertiary600: #10069c;
-  --colorTertiary500: #10069b;
-  --colorTertiary400: #10069a;
-  --colorTertiary300: #100699;
-  --colorTertiary200: #100698;
-  --colorTertiary100: #100697;
+  --colorTertiary900: #000;
+  --colorTertiary800: #111;
+  --colorTertiary700: #222;
+  --colorTertiary600: #333;
+  --colorTertiary500: #444;
+  --colorTertiary400: #555;
+  --colorTertiary300: #666;
+  --colorTertiary200: #777;
+  --colorTertiary100: #888;
 }
