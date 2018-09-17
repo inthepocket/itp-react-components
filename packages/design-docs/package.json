@@ -6,8 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open  --config webpack.dev.config.js",
     "build": "webpack --config webpack.prod.config.js",
-    "stylelint": "stylelint \"**/*.css\" --fix",
-    "postinstall": "npm run build"
+    "stylelint": "stylelint \"**/*.css\" --fix"
   },
   "keywords": [
     "react",
