@@ -11,6 +11,7 @@ const copyTemplates = require('./lib/copyTemplates')
 const installNPMPackages = require('./lib/installNPMPackages')
 const initGit = require('./lib/initGit')
 const appendToFile = require('./lib/appendToFile')
+const updateJSON = require('./lib/updateJSON')
 
 const appName = process.argv[2]
 
@@ -56,16 +57,16 @@ const run = async () => {
   await injectProjectName({appDir, appName})
 
   // update local packages package.json
-  await updatePackageJSON({
-    appDir: `${appDir}/src/common`,
+  await updateJSON({
+    file: path.join(appDir, 'src', 'common', 'package.json'),
     updateJSON: packageJSON => ({
       ...packageJSON,
       name: `${appName}-common`,
     }),
   })
 
-  await updatePackageJSON({
-    appDir: `${appDir}/src/core`,
+  await updateJSON({
+    file: path.join(appDir, 'src', 'core', 'package.json'),
     updateJSON: packageJSON => ({
       ...packageJSON,
       name: `${appName}-core`,
@@ -76,8 +77,8 @@ const run = async () => {
   logTitle('Installing design-docs')
   const designDocsName = 'design-docs'
   await createDocumentionApp({name: designDocsName})
-  await updatePackageJSON({
-    appDir: `${appDir}/${designDocsName}`,
+  await updateJSON({
+    file: path.join(appDir, designDocsName, 'package.json'),
     updateJSON: packageJSON => ({
       ...packageJSON,
       name: `${appName}-${designDocsName}`,
@@ -104,7 +105,7 @@ const run = async () => {
   // });
 
   // install npm packages
-  logTitle('Installing npm packages')
+  logTitle('Installing npm dependencies')
   await installNPMPackages({
     appDir,
     dir: appDir,
@@ -119,19 +120,21 @@ const run = async () => {
     ],
   })
 
-  // install npm packages
-  logTitle('Installing npm packages')
+  // install npm dev dependencies
+  logTitle('Installing npm dev dependencies')
   await installNPMPackages({
     appDir,
     dir: appDir,
-    isDevDependency: true,
-    npmPackages: ['@inthepocket/itp-react-scripts'],
+    npmPackages: ['css', 'shelljs', 'to-css', '@inthepocket/itp-react-scripts'],
+    options: {
+      devDependencies: true,
+    },
   })
 
   // update package.json
   logTitle('Updating package.json')
-  await updatePackageJSON({
-    appDir,
+  await updateJSON({
+    file: path.join(appDir, 'package.json'),
     updateJSON: packageJSON => {
       const {eject, ...scriptsToKeep} = packageJSON.scripts
       return {
@@ -145,6 +148,19 @@ const run = async () => {
         },
       }
     },
+  })
+
+  // update .sketchxport config
+  logTitle('Updating .sketchxport config')
+  await updateJSON({
+    file: path.join(appDir, '.sketchxport', 'config.json'),
+    updateJSON: configJSON => ({
+      ...configJSON,
+      repo: {
+        ...configJSON.repo,
+        uri: configJSON.repo.uri.replace('<repo-slug-here>', appName),
+      },
+    }),
   })
 
   // init git

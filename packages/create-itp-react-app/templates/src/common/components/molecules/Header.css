@@ -1,6 +1,7 @@
 .header {
-  background-color: #10069f;
-  color: #fff;
+  background-color: var(--tertiaryColor);
+  border-bottom: 5px solid var(--primaryColor);
+  color: var(--secondaryColor);
   padding: 50px;
   text-align: center;
 }

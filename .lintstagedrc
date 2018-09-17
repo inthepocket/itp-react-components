@@ -1,5 +1,8 @@
 {
-   '**/*.+(js|json|less|css|ts|tsx|md)': [
+  'ignore': [
+      "packages/create-itp-react-app/templates/.eslintrc"
+    ],
+  '**/*.+(js|json|less|css|ts|tsx|md)': [
     "itp-react-scripts format",
     "git add"
   ],

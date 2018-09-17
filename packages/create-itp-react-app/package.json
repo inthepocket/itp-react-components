@@ -1,12 +1,24 @@
 {
-  "name": "create-itp-react-app",
-  "version": "1.0.0",
+  "name": "@inthepocket/create-itp-react-app",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "author": "In The Pocket",
+  "bin": {
+    "create-itp-react-app": "./index.js"
+  },
+  "keywords": [
+    "react",
+    "itp",
+    "create-react-app"
+  ],
+  "author": {
+    "email": "hello@inthepocket.com",
+    "name": "In The Pocket",
+    "url": "https://inthepocket.com"
+  },
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",

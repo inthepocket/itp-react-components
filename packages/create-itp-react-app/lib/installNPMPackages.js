@@ -7,11 +7,16 @@ const shell = require('shelljs')
  * @param  {Array} npmPackages
  * @return {Promise}
  */
-module.exports = ({appDir, dir, npmPackages, isDevDependency = false}) =>
+module.exports = ({
+  appDir,
+  dir,
+  npmPackages,
+  options: {devDependencies} = {devDependencies: false},
+}) =>
   new Promise(resolve => {
     shell.cd(dir)
     shell.exec(
-      `npm install ${isDevDependency ? '-D' : '-S'} ${npmPackages.join(' ')}`,
+      `npm install ${devDependencies ? '-D' : '-S'} ${npmPackages.join(' ')}`,
       () => {
         shell.cd(appDir)
         resolve()
