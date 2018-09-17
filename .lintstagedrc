@@ -5,7 +5,7 @@
   ],
   "**/*.js": [
     "itp-react-scripts lint --fix",
-    "itp-react-scripts test --findRelatedTests --passWithNoTests`,
+    "itp-react-scripts test --findRelatedTests --passWithNoTests",
     "git add"
   ]
 }
