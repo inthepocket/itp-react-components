@@ -1,11 +1,12 @@
-const shell = require('shelljs')
+const shell = require('shelljs');
+const { CREATE_REACT_APP_VERSION } = require('../config.json');
 
 /**
  * Create React App
  * @param  {String} appName
  * @return {Promise}
  */
-module.exports = ({appName}) =>
+module.exports = ({ appName }) =>
   new Promise(resolve => {
-    shell.exec(`npx create-react-app ${appName}`, resolve)
-  })
+    shell.exec(`npx create-react-app@${CREATE_REACT_APP_VERSION} ${appName}`, resolve);
+  });

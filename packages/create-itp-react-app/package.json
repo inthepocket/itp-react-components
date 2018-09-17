@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "bin": {
     "create-itp-react-app": "./index.js"
@@ -22,6 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.1",
+    "replace-in-file": "^3.4.2",
     "shelljs": "^0.8.2"
   },
   "publishConfig": {

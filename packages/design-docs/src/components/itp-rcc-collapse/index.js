@@ -1,9 +1,9 @@
-import React from 'react'
-import UnstyledCollapse from './UnstyledCollapse'
-import WithHintTextCollapse from './withHintTextCollapse'
+import React from 'react';
+import UnstyledCollapse from './UnstyledCollapse';
+import WithHintTextCollapse from './withHintTextCollapse';
 
 const ItpRcCollapseExample = () => (
-  <div style={{margin: '0 30px 0 40px'}}>
+  <div style={{ margin: '0 30px 0 40px' }}>
     <h1>ITP Rcc Collapse Examples</h1>
     <h2>Using basic css</h2>
     <h3>Unstyled</h3>
@@ -11,6 +11,6 @@ const ItpRcCollapseExample = () => (
     <h3>More Complex Collapse example</h3>
     <WithHintTextCollapse />
   </div>
-)
+);
 
-export default ItpRcCollapseExample
+export default ItpRcCollapseExample;

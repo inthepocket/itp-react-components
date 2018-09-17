@@ -1,4 +1,4 @@
-import pkg from './package.json'
+import pkg from './package.json';
 
 export default {
   title: pkg.name,
@@ -9,4 +9,4 @@ export default {
       primary: '#10069f',
     },
   },
-}
+};

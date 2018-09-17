@@ -1,10 +1,10 @@
-const path = require('path')
-const pkg = require('./package.json')
+const path = require('path');
+const pkg = require('./package.json');
 
 const removeOrganisation = libraryName =>
-  libraryName.substring(libraryName.indexOf('/') + 1, libraryName.length)
+  libraryName.substring(libraryName.indexOf('/') + 1, libraryName.length);
 
-const libraryName = removeOrganisation(pkg.name)
+const libraryName = removeOrganisation(pkg.name);
 
 module.exports = {
   output: {
@@ -30,4 +30,4 @@ module.exports = {
   externals: {
     react: 'react',
   },
-}
+};

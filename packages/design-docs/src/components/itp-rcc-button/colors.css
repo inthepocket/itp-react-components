@@ -25,22 +25,17 @@
   border-color: var(--colorPrimary400);
 }
 
-.ant-btn-group
-  .ant-btn-primary.ant-btn-color-primary:not(:first-child):not(:last-child) {
+.ant-btn-group .ant-btn-primary.ant-btn-color-primary:not(:first-child):not(:last-child) {
   border-right-color: var(--colorPrimary400);
   border-left-color: var(--colorPrimary400);
 }
 
-.ant-btn-group
-  .ant-btn-primary.ant-btn-color-primary:first-child:not(:last-child) {
+.ant-btn-group .ant-btn-primary.ant-btn-color-primary:first-child:not(:last-child) {
   border-right-color: var(--colorPrimary400);
 }
 
-.ant-btn-group
-  .ant-btn-primary.ant-btn-color-primary:last-child:not(:first-child),
-.ant-btn-group
-  .ant-btn-primary.ant-btn-color-primary
-  + .ant-btn-primary.ant-btn-color-primary {
+.ant-btn-group .ant-btn-primary.ant-btn-color-primary:last-child:not(:first-child),
+.ant-btn-group .ant-btn-primary.ant-btn-color-primary + .ant-btn-primary.ant-btn-color-primary {
   border-left-color: var(--colorPrimary400);
 }
 
@@ -127,22 +122,17 @@
   border-color: var(--colorSecondary400);
 }
 
-.ant-btn-group
-  .ant-btn-primary.ant-btn-color-secondary:not(:first-child):not(:last-child) {
+.ant-btn-group .ant-btn-primary.ant-btn-color-secondary:not(:first-child):not(:last-child) {
   border-right-color: var(--colorSecondary400);
   border-left-color: var(--colorSecondary400);
 }
 
-.ant-btn-group
-  .ant-btn-primary.ant-btn-color-secondary:first-child:not(:last-child) {
+.ant-btn-group .ant-btn-primary.ant-btn-color-secondary:first-child:not(:last-child) {
   border-right-color: var(--colorSecondary400);
 }
 
-.ant-btn-group
-  .ant-btn-primary.ant-btn-color-secondary:last-child:not(:first-child),
-.ant-btn-group
-  .ant-btn-primary.ant-btn-color-secondary
-  + .ant-btn-primary.ant-btn-color-secondary {
+.ant-btn-group .ant-btn-primary.ant-btn-color-secondary:last-child:not(:first-child),
+.ant-btn-group .ant-btn-primary.ant-btn-color-secondary + .ant-btn-primary.ant-btn-color-secondary {
   border-left-color: var(--colorSecondary400);
 }
 
@@ -229,22 +219,17 @@
   border-color: var(--colorTertiary400);
 }
 
-.ant-btn-group
-  .ant-btn-primary.ant-btn-color-tertiary:not(:first-child):not(:last-child) {
+.ant-btn-group .ant-btn-primary.ant-btn-color-tertiary:not(:first-child):not(:last-child) {
   border-right-color: var(--colorTertiary400);
   border-left-color: var(--colorTertiary400);
 }
 
-.ant-btn-group
-  .ant-btn-primary.ant-btn-color-tertiary:first-child:not(:last-child) {
+.ant-btn-group .ant-btn-primary.ant-btn-color-tertiary:first-child:not(:last-child) {
   border-right-color: var(--colorTertiary400);
 }
 
-.ant-btn-group
-  .ant-btn-primary.ant-btn-color-tertiary:last-child:not(:first-child),
-.ant-btn-group
-  .ant-btn-primary.ant-btn-color-tertiary
-  + .ant-btn-primary.ant-btn-color-tertiary {
+.ant-btn-group .ant-btn-primary.ant-btn-color-tertiary:last-child:not(:first-child),
+.ant-btn-group .ant-btn-primary.ant-btn-color-tertiary + .ant-btn-primary.ant-btn-color-tertiary {
   border-left-color: var(--colorTertiary400);
 }
 

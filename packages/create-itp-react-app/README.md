@@ -1,26 +1,33 @@
 ## Generated project structure
 
-- docs
-- src
-  - app
-    - screens
-  - common (import from generated-project-name/common)
-    - assets
-    - components
-      - atoms
-      - molecules
-      - organisms
-    - primitives
-  - core (import from generated-project-name/core)
-    - actions
-    - lib
-    - reducers
-    - sagas
+```
+├── docs
+└── src
+    ├── app
+    │   └── screens
+    ├── common (import from generated-project-name/common)
+    │   ├── assets
+    │   ├── components
+    │   │   ├── atoms
+    │   │   ├── molecules
+    │   │   └── organisms
+    │   └── primitives
+    └── core (import from generated-project-name/core)
+        ├── actions
+        ├── lib
+        ├── reducers
+        └── sagas
+```
 
 ### Local packages
 
 - generated-project-name/common
 - generated-project-name/core
+
+## Run the generator
+
+- run `./index <MY_PROJECT_NAME>`
+- a generated project is created in the folder <MY_PROJECT_NAME>
 
 ## docz
 
