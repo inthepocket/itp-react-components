@@ -109,6 +109,7 @@ const run = async() => {
     appDir,
     dir: appDir,
     npmPackages: [
+      'change-case',
       'css',
       'shelljs',
       'to-css',

@@ -1,5 +1,29 @@
 :root {
-  --primaryColor: #000;
-  --secondaryColor: #fff;
-  --tertiaryColor: #10069f;
+  --colorPrimary900: #000;
+  --colorPrimary800: #111;
+  --colorPrimary700: #222;
+  --colorPrimary600: #333;
+  --colorPrimary500: #444;
+  --colorPrimary400: #555;
+  --colorPrimary300: #666;
+  --colorPrimary200: #777;
+  --colorPrimary100: #888;
+  --colorSecondary900: #fff;
+  --colorSecondary800: #efefef;
+  --colorSecondary700: #eee;
+  --colorSecondary600: #dedede;
+  --colorSecondary500: #ddd;
+  --colorSecondary400: #cdcdcd;
+  --colorSecondary300: #ccc;
+  --colorSecondary200: #bcbcbc;
+  --colorSecondary100: #bbb;
+  --colorTertiary900: #10069f;
+  --colorTertiary800: #10069e;
+  --colorTertiary700: #10069d;
+  --colorTertiary600: #10069c;
+  --colorTertiary500: #10069b;
+  --colorTertiary400: #10069a;
+  --colorTertiary300: #100699;
+  --colorTertiary200: #100698;
+  --colorTertiary100: #100697;
 }
