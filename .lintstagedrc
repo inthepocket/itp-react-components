@@ -1,0 +1,11 @@
+{
+  '**/*.+(js|json|less|css|ts|tsx|md)': [
+    "itp-react-scripts format --write",
+    "git add"
+  ],
+  "**/*.js": [
+    "itp-react-scripts lint --fix",
+    "itp-react-scripts test --findRelatedTests --passWithNoTests",
+    "git add"
+  ]
+}

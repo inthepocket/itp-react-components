@@ -3,9 +3,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {Catalog, pageLoader} from 'catalog'
 
+const markdownLoader = page => pageLoader(() => import(`./${page}.md`))
+
 ReactDOM.render(
   <Catalog
-    title="Catalog"
+    title="Design Docs"
     pages={[
       {
         path: '/',
@@ -21,22 +23,20 @@ ReactDOM.render(
       {
         title: 'Components',
         path: '/components',
-        content: pageLoader('pages/components.md'),
-      },
-      {
-        title: 'itp-rcc-collapse',
         pages: [
           {
-            title: 'Base Example',
+            title: 'Button',
             styles: ['/index.css'],
-            imports: {Collapse: require('@inthepocket/itp-rcc-collapse')},
-            path: '/components/itp-rcc-collapse/base',
-            content: pageLoader('pages/itp-rcc-collapse.md'),
+            content: markdownLoader('itp-rcc-button'),
+            path: '/components/itp-rcc-button/base',
+            imports: {Button: require('./components/itp-rcc-button/index.js')},
           },
           {
-            title: 'More complex examples',
-            path: '/components/itp-rcc-collapse/more-examples',
+            title: 'Collapse',
+            styles: ['/index.css'],
             content: require('./components/itp-rcc-collapse/index.js'),
+            path: '/components/itp-rcc-collapse/base',
+            imports: {Collapse: require('@inthepocket/itp-rcc-collapse')},
           },
         ],
       },

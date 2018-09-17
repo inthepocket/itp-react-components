@@ -5,3 +5,13 @@
 .catalog-14mvqx7-Html-Html {
   height: auto;
 }
+
+.ant-btn,
+.ant-btn-group {
+  margin-right: 8px;
+  margin-bottom: 12px;
+}
+
+.ant-btn-group > .ant-btn {
+  margin-right: 0;
+}

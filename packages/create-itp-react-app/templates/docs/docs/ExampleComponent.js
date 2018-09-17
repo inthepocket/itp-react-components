@@ -1,16 +1,16 @@
-import React from 'react';
-import {string, node, function as fn} from 'prop-types';
+import React from 'react'
+import {string, node, function as fn} from 'prop-types'
 
-const ExampleComponent = ({ children, label, style, onClick }) => (
+const ExampleComponent = ({children, label, style, onClick}) => (
   <button style={style} onClick={onClick}>
     {children || label}
   </button>
-);
+)
 
 ExampleComponent.defaultProps = {
   label: 'Button',
   onClick: () => alert('clicked'),
-};
+}
 
 ExampleComponent.propTypes = {
   label: string,
@@ -18,4 +18,4 @@ ExampleComponent.propTypes = {
   onClick: fn,
 }
 
-export default ExampleComponent;
+export default ExampleComponent

@@ -1,4 +1,4 @@
-const shell = require ('shelljs');
+const shell = require('shelljs')
 
 /**
  * Install npm packages
@@ -13,13 +13,13 @@ module.exports = ({
   npmPackages,
   options: {devDependencies} = {devDependencies: false},
 }) =>
-  new Promise (resolve => {
-    shell.cd (dir);
-    shell.exec (
-      `npm install ${devDependencies ? '-D' : '-S'} ${npmPackages.join (' ')}`,
+  new Promise(resolve => {
+    shell.cd(dir)
+    shell.exec(
+      `npm install ${devDependencies ? '-D' : '-S'} ${npmPackages.join(' ')}`,
       () => {
-        shell.cd (appDir);
-        resolve ();
-      }
-    );
-  });
+        shell.cd(appDir)
+        resolve()
+      },
+    )
+  })

@@ -1,4 +1,4 @@
-const shell = require('shelljs');
+const shell = require('shelljs')
 
 const cmds = [
   'git init',
@@ -6,12 +6,13 @@ const cmds = [
   'git commit -m "initial commit"',
   'git branch develop',
   'git checkout develop',
-];
+]
 
 /**
  * Init git
  * @return {Promise}
  */
-module.exports = () => new Promise((resolve) => {
-    shell.exec(cmds.join(' && '), resolve);
-  });
+module.exports = () =>
+  new Promise(resolve => {
+    shell.exec(cmds.join(' && '), resolve)
+  })

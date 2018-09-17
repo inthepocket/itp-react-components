@@ -1,12 +1,13 @@
-const shell = require('shelljs');
-const path = require('path');
+const shell = require('shelljs')
+const path = require('path')
 
 /**
  * Create React App
  * @param  {String} appDir
  * @return {Promise}
  */
-module.exports = ({ appDir }) => new Promise((resolve) => {
+module.exports = ({appDir}) =>
+  new Promise(resolve => {
     shell.rm([
       path.join(appDir, 'README.md'),
       path.join(appDir, 'src', 'App.css'),
@@ -16,7 +17,7 @@ module.exports = ({ appDir }) => new Promise((resolve) => {
       path.join(appDir, 'src', 'index.css'),
       path.join(appDir, 'src', 'index.js'),
       path.join(appDir, 'public', 'favicon.ico'),
-    ]);
+    ])
 
-    resolve();
-  });
+    resolve()
+  })

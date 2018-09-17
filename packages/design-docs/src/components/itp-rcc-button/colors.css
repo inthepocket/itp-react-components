@@ -1,0 +1,305 @@
+.ant-btn-primary.ant-btn-color-primary {
+  color: #fff;
+  background-color: var(--colorPrimary);
+  border-color: var(--colorPrimary);
+}
+
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-primary {
+  color: var(--colorPrimary);
+  background-color: transparent;
+  border-color: var(--colorPrimary);
+  text-shadow: none;
+}
+
+.ant-btn.ant-btn-color-primary:hover,
+.ant-btn.ant-btn-color-primary:focus {
+  color: var(--colorPrimary400);
+  background-color: #fff;
+  border-color: var(--colorPrimary400);
+}
+
+.ant-btn-primary.ant-btn-color-primary:hover,
+.ant-btn-primary.ant-btn-color-primary:focus {
+  color: #fff;
+  background-color: var(--colorPrimary400);
+  border-color: var(--colorPrimary400);
+}
+
+.ant-btn-group
+  .ant-btn-primary.ant-btn-color-primary:not(:first-child):not(:last-child) {
+  border-right-color: var(--colorPrimary400);
+  border-left-color: var(--colorPrimary400);
+}
+
+.ant-btn-group
+  .ant-btn-primary.ant-btn-color-primary:first-child:not(:last-child) {
+  border-right-color: var(--colorPrimary400);
+}
+
+.ant-btn-group
+  .ant-btn-primary.ant-btn-color-primary:last-child:not(:first-child),
+.ant-btn-group
+  .ant-btn-primary.ant-btn-color-primary
+  + .ant-btn-primary.ant-btn-color-primary {
+  border-left-color: var(--colorPrimary400);
+}
+
+.ant-btn-ghost:hover,
+.ant-btn-ghost:focus {
+  color: var(--colorPrimary400);
+  background-color: transparent;
+  border-color: var(--colorPrimary400);
+}
+
+.ant-btn-dashed:hover,
+.ant-btn-dashed:focus {
+  color: var(--colorPrimary400);
+  background-color: #fff;
+  border-color: var(--colorPrimary400);
+}
+
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-primary:hover,
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-primary:focus {
+  color: var(--colorPrimary400);
+  background-color: transparent;
+  border-color: var(--colorPrimary400);
+}
+
+.ant-btn.ant-btn-color-primary:active,
+.ant-btn.active {
+  color: var(--colorPrimary600);
+  background-color: #fff;
+  border-color: var(--colorPrimary600);
+}
+
+.ant-btn-primary.ant-btn-color-primary:active,
+.ant-btn-primary.ant-btn-color-primary.active {
+  color: #fff;
+  background-color: var(--colorPrimary600);
+  border-color: var(--colorPrimary600);
+}
+
+.ant-btn-ghost:active,
+.ant-btn-ghost.active {
+  color: var(--colorPrimary600);
+  background-color: transparent;
+  border-color: var(--colorPrimary600);
+}
+
+.ant-btn-dashed:active,
+.ant-btn-dashed.active {
+  color: var(--colorPrimary600);
+  background-color: #fff;
+  border-color: var(--colorPrimary600);
+}
+
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-primary:active,
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-primary.active {
+  color: var(--colorPrimary600);
+  background-color: transparent;
+  border-color: var(--colorPrimary600);
+}
+
+.ant-btn-primary.ant-btn-color-secondary {
+  color: #fff;
+  background-color: var(--colorSecondary);
+  border-color: var(--colorSecondary);
+}
+
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-secondary {
+  color: var(--colorSecondary);
+  background-color: transparent;
+  border-color: var(--colorSecondary);
+  text-shadow: none;
+}
+
+.ant-btn.ant-btn-color-secondary:hover,
+.ant-btn.ant-btn-color-secondary:focus {
+  color: var(--colorSecondary400);
+  background-color: #fff;
+  border-color: var(--colorSecondary400);
+}
+
+.ant-btn-primary.ant-btn-color-secondary:hover,
+.ant-btn-primary.ant-btn-color-secondary:focus {
+  color: #fff;
+  background-color: var(--colorSecondary400);
+  border-color: var(--colorSecondary400);
+}
+
+.ant-btn-group
+  .ant-btn-primary.ant-btn-color-secondary:not(:first-child):not(:last-child) {
+  border-right-color: var(--colorSecondary400);
+  border-left-color: var(--colorSecondary400);
+}
+
+.ant-btn-group
+  .ant-btn-primary.ant-btn-color-secondary:first-child:not(:last-child) {
+  border-right-color: var(--colorSecondary400);
+}
+
+.ant-btn-group
+  .ant-btn-primary.ant-btn-color-secondary:last-child:not(:first-child),
+.ant-btn-group
+  .ant-btn-primary.ant-btn-color-secondary
+  + .ant-btn-primary.ant-btn-color-secondary {
+  border-left-color: var(--colorSecondary400);
+}
+
+.ant-btn-ghost:hover,
+.ant-btn-ghost:focus {
+  color: var(--colorSecondary400);
+  background-color: transparent;
+  border-color: var(--colorSecondary400);
+}
+
+.ant-btn-dashed:hover,
+.ant-btn-dashed:focus {
+  color: var(--colorSecondary400);
+  background-color: #fff;
+  border-color: var(--colorSecondary400);
+}
+
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-secondary:hover,
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-secondary:focus {
+  color: var(--colorSecondary400);
+  background-color: transparent;
+  border-color: var(--colorSecondary400);
+}
+
+.ant-btn.ant-btn-color-secondary:active,
+.ant-btn.active {
+  color: var(--colorSecondary600);
+  background-color: #fff;
+  border-color: var(--colorSecondary600);
+}
+
+.ant-btn-primary.ant-btn-color-secondary:active,
+.ant-btn-primary.ant-btn-color-secondary.active {
+  color: #fff;
+  background-color: var(--colorSecondary600);
+  border-color: var(--colorSecondary600);
+}
+
+.ant-btn-ghost:active,
+.ant-btn-ghost.active {
+  color: var(--colorSecondary600);
+  background-color: transparent;
+  border-color: var(--colorSecondary600);
+}
+
+.ant-btn-dashed:active,
+.ant-btn-dashed.active {
+  color: var(--colorSecondary600);
+  background-color: #fff;
+  border-color: var(--colorSecondary600);
+}
+
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-secondary:active,
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-secondary.active {
+  color: var(--colorSecondary600);
+  background-color: transparent;
+  border-color: var(--colorSecondary600);
+}
+
+.ant-btn-primary.ant-btn-color-tertiary {
+  color: #fff;
+  background-color: var(--colorTertiary);
+  border-color: var(--colorTertiary);
+}
+
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-tertiary {
+  color: var(--colorTertiary);
+  background-color: transparent;
+  border-color: var(--colorTertiary);
+  text-shadow: none;
+}
+
+.ant-btn.ant-btn-color-tertiary:hover,
+.ant-btn.ant-btn-color-tertiary:focus {
+  color: var(--colorTertiary400);
+  background-color: #fff;
+  border-color: var(--colorTertiary400);
+}
+
+.ant-btn-primary.ant-btn-color-tertiary:hover,
+.ant-btn-primary.ant-btn-color-tertiary:focus {
+  color: #fff;
+  background-color: var(--colorTertiary400);
+  border-color: var(--colorTertiary400);
+}
+
+.ant-btn-group
+  .ant-btn-primary.ant-btn-color-tertiary:not(:first-child):not(:last-child) {
+  border-right-color: var(--colorTertiary400);
+  border-left-color: var(--colorTertiary400);
+}
+
+.ant-btn-group
+  .ant-btn-primary.ant-btn-color-tertiary:first-child:not(:last-child) {
+  border-right-color: var(--colorTertiary400);
+}
+
+.ant-btn-group
+  .ant-btn-primary.ant-btn-color-tertiary:last-child:not(:first-child),
+.ant-btn-group
+  .ant-btn-primary.ant-btn-color-tertiary
+  + .ant-btn-primary.ant-btn-color-tertiary {
+  border-left-color: var(--colorTertiary400);
+}
+
+.ant-btn-ghost:hover,
+.ant-btn-ghost:focus {
+  color: var(--colorTertiary400);
+  background-color: transparent;
+  border-color: var(--colorTertiary400);
+}
+
+.ant-btn-dashed:hover,
+.ant-btn-dashed:focus {
+  color: var(--colorTertiary400);
+  background-color: #fff;
+  border-color: var(--colorTertiary400);
+}
+
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-tertiary:hover,
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-tertiary:focus {
+  color: var(--colorTertiary400);
+  background-color: transparent;
+  border-color: var(--colorTertiary400);
+}
+
+.ant-btn.ant-btn-color-tertiary:active,
+.ant-btn.active {
+  color: var(--colorTertiary600);
+  background-color: #fff;
+  border-color: var(--colorTertiary600);
+}
+
+.ant-btn-primary.ant-btn-color-tertiary:active,
+.ant-btn-primary.ant-btn-color-tertiary.active {
+  color: #fff;
+  background-color: var(--colorTertiary600);
+  border-color: var(--colorTertiary600);
+}
+
+.ant-btn-ghost:active,
+.ant-btn-ghost.active {
+  color: var(--colorTertiary600);
+  background-color: transparent;
+  border-color: var(--colorTertiary600);
+}
+
+.ant-btn-dashed:active,
+.ant-btn-dashed.active {
+  color: var(--colorTertiary600);
+  background-color: #fff;
+  border-color: var(--colorTertiary600);
+}
+
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-tertiary:active,
+.ant-btn-background-ghost.ant-btn-primary.ant-btn-color-tertiary.active {
+  color: var(--colorTertiary600);
+  background-color: transparent;
+  border-color: var(--colorTertiary600);
+}

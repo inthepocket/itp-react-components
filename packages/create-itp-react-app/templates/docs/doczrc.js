@@ -1,15 +1,12 @@
-import pkg from './package.json';
+import pkg from './package.json'
 
 export default {
   title: pkg.name,
   description: pkg.description,
-  files: [
-    'docs/**/*.mdx',
-    'pages/**/*.js'
-  ],
+  files: ['docs/**/*.mdx', 'pages/**/*.js'],
   themeConfig: {
     colors: {
       primary: '#10069f',
     },
   },
-};
+}
