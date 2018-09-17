@@ -29,6 +29,7 @@
     "stylelint-config-standard": "^18.2.0"
   },
   "dependencies": {
+    "@inthepocket/itp-rcc-button": "^0.0.1",
     "@inthepocket/itp-rcc-collapse": "^0.0.1",
     "catalog": "^3.5.5",
     "copy-webpack-plugin": "^4.5.2",
