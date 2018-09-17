@@ -124,7 +124,7 @@ const run = async () => {
   await installNPMPackages({
     appDir,
     dir: appDir,
-    npmPackages: ['css', 'shelljs', 'to-css', '@inthepocket/itp-react-scripts'],
+    npmPackages: ['change-case', 'css', 'shelljs', 'to-css', '@inthepocket/itp-react-scripts'],
     options: {
       devDependencies: true,
     },

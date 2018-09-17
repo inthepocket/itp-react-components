@@ -1,11 +1,15 @@
 #!/usr/bin/env node
-const fs = require('fs')
-const path = require('path')
-const css = require('css')
-const toCss = require('to-css')
+const fs = require('fs');
+const path = require('path');
+const css = require('css');
+const toCss = require('to-css');
+const changeCase = require('change-case');
 
 const SKETCHXPORT_JSON_FILENAME = 'sketchxport.json'
 const ROOT_CSS_FILENAME = 'Root.css'
+
+const sortObject = (object) => Object.keys(object)
+  .sort().reduce((nextObject, key) => ({...nextObject, [key]: object[key]}), {});
 
 fs.readFile(path.join(SKETCHXPORT_JSON_FILENAME), 'utf8', (error, data) => {
   if (error) {
@@ -25,11 +29,8 @@ fs.readFile(path.join(SKETCHXPORT_JSON_FILENAME), 'utf8', (error, data) => {
       process.exit()
     }
 
-    const nextAST = {}
-    const rootCss = css.parse(cssData)
-    const rootRule = rootCss.stylesheet.rules.find(
-      rule => rule.selectors[0] === ':root',
-    )
+    const nextAST = {};
+    const rootCss = css.parse(cssData);
 
     rootCss.stylesheet.rules.forEach(rule => {
       const declarations = {}
@@ -38,12 +39,13 @@ fs.readFile(path.join(SKETCHXPORT_JSON_FILENAME), 'utf8', (error, data) => {
         declarations[declaration.property] = declaration.value
       })
 
-      sketchxportJSON.colors.forEach(importedColor => {
-        declarations[`--${importedColor.id}`] = `#${importedColor.hex}`
-      })
+      sketchxportJSON.colors.forEach((importedColor) => {
+        const colorVariableName = changeCase.camelCase(`color-${importedColor.id}`);
+        declarations[`--${colorVariableName}`] = `#${importedColor.hex}`;
+      });
 
-      nextAST[rule.selectors.join(', ')] = declarations
-    })
+      nextAST[rule.selectors.join(', ')] = sortObject(declarations);
+    });
 
     const nextCss = css.stringify(css.parse(toCss(nextAST)))
 

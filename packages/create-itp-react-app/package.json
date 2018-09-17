@@ -24,5 +24,8 @@
     "chalk": "^2.4.1",
     "replace-in-file": "^3.4.2",
     "shelljs": "^0.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
