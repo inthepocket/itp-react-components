@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
-const merge = require('webpack-merge')
-const common = require('./webpack.common.js')
+const merge = require('webpack-merge');
+const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -9,4 +9,4 @@ module.exports = merge(common, {
     ...common.output,
     filename: 'index.min.js',
   },
-})
+});

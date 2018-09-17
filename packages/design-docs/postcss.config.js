@@ -1,17 +1,17 @@
 /* eslint-disable global-require, import/no-extraneous-dependencies, import/no-dynamic-require */
-const path = require('path')
+const path = require('path');
 
-const pathToDefaultStyle = `${path.resolve(__dirname)}/root.json`
-let defaultStyle
+const pathToDefaultStyle = `${path.resolve(__dirname)}/root.json`;
+let defaultStyle;
 
 try {
-  defaultStyle = require(pathToDefaultStyle)
+  defaultStyle = require(pathToDefaultStyle);
 } catch (e) {
   defaultStyle = {
     'color-primary': '#000',
     'color-secondary': '#fff',
     'color-tertiary': '#10069f',
-  }
+  };
 }
 
 // REMOVE-THIS-LATER overwrite with defaults for now..
@@ -25,7 +25,7 @@ defaultStyle = {
   colorTertiary: '#10069f',
   colorTertiary400: '#10069f',
   colorTertiary600: '#10069f',
-}
+};
 // REMOVE-THIS-LATER end of overwrite with defaults for now..
 
 module.exports = {
@@ -40,4 +40,4 @@ module.exports = {
     require('precss'),
     require('autoprefixer'),
   ],
-}
+};

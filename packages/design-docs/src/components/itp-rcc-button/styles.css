@@ -1,6 +1,6 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 a {
@@ -825,9 +825,7 @@ a[disabled] {
 .ant-btn-group + .ant-btn-group {
   margin-left: -1px;
 }
-.ant-btn-group
-  .ant-btn-primary
-  + .ant-btn:not(.ant-btn-primary):not([disabled]) {
+.ant-btn-group .ant-btn-primary + .ant-btn:not(.ant-btn-primary):not([disabled]) {
   border-left-color: transparent;
 }
 .ant-btn-group .ant-btn {
@@ -875,16 +873,12 @@ a[disabled] {
 .ant-btn-group > .ant-btn-group:not(:first-child):not(:last-child) > .ant-btn {
   border-radius: 2;
 }
-.ant-btn-group
-  > .ant-btn-group:first-child:not(:last-child)
-  > .ant-btn:last-child {
+.ant-btn-group > .ant-btn-group:first-child:not(:last-child) > .ant-btn:last-child {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   padding-right: 8px;
 }
-.ant-btn-group
-  > .ant-btn-group:last-child:not(:first-child)
-  > .ant-btn:first-child {
+.ant-btn-group > .ant-btn-group:last-child:not(:first-child) > .ant-btn:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   padding-left: 8px;
@@ -1002,8 +996,7 @@ a[disabled] {
 .ant-btn-background-ghost.ant-btn-primary.disabled:active > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-primary[disabled]:active > a:only-child:after,
 .ant-btn-background-ghost.ant-btn-primary.disabled.active > a:only-child:after,
-.ant-btn-background-ghost.ant-btn-primary[disabled].active
-  > a:only-child:after {
+.ant-btn-background-ghost.ant-btn-primary[disabled].active > a:only-child:after {
   content: '';
   position: absolute;
   top: 0;

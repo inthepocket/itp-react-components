@@ -1,10 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = ({plugins = [], cssStyleLoader}) => ({
-  entry: {app: path.join(__dirname, 'src/index.js')},
+module.exports = ({ plugins = [], cssStyleLoader }) => ({
+  entry: { app: path.join(__dirname, 'src/index.js') },
   module: {
     rules: [
       {
@@ -52,4 +52,4 @@ module.exports = ({plugins = [], cssStyleLoader}) => ({
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-})
+});

@@ -1,4 +1,4 @@
-import Collapse from 'rc-collapse'
-import './index.css'
+import Collapse from 'rc-collapse';
+import './index.css';
 
-export default Collapse
+export default Collapse;

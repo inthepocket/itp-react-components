@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs');
 
 /**
  * Append to file
@@ -7,10 +7,10 @@ const fs = require('fs')
  * @param {String} data
  * @return {Promise}
  */
-module.exports = ({directory, fileName, data}) =>
+module.exports = ({ directory, fileName, data }) =>
   new Promise(resolve => {
     fs.appendFile(`${directory}/${fileName}`, data, function(err) {
-      if (err) throw err
-      resolve()
-    })
-  })
+      if (err) throw err;
+      resolve();
+    });
+  });

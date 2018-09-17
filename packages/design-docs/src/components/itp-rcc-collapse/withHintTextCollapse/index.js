@@ -1,9 +1,9 @@
-import Collapse from '@inthepocket/itp-rcc-collapse'
-import React from 'react'
+import Collapse from '@inthepocket/itp-rcc-collapse';
+import React from 'react';
 
-import './styles.css'
+import './styles.css';
 
-const Header = ({title, hintText}) => (
+const Header = ({ title, hintText }) => (
   <div className="collapse-header">
     <span>{title}</span>
     <div className="collapse-controls">
@@ -15,7 +15,7 @@ const Header = ({title, hintText}) => (
       </div>
     </div>
   </div>
-)
+);
 
 const WithHintTextCollapse = () => (
   <Collapse className="collapse-styled">
@@ -27,15 +27,12 @@ const WithHintTextCollapse = () => (
         <span>Collapse Panel Content 1</span>
       </div>
     </Collapse.Panel>
-    <Collapse.Panel
-      header={<Header title="Collapse Panel 2" />}
-      showArrow={false}
-    >
+    <Collapse.Panel header={<Header title="Collapse Panel 2" />} showArrow={false}>
       <div className="collapse-content">
         <span>Collapse Panel Content 2</span>
       </div>
     </Collapse.Panel>
   </Collapse>
-)
+);
 
-export default WithHintTextCollapse
+export default WithHintTextCollapse;

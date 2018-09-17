@@ -1,23 +1,23 @@
 // Inspired by ant-design/button-group
 // https://github.com/ant-design/ant-design/blob/master/components/button/button.tsx
-import React from 'react'
-import classNames from 'classnames'
+import React from 'react';
+import classNames from 'classnames';
 
 const ButtonGroup = props => {
-  const {prefixCls = '', size, className, ...others} = props
+  const { prefixCls = '', size, className, ...others } = props;
 
   // large => lg
   // small => sm
-  let sizeCls = ''
+  let sizeCls = '';
   switch (size) {
     case 'large':
-      sizeCls = 'lg'
-      break
+      sizeCls = 'lg';
+      break;
     case 'small':
-      sizeCls = 'sm'
-      break
+      sizeCls = 'sm';
+      break;
     default:
-      break
+      break;
   }
 
   const classes = classNames(
@@ -26,9 +26,9 @@ const ButtonGroup = props => {
       [`${prefixCls}-${sizeCls}`]: sizeCls,
     },
     className,
-  )
+  );
 
-  return <div {...others} className={classes} />
-}
+  return <div {...others} className={classes} />;
+};
 
-export default ButtonGroup
+export default ButtonGroup;
