@@ -2,6 +2,8 @@
 const shell = require('shelljs');
 const chalk = require('chalk');
 const path = require('path');
+const prompt = require('prompt');
+const changeCase = require('change-case');
 const createReactApp = require('./lib/createReactApp');
 const createDocumentationApp = require('./lib/createDocumentationApp');
 const injectProjectName = require('./lib/injectProjectName');
@@ -9,28 +11,50 @@ const cleanupReactApp = require('./lib/cleanupReactApp');
 const copyTemplates = require('./lib/copyTemplates');
 const installNPMPackages = require('./lib/installNPMPackages');
 const initGit = require('./lib/initGit');
-const appendToFile = require('./lib/appendToFile');
-const updateJSON = require('./lib/updateJSON');
-
-const appName = process.argv[2];
-
-if (typeof appName === 'undefined') {
-  console.error(chalk.red.bold('Define an appname as seconds argument.'));
-  console.error(chalk.red.bold('Like: create-itp-react-app <APPNAME>.'));
-  console.error(chalk.red.bold('Terminating this process..'));
-
-  process.exit();
-}
-
-const appDir = `${process.cwd()}/${appName}`;
-const templateDir = path.resolve(__dirname, 'templates');
 
 const logTitle = title => {
   console.log(' ');
   console.log(chalk.inverse(title));
 };
 
-const run = async () => {
+const setup = () => {
+  const prompts = ['sketchFilePath'];
+  let appName = process.argv[2];
+
+  if (!appName) {
+    prompts.unshift('appName');
+  }
+
+  prompt.message = 'Please provide';
+  prompt.start();
+  prompt.get(prompts, (error, result) => {
+    if (error) {
+      return process.exit();
+    }
+
+    if (!appName && !result.appName) {
+      console.error(chalk.red.bold('You did not provide a valid appName.'));
+      console.error(chalk.red('You can provide appName as second argument to the command.'));
+      console.error(chalk.red('$ apx @inthepocket/create-itp-react-app <appName>'));
+      console.error(chalk.red.bold('Terminating this process..'));
+      return process.exit();
+    }
+
+    if (!appName) {
+      ({ appName } = result);
+    }
+
+    return run({
+      ...result,
+      appName: changeCase.paramCase(appName),
+    });
+  });
+}
+
+const run = async({ appName, sketchFilePath }) => {
+  const appDir = `${process.cwd()}/${appName}`;
+  const templateDir = path.resolve(__dirname, 'templates');
+
   shell.exec('clear');
   console.log(chalk.white.bgBlue.bold(`Create ITP React App: ${appName}`));
   console.log('Learn more about create-itp-react-app at https://github.com/');
@@ -142,6 +166,10 @@ const run = async () => {
     file: path.join(appDir, '.sketchxport', 'config.json'),
     updateJSON: configJSON => ({
       ...configJSON,
+      commit: {
+        ...configJSON.commit,
+        sketchFilePath,
+      },
       repo: {
         ...configJSON.repo,
         uri: configJSON.repo.uri.replace('<repo-slug-here>', appName),
@@ -158,4 +186,4 @@ const run = async () => {
   console.log(' ');
 };
 
-run();
+setup();
