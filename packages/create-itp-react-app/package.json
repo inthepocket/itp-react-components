@@ -23,5 +23,8 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "shelljs": "^0.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
