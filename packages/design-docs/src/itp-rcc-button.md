@@ -1,5 +1,3 @@
-# Buttons
-
 ### Unstyled
 
 ```react
