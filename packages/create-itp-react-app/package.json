@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "node ./scripts/copyDesignDocs.js"
   },
   "bin": {
     "create-itp-react-app": "./index.js"
@@ -27,5 +28,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "recursive-copy": "^2.0.9"
   }
 }

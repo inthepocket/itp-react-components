@@ -11,6 +11,7 @@ const installNPMPackages = require('./lib/installNPMPackages');
 const initGit = require('./lib/initGit');
 const appendToFile = require('./lib/appendToFile');
 const updateJSON = require('./lib/updateJSON');
+const logTitle = require('./utils/logTitle');
 
 const appName = process.argv[2];
 
@@ -24,11 +25,6 @@ if (typeof appName === 'undefined') {
 
 const appDir = `${process.cwd()}/${appName}`;
 const appTemplateDir = path.resolve(__dirname, 'templates', 'app');
-
-const logTitle = title => {
-  console.log(' ');
-  console.log(chalk.inverse(title));
-};
 
 const run = async () => {
   shell.exec('clear');

@@ -1,10 +1,8 @@
 const shell = require('shelljs');
+var copy = require('recursive-copy');
 
 /**
  * Install npm packages
  * @return {Promise}
  */
-module.exports = ({ targetDir, srcDir }) =>
-  new Promise(resolve => {
-    shell.exec(`cp -a -R ${srcDir}/. ${targetDir}`, resolve);
-  });
+module.exports = ({ targetDir, srcDir, options }) => copy(srcDir, targetDir, options);
