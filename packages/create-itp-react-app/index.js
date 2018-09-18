@@ -5,25 +5,36 @@ const fs = require('fs');
 const runGenerator = require('./generator/runGenerator');
 const setupGenerator = require('./generator/setupGenerator');
 
-const verifyIfExists = async (dir) => new Promise((resolve, reject) => {
-  fs.exists(dir, (exists) => exists ? resolve() :  reject(new Error(`path ${dir} does not exists, unable to execute script`)))
-})
+const verifyIfExists = async dir =>
+  new Promise((resolve, reject) => {
+    fs.exists(
+      dir,
+      exists =>
+        exists
+          ? resolve()
+          : reject(new Error(`path ${dir} does not exists, unable to execute script`)),
+    );
+  });
 
 const init = async () => {
   try {
     const { appName, sketchFilePath } = await setupGenerator();
 
     const docsTemplateDir = path.resolve(__dirname, 'templates', 'design-docs');
-const appTemplateDir = path.resolve(__dirname, 'templates', 'app');
+    const appTemplateDir = path.resolve(__dirname, 'templates', 'app');
 
-await verifyIfExists(appTemplateDir);
+    await verifyIfExists(appTemplateDir);
 
-try {
-  await verifyIfExists(docsTemplateDir);
-} catch(err) {
-  console.error(chalk.red.bold(`\nDon't forget to run the prepublishOnly script before using the generator locally. \nThis is needed to have a local template directory of the design docs.\n`));
-  throw err;
-}
+    try {
+      await verifyIfExists(docsTemplateDir);
+    } catch (err) {
+      console.error(
+        chalk.red.bold(
+          `\nDon't forget to run the prepublishOnly script before using the generator locally. \nThis is needed to have a local template directory of the design docs.\n`,
+        ),
+      );
+      throw err;
+    }
 
     runGenerator({
       appName,

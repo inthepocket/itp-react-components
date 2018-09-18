@@ -3,7 +3,10 @@ import Button from './components/itp-rcc-button';
 import Collapse from './components/itp-rcc-collapse';
 import root from '../root.json';
 
-const filterAndMapThemeColor = (name) => Object.entries(root).filter(([key]) => key.indexOf(name) !== -1).map(([key, value]) => ({ name: key, value }))
+const filterAndMapThemeColor = name =>
+  Object.entries(root)
+    .filter(([key]) => key.indexOf(name) !== -1)
+    .map(([key, value]) => ({ name: key, value }));
 const primaryColor = filterAndMapThemeColor('Primary');
 const secondaryColor = filterAndMapThemeColor('Secondary');
 const tertiaryColor = filterAndMapThemeColor('Tertiary');
@@ -18,8 +21,10 @@ export default [
     title: 'Welcome',
     content: markdownLoader('intro'),
     imports: {
-      primaryColor, secondaryColor, tertiaryColor
-    }
+      primaryColor,
+      secondaryColor,
+      tertiaryColor,
+    },
   },
   {
     title: 'Components',

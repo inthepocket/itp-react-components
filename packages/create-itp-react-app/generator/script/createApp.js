@@ -10,8 +10,8 @@ const copyDirectory = require('../../lib/copyDirectory');
 const updateJSON = require('../../lib/updateJSON');
 const installNPMPackages = require('../../lib/installNPMPackages');
 
-module.exports = async({appName, appDir, appTemplateDir}) => {
-    shell.exec('clear');
+module.exports = async ({ appName, appDir, appTemplateDir }) => {
+  shell.exec('clear');
   console.log(chalk.white.bgBlue.bold(`Create ITP React App: ${appName}`));
   console.log('Learn more about create-itp-react-app at https://github.com/');
 
@@ -79,7 +79,6 @@ module.exports = async({appName, appDir, appTemplateDir}) => {
     },
   });
 
-
   // update package.json
   logTitle('Updating package.json');
   await updateJSON({
@@ -96,5 +95,4 @@ module.exports = async({appName, appDir, appTemplateDir}) => {
       };
     },
   });
-  
-}
+};

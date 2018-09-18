@@ -6,8 +6,8 @@ const copyDirectory = require('../../lib/copyDirectory');
 const exec = require('../../lib/exec');
 const appendToFile = require('../../lib/appendToFile');
 
-module.exports = async({appName, appDir, docsTemplateDir}) => {
-      // install design-docs
+module.exports = async ({ appName, appDir, docsTemplateDir }) => {
+  // install design-docs
   logTitle('Installing design-docs');
   const designDocsName = 'design-docs';
   const targetDir = `${appDir}/${designDocsName}`;
@@ -30,20 +30,19 @@ module.exports = async({appName, appDir, docsTemplateDir}) => {
     data: `${designDocsName}/node_modules\n.eslintcache`,
   });
 
-
   // update package.json
   logTitle('Updating package.json');
   await updateJSON({
     file: path.join(appDir, 'package.json'),
     updateJSON: packageJSON => ({
-        ...packageJSON,
-        author: 'In The Pocket',
-        license: 'MIT',
-        scripts: {
-          ...packageJSON.scripts,
-          'docs:start': `cd ${designDocsName} && npm run start`,
-          'docs:build': `cd ${designDocsName} && npm run build`,
-        },
-      }),
+      ...packageJSON,
+      author: 'In The Pocket',
+      license: 'MIT',
+      scripts: {
+        ...packageJSON.scripts,
+        'docs:start': `cd ${designDocsName} && npm run start`,
+        'docs:build': `cd ${designDocsName} && npm run build`,
+      },
+    }),
   });
-}
+};
