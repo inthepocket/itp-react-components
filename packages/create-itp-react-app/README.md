@@ -1,3 +1,10 @@
+# create-itp-react-app
+## Getting started
+```
+$ npx @inthepocket/create-itp-react-app <your-project-name>
+$ cd <your-project-name>
+$ npm start
+```
 ## Generated project structure
 
 ```
