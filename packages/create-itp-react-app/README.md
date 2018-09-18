@@ -42,6 +42,28 @@ $ npm start
 - Due to a docz bug, it is currently not possible to import external (as in outside the docz folder) components:
   https://github.com/pedronauck/docz/issues/225
 
+## Known issues
+### Error: ENFILE: file table overflow
+Stack trace
+
+```
+$ (node:56347) UnhandledPromiseRejectionWarning: Error: ENFILE: file table overflow, open '<LOCAL_PATH>/node_modules/jest-matchers/build/spyMatchers.js'
+$ (node:56347) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise whichwas not handled with .catch(). (rejection id: 1)
+$ (node:56347) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+```
+
+Workaround
+
+```
+$ echo kern.maxfiles=65536 | sudo tee -a /etc/sysctl.conf
+$ echo kern.maxfilesperproc=65536 | sudo tee -a /etc/sysctl.conf
+$ sudo sysctl -w kern.maxfiles=65536
+$ sudo sysctl -w kern.maxfilesperproc=65536
+$ ulimit -n 65536
+```
+
+Jira ref: DESSSYS-26
+
 ## Roadmap
 
 - design system (in progress)
