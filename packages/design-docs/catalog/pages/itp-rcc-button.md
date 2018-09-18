@@ -14,7 +14,7 @@
   <Button prefixCls="ant-btn" color="primary" type="primary" >Default Button</Button>
   <Button prefixCls="ant-btn" color="primary" type="primary" size="small">Small Button</Button>
   <br />
-  <Button prefixCls="ant-btn" color="primary" type="primary" href="http://example.com">Link Button</Button>
+  <Button prefixCls="ant-btn" color="primary" type="primary" href="http://inthepocket.com">Link Button</Button>
   <Button prefixCls="ant-btn" color="primary" type="primary" loading>Loading</Button>
   <Button prefixCls="ant-btn" color="primary" type="primary" loading size="small">Loading</Button>
   <Button prefixCls="ant-btn" color="primary" type="default">Button</Button>

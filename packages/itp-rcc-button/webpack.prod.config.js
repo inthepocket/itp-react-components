@@ -7,6 +7,6 @@ module.exports = merge(common, {
   mode: 'production',
   output: {
     ...common.output,
-    filename: 'index.min.js',
+    filename: 'index.js',
   },
 });

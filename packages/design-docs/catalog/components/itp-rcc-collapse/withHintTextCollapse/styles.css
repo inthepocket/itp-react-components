@@ -1,7 +1,7 @@
 .collapse-styled {
   font-family: sans-serif;
   line-height: 1.44;
-  color: var(--color-primary);
+  color: var(--colorPrimary600);
 }
 
 .collapse-styled .collapse-header {
@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  border-bottom: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--colorPrimary600);
 }
 
 .collapse-styled .collapse-controls {
@@ -24,7 +24,7 @@
   width: 24px;
   height: 24px;
   margin-left: 8px;
-  background-color: var(--color-tertiary);
+  background-color: var(--colorTertiary600);
   border-radius: 24px;
 }
 
@@ -35,21 +35,21 @@
 .collapse-styled > .rc-collapse-item > .rc-collapse-header:focus {
   border-radius: 2px;
   outline: none;
-  box-shadow: 0 0 0 1px var(--color-tertiary);
+  box-shadow: 0 0 0 1px var(--colorTertiary600);
 }
 
 .collapse-styled .collapse-icon-container svg {
   transition: transform 150ms ease;
   transform: rotate(360deg);
-  fill: var(--color-secondary);
+  fill: var(--colorSecondary600);
 }
 
 .collapse-styled .rc-collapse-item-active .collapse-icon-container {
-  background-color: var(--color-secondary);
+  background-color: var(--colorSecondary600);
 }
 
 .collapse-styled .rc-collapse-item-active .collapse-icon-container svg {
   transition: transform 150ms ease;
   transform: rotate(180deg);
-  fill: var(--color-tertiary);
+  fill: var(--colorTertiary600);
 }

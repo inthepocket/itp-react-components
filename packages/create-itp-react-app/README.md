@@ -8,7 +8,7 @@ $ npm start
 ## Generated project structure
 
 ```
-├── docs
+├── design-docs
 └── src
     ├── app
     │   └── screens
@@ -33,14 +33,30 @@ $ npm start
 
 ## Run the generator
 
-- run `./index <MY_PROJECT_NAME>`
+- run `node index.js <MY_PROJECT_NAME>`
 - a generated project is created in the folder <MY_PROJECT_NAME>
 
-## docz
+## Known issues
+### Error: ENFILE: file table overflow
+Stack trace
 
-- Added docz as a sub package because CRA uses webpack3, docz needs webpack4
-- Due to a docz bug, it is currently not possible to import external (as in outside the docz folder) components:
-  https://github.com/pedronauck/docz/issues/225
+```
+$ (node:56347) UnhandledPromiseRejectionWarning: Error: ENFILE: file table overflow, open '<LOCAL_PATH>/node_modules/jest-matchers/build/spyMatchers.js'
+$ (node:56347) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise whichwas not handled with .catch(). (rejection id: 1)
+$ (node:56347) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+```
+
+Workaround
+
+```
+$ echo kern.maxfiles=65536 | sudo tee -a /etc/sysctl.conf
+$ echo kern.maxfilesperproc=65536 | sudo tee -a /etc/sysctl.conf
+$ sudo sysctl -w kern.maxfiles=65536
+$ sudo sysctl -w kern.maxfilesperproc=65536
+$ ulimit -n 65536
+```
+
+Jira ref: DESSSYS-26
 
 ## Roadmap
 
