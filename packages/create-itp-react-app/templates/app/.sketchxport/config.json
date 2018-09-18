@@ -1,4 +1,7 @@
 {
+  "commit": {
+    "sketchFilePath": ""
+  },
   "repo": {
     "commitMessage": "Updated assets & config",
     "uri": "inthepocket/<repo-slug-here>"
