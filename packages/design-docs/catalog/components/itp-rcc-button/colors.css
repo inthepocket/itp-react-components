@@ -1,13 +1,13 @@
 .ant-btn-primary.ant-btn-color-primary {
   color: #fff;
-  background-color: var(--colorPrimary);
-  border-color: var(--colorPrimary);
+  background-color: var(--colorPrimary600);
+  border-color: var(--colorPrimary600);
 }
 
 .ant-btn-background-ghost.ant-btn-primary.ant-btn-color-primary {
-  color: var(--colorPrimary);
+  color: var(--colorPrimary600);
   background-color: transparent;
-  border-color: var(--colorPrimary);
+  border-color: var(--colorPrimary600);
   text-shadow: none;
 }
 
@@ -62,49 +62,49 @@
 
 .ant-btn.ant-btn-color-primary:active,
 .ant-btn.active {
-  color: var(--colorPrimary600);
+  color: var(--colorPrimary400);
   background-color: #fff;
-  border-color: var(--colorPrimary600);
+  border-color: var(--colorPrimary400);
 }
 
 .ant-btn-primary.ant-btn-color-primary:active,
 .ant-btn-primary.ant-btn-color-primary.active {
   color: #fff;
-  background-color: var(--colorPrimary600);
-  border-color: var(--colorPrimary600);
+  background-color: var(--colorPrimary400);
+  border-color: var(--colorPrimary400);
 }
 
 .ant-btn-ghost:active,
 .ant-btn-ghost.active {
-  color: var(--colorPrimary600);
+  color: var(--colorPrimary400);
   background-color: transparent;
-  border-color: var(--colorPrimary600);
+  border-color: var(--colorPrimary400);
 }
 
 .ant-btn-dashed:active,
 .ant-btn-dashed.active {
-  color: var(--colorPrimary600);
+  color: var(--colorPrimary400);
   background-color: #fff;
-  border-color: var(--colorPrimary600);
+  border-color: var(--colorPrimary400);
 }
 
 .ant-btn-background-ghost.ant-btn-primary.ant-btn-color-primary:active,
 .ant-btn-background-ghost.ant-btn-primary.ant-btn-color-primary.active {
-  color: var(--colorPrimary600);
+  color: var(--colorPrimary400);
   background-color: transparent;
-  border-color: var(--colorPrimary600);
+  border-color: var(--colorPrimary400);
 }
 
 .ant-btn-primary.ant-btn-color-secondary {
   color: #fff;
-  background-color: var(--colorSecondary);
-  border-color: var(--colorSecondary);
+  background-color: var(--colorSecondary600);
+  border-color: var(--colorSecondary600);
 }
 
 .ant-btn-background-ghost.ant-btn-primary.ant-btn-color-secondary {
-  color: var(--colorSecondary);
+  color: var(--colorSecondary600);
   background-color: transparent;
-  border-color: var(--colorSecondary);
+  border-color: var(--colorSecondary600);
   text-shadow: none;
 }
 
@@ -194,14 +194,14 @@
 
 .ant-btn-primary.ant-btn-color-tertiary {
   color: #fff;
-  background-color: var(--colorTertiary);
-  border-color: var(--colorTertiary);
+  background-color: var(--colorTertiary600);
+  border-color: var(--colorTertiary600);
 }
 
 .ant-btn-background-ghost.ant-btn-primary.ant-btn-color-tertiary {
-  color: var(--colorTertiary);
+  color: var(--colorTertiary600);
   background-color: transparent;
-  border-color: var(--colorTertiary);
+  border-color: var(--colorTertiary600);
   text-shadow: none;
 }
 

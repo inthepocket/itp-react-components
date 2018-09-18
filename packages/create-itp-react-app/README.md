@@ -8,7 +8,7 @@ $ npm start
 ## Generated project structure
 
 ```
-├── docs
+├── design-docs
 └── src
     ├── app
     │   └── screens
@@ -33,14 +33,8 @@ $ npm start
 
 ## Run the generator
 
-- run `./index <MY_PROJECT_NAME>`
+- run `node index.js <MY_PROJECT_NAME>`
 - a generated project is created in the folder <MY_PROJECT_NAME>
-
-## docz
-
-- Added docz as a sub package because CRA uses webpack3, docz needs webpack4
-- Due to a docz bug, it is currently not possible to import external (as in outside the docz folder) components:
-  https://github.com/pedronauck/docz/issues/225
 
 ## Known issues
 ### Error: ENFILE: file table overflow
