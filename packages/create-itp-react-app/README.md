@@ -31,8 +31,8 @@ $ npm start
 - generated-project-name/common
 - generated-project-name/core
 
-## Run the generator
-
+## Run the generator locally
+- run the prepublishOnly script before running the generator (to generate the design-docs template folder)
 - run `node index.js <MY_PROJECT_NAME>`
 - a generated project is created in the folder <MY_PROJECT_NAME>
 

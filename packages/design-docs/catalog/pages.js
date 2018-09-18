@@ -1,6 +1,12 @@
 import { pageLoader } from 'catalog';
 import Button from './components/itp-rcc-button';
 import Collapse from './components/itp-rcc-collapse';
+import root from '../root.json';
+
+const filterAndMapThemeColor = (name) => Object.entries(root).filter(([key]) => key.indexOf(name) !== -1).map(([key, value]) => ({ name: key, value }))
+const primaryColor = filterAndMapThemeColor('Primary');
+const secondaryColor = filterAndMapThemeColor('Secondary');
+const tertiaryColor = filterAndMapThemeColor('Tertiary');
 
 // Create a convenient loader for markdown files
 const markdownLoader = page => pageLoader(() => import(`./pages/${page}.md`));
@@ -11,6 +17,9 @@ export default [
     styles: ['/index.css'],
     title: 'Welcome',
     content: markdownLoader('intro'),
+    imports: {
+      primaryColor, secondaryColor, tertiaryColor
+    }
   },
   {
     title: 'Components',

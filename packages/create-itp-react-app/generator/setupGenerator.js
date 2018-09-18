@@ -13,7 +13,7 @@ module.exports = () => new Promise((resolve, reject) => {
   prompt.start();
   prompt.get(prompts, (error, result) => {
     if (error) {
-      return reject(new Error('Prompt error'));
+      return reject(new Error('Prompt error', error));
     }
 
     if (!appName && !result.appName) {

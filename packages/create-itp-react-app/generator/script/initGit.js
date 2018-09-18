@@ -1,5 +1,7 @@
 const shell = require('shelljs');
 
+const logTitle = require('../../lib/logTitle');
+
 const cmds = [
   'git init',
   'git add .',
@@ -14,5 +16,7 @@ const cmds = [
  */
 module.exports = () =>
   new Promise(resolve => {
+    logTitle('Initializing git');
+
     shell.exec(cmds.join(' && '), resolve);
   });

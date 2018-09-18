@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Catalog } from 'catalog';
 import pages from './pages';
+import root from '../root.json';
 
-const BRAND_COLOR = '#10069c';
-const LINK_COLOR = '#FF5555';
+const BRAND_COLOR = root.colorPrimary600 || '#10069c';
+const LINK_COLOR = root.colorTertiary600 || '#FF5555';
 
 // Defaults overwritten with CONSTANTS from above
 const theme = {

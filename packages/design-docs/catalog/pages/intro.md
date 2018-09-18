@@ -5,21 +5,12 @@
 
 # Theme
 
-```color
-value: '#10069f'
-name: 'Main'
-span: 4
+```color-palette|span-2
+colors: !import primaryColor
 ```
-
-```color
-value: '#e1f3f9'
-name: 'Secondary'
-span: 2
+```color-palette|span-2
+colors: !import secondaryColor
 ```
-
-```color-palette
-colors:
-  - {name: "shade1", value: "#376187"}
-  - {name: "shade2", value: "#23527C"}
-  - {name: "shade3", value: "#204B71"}
+```color-palette|span-2
+colors: !import tertiaryColor
 ```
