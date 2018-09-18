@@ -11,6 +11,8 @@ const cleanupReactApp = require('./lib/cleanupReactApp');
 const copyTemplates = require('./lib/copyTemplates');
 const installNPMPackages = require('./lib/installNPMPackages');
 const initGit = require('./lib/initGit');
+const appendToFile = require('./lib/appendToFile');
+const updateJSON = require('./lib/updateJSON');
 
 const logTitle = title => {
   console.log(' ');
