@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 const chalk = require('chalk');
 const path = require('path');
-const runGenerator = require('./lib/runGenerator');
-const setupGenerator = require('./lib/setupGenerator');
+const runGenerator = require('./generator/runGenerator');
+const setupGenerator = require('./generator/setupGenerator');
 
 const init = async () => {
   try {

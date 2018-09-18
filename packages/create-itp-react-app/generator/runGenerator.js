@@ -2,16 +2,16 @@ const chalk = require('chalk');
 const path = require('path');
 const shell = require('shelljs');
 
-const logTitle = require('./logTitle');
-const createReactApp = require('./createReactApp');
-const createDocumentationApp = require('./createDocumentationApp');
-const injectProjectName = require('./injectProjectName');
-const cleanupReactApp = require('./cleanupReactApp');
-const copyDir = require('./copyDir');
-const installNPMPackages = require('./installNPMPackages');
-const initGit = require('./initGit');
-const appendToFile = require('./appendToFile');
-const updateJSON = require('./updateJSON');
+const logTitle = require('../lib/logTitle');
+const createReactApp = require('../lib/createReactApp');
+const createDocumentationApp = require('../lib/createDocumentationApp');
+const injectProjectName = require('../lib/injectProjectName');
+const cleanupReactApp = require('../lib/cleanupReactApp');
+const copyDir = require('../lib/copyDir');
+const installNPMPackages = require('../lib/installNPMPackages');
+const initGit = require('../lib/initGit');
+const appendToFile = require('../lib/appendToFile');
+const updateJSON = require('../lib/updateJSON');
 
 module.exports = async({ appName, appDir, appTemplateDir, sketchFilePath }) => {
   shell.exec('clear');

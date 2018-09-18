@@ -1,3 +1,5 @@
 node_modules
 .vscode
 .eslintcache
+generator/prepublishGenerator.js
+package.json.lerna_backup

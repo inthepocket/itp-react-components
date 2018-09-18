@@ -2,3 +2,4 @@ node_modules
 .vscode
 .eslintcache
 templates/design-docs
+package.json.lerna_backup

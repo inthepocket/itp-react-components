@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const path = require ('path');
 const copyDir = require ('../lib/copyDir');
-const logTitle = require ('../utils/logTitle');
+const logTitle = require ('../lib/logTitle');
 
 const run = async () => {
   logTitle ('Copying app templates');

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "prepublishOnly": "node ./scripts/copyDesignDocs.js"
+    "prepublishOnly": "node ./generator/prepublishGenerator.js"
   },
   "bin": {
     "create-itp-react-app": "./index.js"
