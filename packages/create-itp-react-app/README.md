@@ -8,7 +8,7 @@ $ npm start
 ## Generated project structure
 
 ```
-├── docs
+├── design-docs
 └── src
     ├── app
     │   └── screens
