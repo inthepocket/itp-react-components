@@ -103,6 +103,7 @@ const run = async () => {
       'redux',
       'src/common',
       'src/core',
+      '@inthepocket/itp-rcc-button',
     ],
   });
 
