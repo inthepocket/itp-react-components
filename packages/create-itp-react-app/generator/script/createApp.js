@@ -75,7 +75,7 @@ module.exports = async ({ appName, appDir, appTemplateDir }) => {
   await installNPMPackages({
     appDir,
     dir: appDir,
-    npmPackages: ['change-case', 'css', 'shelljs', 'to-css', '@inthepocket/itp-react-scripts'],
+    npmPackages: ['change-case', 'shelljs', 'to-css', '@inthepocket/itp-react-scripts'],
     options: {
       devDependencies: true,
     },
@@ -100,6 +100,7 @@ module.exports = async ({ appName, appDir, appTemplateDir }) => {
         license: 'MIT',
         scripts: {
           ...scriptsToKeep,
+          'create-root-css': 'node ./scripts/createRootCSS.js',
         },
       };
     },
