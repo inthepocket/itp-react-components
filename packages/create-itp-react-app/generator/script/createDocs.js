@@ -27,7 +27,7 @@ module.exports = async ({ appName, appDir, docsTemplateDir }) => {
   await appendToFile({
     directory: appDir,
     fileName: '.gitignore',
-    data: `${designDocsName}/node_modules\n.eslintcache`,
+    data: `\n${designDocsName}/node_modules`,
   });
 
   // update package.json

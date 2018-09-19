@@ -9,6 +9,7 @@ const cleanupReactApp = require('../../lib/cleanupReactApp');
 const copyDirectory = require('../../lib/copyDirectory');
 const updateJSON = require('../../lib/updateJSON');
 const installNPMPackages = require('../../lib/installNPMPackages');
+const appendToFile = require('../../lib/appendToFile');
 
 module.exports = async ({ appName, appDir, appTemplateDir }) => {
   shell.exec('clear');
@@ -77,6 +78,13 @@ module.exports = async ({ appName, appDir, appTemplateDir }) => {
     options: {
       devDependencies: true,
     },
+  });
+
+  // update gitignore
+  await appendToFile({
+    directory: appDir,
+    fileName: '.gitignore',
+    data: `\n.eslintcache\n.vscode`,
   });
 
   // update package.json
