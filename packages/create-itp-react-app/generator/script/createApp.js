@@ -66,6 +66,7 @@ module.exports = async ({ appName, appDir, appTemplateDir }) => {
       'redux',
       'src/common',
       'src/core',
+      '@inthepocket/itp-rcc-button'
     ],
   });
 
@@ -74,7 +75,7 @@ module.exports = async ({ appName, appDir, appTemplateDir }) => {
   await installNPMPackages({
     appDir,
     dir: appDir,
-    npmPackages: ['change-case', 'css', 'shelljs', 'to-css', '@inthepocket/itp-react-scripts'],
+    npmPackages: ['change-case', 'css', 'shelljs', 'to-css', '@inthepocket/itp-react-scripts', ],
     options: {
       devDependencies: true,
     },
