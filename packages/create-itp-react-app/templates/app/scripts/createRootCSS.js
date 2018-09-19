@@ -6,7 +6,7 @@ const appRootJSON = require('../src/root.json');
 const ddRootJSON = require('../design-docs/root.json');
 
 const ROOT_CSS_APP_PATH = path.join('src', 'root.css');
-const ROOT_CSS_DD_PATH = path.join('design-docs', 'root.css');
+const ROOT_CSS_DD_PATH = path.join('design-docs', 'static', 'root.css');
 
 const writeFile = ({
   filePath,
