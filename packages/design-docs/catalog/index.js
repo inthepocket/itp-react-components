@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Catalog } from 'catalog';
 import pages from './pages';
 import root from '../root.json';
+import logo from '../images/logo.svg';
 
 const BRAND_COLOR = root.colorPrimary600 || '#10069c';
 const LINK_COLOR = root.colorTertiary600 || '#FF5555';
@@ -75,6 +76,6 @@ const theme = {
 };
 
 ReactDOM.render(
-  <Catalog title="ITP React Components" logoSrc="/itp_logo.svg" theme={theme} pages={pages} />,
+  <Catalog title="ITP React Components" logoSrc={logo} theme={theme} pages={pages} />,
   document.getElementById('catalog'),
 );
