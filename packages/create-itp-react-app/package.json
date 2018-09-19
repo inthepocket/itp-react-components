@@ -1,10 +1,11 @@
 {
   "name": "@inthepocket/create-itp-react-app",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "node ./generator/prepublishGenerator.js"
   },
   "bin": {
     "create-itp-react-app": "./index.js"
@@ -25,7 +26,8 @@
     "change-case": "^3.0.2",
     "prompt": "^1.0.0",
     "replace-in-file": "^3.4.2",
-    "shelljs": "^0.8.2"
+    "shelljs": "^0.8.2",
+    "recursive-copy": "^2.0.9"
   },
   "publishConfig": {
     "access": "public"

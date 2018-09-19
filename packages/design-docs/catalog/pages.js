@@ -1,4 +1,15 @@
 import { pageLoader } from 'catalog';
+import Button from './components/itp-rcc-button';
+import Collapse from './components/itp-rcc-collapse';
+import root from '../root.json';
+
+const filterAndMapThemeColor = name =>
+  Object.entries(root)
+    .filter(([key]) => key.indexOf(name) !== -1)
+    .map(([key, value]) => ({ name: key, value }));
+const primaryColor = filterAndMapThemeColor('Primary');
+const secondaryColor = filterAndMapThemeColor('Secondary');
+const tertiaryColor = filterAndMapThemeColor('Tertiary');
 
 // Create a convenient loader for markdown files
 const markdownLoader = page => pageLoader(() => import(`./pages/${page}.md`));
@@ -9,6 +20,11 @@ export default [
     styles: ['/index.css'],
     title: 'Welcome',
     content: markdownLoader('intro'),
+    imports: {
+      primaryColor,
+      secondaryColor,
+      tertiaryColor,
+    },
   },
   {
     title: 'Components',
@@ -19,11 +35,11 @@ export default [
         styles: ['/components/itp-rcc-button/index.css'],
         content: markdownLoader('itp-rcc-button'),
         path: '/components/itp-rcc-button/base',
-        imports: { Button: require('./components/itp-rcc-button/index.js') },
+        imports: { Button },
       },
       {
         title: 'Collapse',
-        content: require('./components/itp-rcc-collapse/index.js'),
+        content: Collapse,
         path: '/components/itp-rcc-collapse/base',
       },
     ],

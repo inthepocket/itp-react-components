@@ -2,18 +2,16 @@ const chalk = require('chalk');
 const path = require('path');
 const shell = require('shelljs');
 
-const logTitle = require('./logTitle');
-const createReactApp = require('./createReactApp');
-const createDocumentationApp = require('./createDocumentationApp');
-const injectProjectName = require('./injectProjectName');
-const cleanupReactApp = require('./cleanupReactApp');
-const copyDir = require('./copyDir');
-const installNPMPackages = require('./installNPMPackages');
-const initGit = require('./initGit');
-const appendToFile = require('./appendToFile');
-const updateJSON = require('./updateJSON');
+const logTitle = require('../../lib/logTitle');
+const createReactApp = require('../../lib/createReactApp');
+const injectProjectName = require('../../lib/injectProjectName');
+const cleanupReactApp = require('../../lib/cleanupReactApp');
+const copyDirectory = require('../../lib/copyDirectory');
+const updateJSON = require('../../lib/updateJSON');
+const installNPMPackages = require('../../lib/installNPMPackages');
+const appendToFile = require('../../lib/appendToFile');
 
-module.exports = async({ appName, appDir, appTemplateDir, sketchFilePath }) => {
+module.exports = async ({ appName, appDir, appTemplateDir }) => {
   shell.exec('clear');
   console.log(chalk.white.bgBlue.bold(`Create ITP React App: ${appName}`));
   console.log('Learn more about create-itp-react-app at https://github.com/');
@@ -33,7 +31,7 @@ module.exports = async({ appName, appDir, appTemplateDir, sketchFilePath }) => {
 
   // copy templates
   logTitle('Copying app templates');
-  await copyDir({ targetDir: appDir, srcDir: appTemplateDir });
+  await copyDirectory({ targetDir: appDir, srcDir: appTemplateDir });
 
   logTitle('Inject project name');
   await injectProjectName({ appDir, appName });
@@ -53,24 +51,6 @@ module.exports = async({ appName, appDir, appTemplateDir, sketchFilePath }) => {
       ...packageJSON,
       name: `${appName}-core`,
     }),
-  });
-
-  // install design-docs
-  logTitle('Installing design-docs');
-  const designDocsName = 'design-docs';
-  await createDocumentationApp({ name: designDocsName });
-  await updateJSON({
-    file: path.join(appDir, designDocsName, 'package.json'),
-    updateJSON: packageJSON => ({
-      ...packageJSON,
-      name: `${appName}-${designDocsName}`,
-    }),
-  });
-
-  await appendToFile({
-    directory: appDir,
-    fileName: '.gitignore',
-    data: `docs/node_modules\n.eslintcache`,
   });
 
   // install npm packages
@@ -100,6 +80,13 @@ module.exports = async({ appName, appDir, appTemplateDir, sketchFilePath }) => {
     },
   });
 
+  // update gitignore
+  await appendToFile({
+    directory: appDir,
+    fileName: '.gitignore',
+    data: `\n.eslintcache\n.vscode`,
+  });
+
   // update package.json
   logTitle('Updating package.json');
   await updateJSON({
@@ -112,35 +99,8 @@ module.exports = async({ appName, appDir, appTemplateDir, sketchFilePath }) => {
         license: 'MIT',
         scripts: {
           ...scriptsToKeep,
-          'docs:start': `cd ${designDocsName} && npm run catalog-start`,
-          'docs:build': `cd ${designDocsName} && npm run catalog-build`,
         },
       };
     },
   });
-
-  // update .sketchxport config
-  logTitle('Updating .sketchxport config');
-  await updateJSON({
-    file: path.join(appDir, '.sketchxport', 'config.json'),
-    updateJSON: configJSON => ({
-      ...configJSON,
-      commit: {
-        ...configJSON.commit,
-        sketchFilePath,
-      },
-      repo: {
-        ...configJSON.repo,
-        uri: configJSON.repo.uri.replace('<repo-slug-here>', appName),
-      },
-    }),
-  });
-
-  // init git
-  logTitle('Initializing git');
-  await initGit();
-
-  console.log(' ');
-  console.log('All set. Happy coding 🚀');
-  console.log(' ');
 };
