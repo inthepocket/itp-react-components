@@ -7,7 +7,7 @@
     "uri": "inthepocket/<repo-slug-here>"
   },
   "sketchxport": {
-    "assetsOutputDir": "src/common/assets/images",
+    "assetsOutputDir": "design-docs/assets/images",
     "configOutputDir": ""
   }
 }

@@ -17,7 +17,7 @@ const theme = {
   linkColor: LINK_COLOR,
 
   // NavigationBar background color, but also sometimes used as a foreground
-  // or border color.
+    // or border color.
   lightColor: '#D6D6D6',
 
   // Used in PageHeader
