@@ -1,6 +1,6 @@
 {
   "name": "@inthepocket/itp-rcc-collapse",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ITP Collapse base component",
   "main": "lib/index.js",
   "scripts": {
