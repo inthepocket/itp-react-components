@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Catalog } from 'catalog';
 import pages from './pages';
 import root from '../root.json';
-import logo from '../images/logo.svg';
+import logo from '../assets/images/logo.svg';
 
 const BRAND_COLOR = root.colorPrimary600 || '#10069c';
 const LINK_COLOR = root.colorTertiary600 || '#FF5555';
