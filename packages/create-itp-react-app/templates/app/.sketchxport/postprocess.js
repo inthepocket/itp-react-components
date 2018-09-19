@@ -1,54 +1,101 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-const css = require('css');
-const toCss = require('to-css');
 const changeCase = require('change-case');
 
-const SKETCHXPORT_JSON_FILENAME = 'sketchxport.json';
-const ROOT_CSS_FILENAME = 'Root.css';
+const SKETCHXPORT_JSON_PATH = path.join('sketchxport.json');
+const ROOT_JSON_APP_PATH = path.join('src', 'root.json');
+const ROOT_JSON_DD_PATH = path.join('design-docs', 'root.json');
 
 const sortObject = object =>
   Object.keys(object)
     .sort()
     .reduce((nextObject, key) => ({ ...nextObject, [key]: object[key] }), {});
 
-fs.readFile(path.join(SKETCHXPORT_JSON_FILENAME), 'utf8', (error, data) => {
-  if (error) {
-    console.log(`Sketchxport postprocces failed. File not found: ${SKETCHXPORT_JSON_FILENAME}`);
-    process.exit();
-  }
-
-  const sketchxportJSON = JSON.parse(data);
-
-  fs.readFile(path.join('src', ROOT_CSS_FILENAME), 'utf8', (error, cssData) => {
+const readJSON = ({
+  filePath,
+}) => new Promise((resolve, reject) => {
+  fs.readFile(filePath, 'utf8', (error, data) => {
     if (error) {
-      console.log(`Sketchxport postprocces failed. File not found: ${ROOT_CSS_FILENAME}`);
-      process.exit();
+      return reject(new Error(`File not found: ${filePath}`));
     }
 
-    const nextAST = {};
-    const rootCss = css.parse(cssData);
-
-    rootCss.stylesheet.rules.forEach(rule => {
-      const declarations = {};
-
-      rule.declarations.forEach(declaration => {
-        declarations[declaration.property] = declaration.value;
-      });
-
-      sketchxportJSON.colors.forEach(importedColor => {
-        const colorVariableName = changeCase.camelCase(`color-${importedColor.id}`);
-        declarations[`--${colorVariableName}`] = `#${importedColor.hex}`;
-      });
-
-      nextAST[rule.selectors.join(', ')] = sortObject(declarations);
-    });
-
-    const nextCss = css.stringify(css.parse(toCss(nextAST)));
-
-    fs.writeFile(path.join('src', 'Root.css'), nextCss, 'utf8', () => {
-      console.log('sketchxport postprocessing done.');
-    });
+    return resolve(JSON.parse(data));
   });
 });
+
+const writeFile = ({
+  filePath,
+  data,
+}) => new Promise((resolve) => {
+  fs.writeFile(filePath, data, 'utf8', resolve);
+});
+
+const writeJSON = ({
+  filePath,
+  jsonData,
+}) => writeFile({ filePath, data: JSON.stringify(jsonData, null, 2) });
+
+const mapRootJSON = ({
+  sketchXportJSON,
+  rootJSON,
+}) => new Promise((resolve, reject) => {
+  try {
+    sketchXportJSON.colors.forEach(importedColor => {
+      const colorVariableName = changeCase.camelCase(`color-${importedColor.id}`);
+      rootJSON[colorVariableName] = `#${importedColor.hex}`;
+    });
+
+    return resolve(sortObject(rootJSON));
+  } catch (error) {
+    return reject(error);
+  }
+});
+
+const getRootJSON = ({
+  rootJSONPath,
+  sketchXportJSON,
+}) => new Promise(async(resolve, reject) => {
+  try {
+    const rootJSON = await readJSON({ filePath: rootJSONPath });
+    const jsonData = await mapRootJSON({
+      sketchXportJSON,
+      rootJSON,
+    });
+
+    return resolve(jsonData);
+  } catch (error) {
+    return reject(error);
+  }
+});
+
+const postProcess = async () => {
+  try {
+    const sketchXportJSON = await readJSON({ filePath: SKETCHXPORT_JSON_PATH });
+
+    const appRootJSON = await getRootJSON({
+      rootJSONPath: ROOT_JSON_APP_PATH,
+      sketchXportJSON,
+    });
+
+    const ddRootJSON = await getRootJSON({
+      rootJSONPath: ROOT_JSON_DD_PATH,
+      sketchXportJSON,
+    });
+
+    await writeJSON({
+      filePath: ROOT_JSON_APP_PATH,
+      jsonData: appRootJSON,
+    });
+
+    await writeJSON({
+      filePath: ROOT_JSON_DD_PATH,
+      jsonData: ddRootJSON,
+    });
+  } catch (error) {
+    console.error(error.message);
+    process.exit();
+  }
+};
+
+postProcess();

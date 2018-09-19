@@ -3,7 +3,7 @@ const path = require('path');
 const logTitle = require('../../lib/logTitle');
 const updateJSON = require('../../lib/updateJSON');
 
-module.exports = async ({ appName, appDir, sketchFilePath }) => {
+module.exports = async ({ appName, appDir, sketchfilePath }) => {
   // update .sketchxport config
   logTitle('Updating .sketchxport config');
   await updateJSON({
@@ -12,7 +12,7 @@ module.exports = async ({ appName, appDir, sketchFilePath }) => {
       ...configJSON,
       commit: {
         ...configJSON.commit,
-        sketchFilePath,
+        sketchfilePath,
       },
       repo: {
         ...configJSON.repo,

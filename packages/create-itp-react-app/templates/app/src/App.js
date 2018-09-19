@@ -1,6 +1,6 @@
 import React from 'react';
 import 'normalize.css/normalize.css';
-import './Root.css';
+import './root.css';
 import Header from '<PROJECT-NAME>-common/components/molecules/Header';
 import './App.css';
 
