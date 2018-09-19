@@ -66,6 +66,7 @@ module.exports = async ({ appName, appDir, appTemplateDir }) => {
       'redux',
       'src/common',
       'src/core',
+      '@inthepocket/itp-rcc-button'
     ],
   });
 
