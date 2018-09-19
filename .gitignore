@@ -3,3 +3,4 @@ lerna-debug.log
 .npmrc
 .eslintcache
 .vscode
+.DS_Store
