@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Catalog } from 'catalog';
 import pages from './pages';
 import root from '../root.json';
+import logo from '../assets/images/logo.svg';
 
 const BRAND_COLOR = root.colorPrimary600 || '#10069c';
 const LINK_COLOR = root.colorTertiary600 || '#FF5555';
@@ -16,7 +17,7 @@ const theme = {
   linkColor: LINK_COLOR,
 
   // NavigationBar background color, but also sometimes used as a foreground
-  // or border color.
+    // or border color.
   lightColor: '#D6D6D6',
 
   // Used in PageHeader
@@ -75,6 +76,6 @@ const theme = {
 };
 
 ReactDOM.render(
-  <Catalog title="ITP React Components" logoSrc="/itp_logo.svg" theme={theme} pages={pages} />,
+  <Catalog title="ITP React Components" logoSrc={logo} theme={theme} pages={pages} />,
   document.getElementById('catalog'),
 );
