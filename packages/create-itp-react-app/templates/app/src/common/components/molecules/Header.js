@@ -1,10 +1,10 @@
 import React from 'react';
 import { string } from 'prop-types';
 import Title from '../atoms/Title';
-import './Header.css';
+import styles from './Header.module.css';
 
 const Header = ({ title }) => (
-  <div className="header">
+  <div className={styles.header}>
     <Title text={title} />
   </div>
 );
