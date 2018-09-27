@@ -1,8 +1,8 @@
 import React from 'react';
 import { string } from 'prop-types';
-import './Title.css';
+import styles from './Title.module.css';
 
-const Title = ({ text }) => <h1 className="title">{text}</h1>;
+const Title = ({ text }) => <h1 className={styles.title}>{text}</h1>;
 
 Title.propTypes = {
   text: string,

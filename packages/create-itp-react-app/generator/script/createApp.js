@@ -75,7 +75,16 @@ module.exports = async ({ appName, appDir, appTemplateDir }) => {
   await installNPMPackages({
     appDir,
     dir: appDir,
-    npmPackages: ['change-case', 'shelljs', 'to-css', '@inthepocket/itp-react-scripts'],
+    npmPackages: [
+      'change-case',
+      'shelljs',
+      'to-css',
+      '@inthepocket/itp-react-scripts',
+      'react-app-rewired',
+      'react-app-rewire-postcss',
+      'react-app-rewire-css-modules-extensionless',
+      'postcss-preset-env',
+    ],
     options: {
       devDependencies: true,
     },
@@ -100,6 +109,9 @@ module.exports = async ({ appName, appDir, appTemplateDir }) => {
         license: 'MIT',
         scripts: {
           ...scriptsToKeep,
+          start: 'react-app-rewired start',
+          build: 'react-app-rewired build',
+          test: 'react-app-rewired test --env=jsdom',
           'create-root-css': 'node ./scripts/createRootCSS.js',
         },
       };

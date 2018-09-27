@@ -8,6 +8,23 @@ $ cd <your-project-name>
 $ npm start
 ```
 
+## Features
+* create-react-app
+* react
+* react-dom
+* prop-types
+* redux
+* redux-saga
+* react-redux
+* normalize.css
+* css modules (react-app-rewired)
+* postcss (react-app-rewired)
+* postcss-preset-env (react-app-rewired)
+* @inthepocket itp-react-scripts
+* @inthepocket sketchxport
+* @inthepocket design docs
+* @inthepocket common components
+
 ## Generated project structure
 
 ```
@@ -34,7 +51,7 @@ $ npm start
 - generated-project-name/common
 - generated-project-name/core
 
-## Run the generator locally
+## Development (running the generator locally)
 
 - run the prepublishOnly script before running the generator (to generate the design-docs template folder)
 - run `node index.js <MY_PROJECT_NAME>`
@@ -65,10 +82,7 @@ $ ulimit -n 65536
 Jira ref: DESSSYS-26
 
 ## Roadmap
-
-- design system (in progress)
 - example files (in progress)
-- itp common components (in progress)
-- itp-react-scripts (in progress)
 - remove example files script
-- css modules (react-app-rewired / react-scripts v2)
+- documentation: react-app-rewired, css-modules, postcss, postcss-preset-env, .browserlistrc
+- editorconfig
