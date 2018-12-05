@@ -17,6 +17,7 @@ Inspired by [ant-design button](https://github.com/ant-design/ant-design/blob/ma
 
 #### Custom API
 
-| Property | Description                                               | Type   | Default |
-| -------- | --------------------------------------------------------- | ------ | ------- |
-| color    | can be set to `primary` `secondary` `tertiary` or omitted | string | -       |
+| Property | Description                                                           | Type   | Default |
+| -------- | ---------------------------------------------------------             | ------ | ------- |
+| color    | can be set to `primary` `secondary` `tertiary` or omitted             | string | -       |
+| styles   | imported css module (if passed, prefixed classNames will be disabled) | object | null    |
