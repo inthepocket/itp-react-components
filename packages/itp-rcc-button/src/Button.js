@@ -16,13 +16,17 @@ function insertSpace(child) {
   return child; // eslint-disable-line consistent-return
 }
 
+function capitalize(word) {
+  return word && word.charAt(0).toUpperCase() + word.slice(1);
+}
+
 export default class Button extends Component {
   static defaultProps = {
-    className: undefined,
     color: undefined,
     type: undefined,
     shape: undefined,
     size: undefined,
+    styles: null,
     htmlType: undefined,
     onClick: () => {},
     prefixCls: '',
@@ -37,11 +41,29 @@ export default class Button extends Component {
     type: PropTypes.oneOf(['default', 'primary', 'ghost', 'dashed', 'danger']),
     shape: PropTypes.oneOf(['circle', 'circle-outline']),
     size: PropTypes.oneOf(['large', 'default', 'small']),
+    // CSS Modules
+    styles: PropTypes.shape({
+      backgroundGhost: PropTypes.string,
+      block: PropTypes.string,
+      button: PropTypes.string.isRequired,
+      colorPrimary: PropTypes.string,
+      colorSecondary: PropTypes.string,
+      colorTertiary: PropTypes.string,
+      iconOnly: PropTypes.string,
+      loading: PropTypes.string,
+      shapeCircle: PropTypes.string,
+      shapeCircleOutline: PropTypes.string,
+      sizeLarge: PropTypes.string,
+      sizeSmall: PropTypes.string,
+      typeDanger: PropTypes.string,
+      typeDashed: PropTypes.string,
+      typeGhost: PropTypes.string,
+      typePrimary: PropTypes.string,
+    }),
     htmlType: PropTypes.oneOf(['submit', 'button', 'reset']),
     onClick: PropTypes.func,
     prefixCls: PropTypes.string,
     loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
-    className: PropTypes.string,
     icon: PropTypes.string,
     ghost: PropTypes.bool,
     block: PropTypes.bool,
@@ -89,13 +111,13 @@ export default class Button extends Component {
       type,
       shape,
       size,
-      className,
       children,
       icon,
       prefixCls,
       ghost,
       loading: _loadingProp,
       block,
+      styles,
       ...rest
     } = this.props;
 
@@ -115,16 +137,28 @@ export default class Button extends Component {
         break;
     }
 
-    const classes = classNames(prefixCls, className, {
-      [`${prefixCls}-color-${color}`]: color,
-      [`${prefixCls}-${type}`]: type,
-      [`${prefixCls}-${shape}`]: shape,
-      [`${prefixCls}-${sizeCls}`]: sizeCls,
-      [`${prefixCls}-icon-only`]: !children && icon,
-      [`${prefixCls}-loading`]: loading,
-      [`${prefixCls}-background-ghost`]: ghost,
-      [`${prefixCls}-block`]: block,
-    });
+    const className = styles ?
+      classNames({
+        [styles[prefixCls]] : styles[prefixCls],
+        [styles[`color${capitalize(color)}`]] : styles[`color${capitalize(color)}`],
+        [styles[`type${capitalize(type)}`]] : type && styles[`type${capitalize(type)}`],
+        [styles[`shape${capitalize(shape)}`]] : shape && styles[`shape${capitalize(shape)}`],
+        [styles[`size${capitalize(size)}`]] : size && styles[`size${capitalize(size)}`],
+        [styles.iconOnly]: styles.iconOnly && !children && icon,
+        [styles.loading]: styles.loading && loading,
+        [styles.backgroundGhost]: styles.backgroundGhost && ghost,
+        [styles.block]: styles.block && block,
+      }) :
+      classNames(prefixCls, {
+        [`${prefixCls}-color-${color}`]: color,
+        [`${prefixCls}-${type}`]: type,
+        [`${prefixCls}-${shape}`]: shape,
+        [`${prefixCls}-${sizeCls}`]: sizeCls,
+        [`${prefixCls}-icon-only`]: !children && icon,
+        [`${prefixCls}-loading`]: loading,
+        [`${prefixCls}-background-ghost`]: ghost,
+        [`${prefixCls}-block`]: block,
+      });
 
     const iconType = loading ? 'loading' : icon;
     const iconNode = iconType ? (
@@ -149,7 +183,7 @@ export default class Button extends Component {
       /* eslint-disable jsx-a11y/click-events-have-key-events */
       /* eslint-disable jsx-a11y/no-static-element-interactions */
       return (
-        <a {...rest} className={classes} onClick={this.handleClick}>
+        <a {...rest} className={className} onClick={this.handleClick}>
           {iconNode}
           {kids}
         </a>
@@ -163,7 +197,7 @@ export default class Button extends Component {
       <button
         {...otherProps}
         type={htmlType || 'button'}
-        className={classes}
+        className={className}
         onClick={this.handleClick}
       >
         {iconNode}
