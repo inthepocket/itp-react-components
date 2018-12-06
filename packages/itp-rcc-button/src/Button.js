@@ -179,7 +179,7 @@ export default class Button extends Component {
     const kids =
       children || children === 0 ? React.Children.map(children, child => insertSpace(child)) : null;
 
-    if ('href' in rest) {
+    if (rest.href) {
       /* eslint-disable jsx-a11y/click-events-have-key-events */
       /* eslint-disable jsx-a11y/no-static-element-interactions */
       return (
