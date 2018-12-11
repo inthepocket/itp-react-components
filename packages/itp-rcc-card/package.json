@@ -1,7 +1,7 @@
 {
   "name": "@inthepocket/itp-rcc-card",
   "version": "0.0.1",
-  "description": "",
+  "description": "ITP Card component",
   "main": "dist/Card.js",
   "types": "dist/Card.d.ts",
   "files": [
