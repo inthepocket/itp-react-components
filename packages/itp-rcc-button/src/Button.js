@@ -30,7 +30,6 @@ export default class Button extends Component {
     htmlType: undefined,
     onClick: () => {},
     prefixCls: '',
-    icon: undefined,
     loading: false,
     ghost: false,
     block: false,
@@ -49,7 +48,6 @@ export default class Button extends Component {
       colorPrimary: PropTypes.string,
       colorSecondary: PropTypes.string,
       colorTertiary: PropTypes.string,
-      iconOnly: PropTypes.string,
       loading: PropTypes.string,
       shapeCircle: PropTypes.string,
       shapeCircleOutline: PropTypes.string,
@@ -64,7 +62,6 @@ export default class Button extends Component {
     onClick: PropTypes.func,
     prefixCls: PropTypes.string,
     loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
-    icon: PropTypes.string,
     ghost: PropTypes.bool,
     block: PropTypes.bool,
   };
@@ -112,7 +109,6 @@ export default class Button extends Component {
       shape,
       size,
       children,
-      icon,
       prefixCls,
       ghost,
       loading: _loadingProp,
@@ -144,7 +140,6 @@ export default class Button extends Component {
         [styles[`type${capitalize(type)}`]] : type && styles[`type${capitalize(type)}`],
         [styles[`shape${capitalize(shape)}`]] : shape && styles[`shape${capitalize(shape)}`],
         [styles[`size${capitalize(size)}`]] : size && styles[`size${capitalize(size)}`],
-        [styles.iconOnly]: styles.iconOnly && !children && icon,
         [styles.loading]: styles.loading && loading,
         [styles.backgroundGhost]: styles.backgroundGhost && ghost,
         [styles.block]: styles.block && block,
@@ -154,28 +149,11 @@ export default class Button extends Component {
         [`${prefixCls}-${type}`]: type,
         [`${prefixCls}-${shape}`]: shape,
         [`${prefixCls}-${sizeCls}`]: sizeCls,
-        [`${prefixCls}-icon-only`]: !children && icon,
         [`${prefixCls}-loading`]: loading,
         [`${prefixCls}-background-ghost`]: ghost,
         [`${prefixCls}-block`]: block,
       });
 
-    const iconType = loading ? 'loading' : icon;
-    const iconNode = iconType ? (
-      <i className="anticon anticon-loading">
-        <svg
-          viewBox="0 0 1024 1024"
-          className="anticon-spin"
-          data-icon="loading"
-          width="1em"
-          height="1em"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path d="M988 548c-19.9 0-36-16.1-36-36 0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 0 0-94.3-139.9 437.71 437.71 0 0 0-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.3C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3.1 19.9-16 36-35.9 36z" />
-        </svg>
-      </i>
-    ) : null;
     const kids =
       children || children === 0 ? React.Children.map(children, child => insertSpace(child)) : null;
 
@@ -184,7 +162,6 @@ export default class Button extends Component {
       /* eslint-disable jsx-a11y/no-static-element-interactions */
       return (
         <a {...rest} className={className} onClick={this.handleClick}>
-          {iconNode}
           {kids}
         </a>
       );
@@ -200,7 +177,6 @@ export default class Button extends Component {
         className={className}
         onClick={this.handleClick}
       >
-        {iconNode}
         {kids}
       </button>
     );
