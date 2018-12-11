@@ -2,7 +2,7 @@
 
 exports[`Card: css modules: default 1`] = `
 <div
-  className="cssModulesCard"
+  className="cssModulesCard cssModulesTypePrimary"
 >
   <header
     className="cssModulesHeader"
@@ -33,7 +33,7 @@ exports[`Card: css modules: default 1`] = `
 
 exports[`Card: css modules: size: large 1`] = `
 <div
-  className="cssModulesCard"
+  className="cssModulesCard cssModulesTypePrimary"
 >
   <header
     className="cssModulesHeader cssModulesHeaderSizeLarge"
@@ -64,7 +64,7 @@ exports[`Card: css modules: size: large 1`] = `
 
 exports[`Card: css modules: size: small 1`] = `
 <div
-  className="cssModulesCard"
+  className="cssModulesCard cssModulesTypePrimary"
 >
   <header
     className="cssModulesHeader cssModulesHeaderSizeSmall"
@@ -93,9 +93,102 @@ exports[`Card: css modules: size: small 1`] = `
 </div>
 `;
 
+exports[`Card: css modules: type: primary 1`] = `
+<div
+  className="cssModulesCard cssModulesTypePrimary"
+>
+  <header
+    className="cssModulesHeader"
+  >
+    <h1>
+      Excepteur sint occaecat cupidatat
+    </h1>
+  </header>
+  <div
+    className="cssModulesBody"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+  <footer
+    className="cssModulesFooter"
+  >
+    <p>
+      Quis nostrum exercitationem ullam corporis suscipit.
+    </p>
+  </footer>
+</div>
+`;
+
+exports[`Card: css modules: type: secondary 1`] = `
+<div
+  className="cssModulesCard cssModulesTypeSecondary"
+>
+  <header
+    className="cssModulesHeader"
+  >
+    <h1>
+      Excepteur sint occaecat cupidatat
+    </h1>
+  </header>
+  <div
+    className="cssModulesBody"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+  <footer
+    className="cssModulesFooter"
+  >
+    <p>
+      Quis nostrum exercitationem ullam corporis suscipit.
+    </p>
+  </footer>
+</div>
+`;
+
+exports[`Card: css modules: type: tertiary 1`] = `
+<div
+  className="cssModulesCard cssModulesTypeTertiary"
+>
+  <header
+    className="cssModulesHeader"
+  >
+    <h1>
+      Excepteur sint occaecat cupidatat
+    </h1>
+  </header>
+  <div
+    className="cssModulesBody"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+  <footer
+    className="cssModulesFooter"
+  >
+    <p>
+      Quis nostrum exercitationem ullam corporis suscipit.
+    </p>
+  </footer>
+</div>
+`;
+
 exports[`Card: default 1`] = `
 <div
-  className="card"
+  className="card card-type-primary"
 >
   <div
     className="card-body card-body-size-default"
@@ -112,7 +205,7 @@ exports[`Card: default 1`] = `
 
 exports[`Card: linked 1`] = `
 <a
-  className="card card-link"
+  className="card card-link card-type-primary"
   href="https://inthepocket.mobi/"
   target="_self"
 >
@@ -131,7 +224,7 @@ exports[`Card: linked 1`] = `
 
 exports[`Card: linked with target 1`] = `
 <a
-  className="card card-link"
+  className="card card-link card-type-primary"
   href="https://inthepocket.mobi/"
   target="_blank"
 >
@@ -150,7 +243,7 @@ exports[`Card: linked with target 1`] = `
 
 exports[`Card: onClick 1`] = `
 <div
-  className="card"
+  className="card card-type-primary"
   onClick={[Function]}
 >
   <div
@@ -168,7 +261,7 @@ exports[`Card: onClick 1`] = `
 
 exports[`Card: size: large 1`] = `
 <div
-  className="card"
+  className="card card-type-primary"
 >
   <div
     className="card-body card-body-size-large"
@@ -185,7 +278,7 @@ exports[`Card: size: large 1`] = `
 
 exports[`Card: size: small 1`] = `
 <div
-  className="card"
+  className="card card-type-primary"
 >
   <div
     className="card-body card-body-size-small"
@@ -200,9 +293,60 @@ exports[`Card: size: small 1`] = `
 </div>
 `;
 
+exports[`Card: type: primary 1`] = `
+<div
+  className="card card-type-primary"
+>
+  <div
+    className="card-body card-body-size-default"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card: type: secondary 1`] = `
+<div
+  className="card card-type-secondary"
+>
+  <div
+    className="card-body card-body-size-default"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card: type: tertiary 1`] = `
+<div
+  className="card card-type-tertiary"
+>
+  <div
+    className="card-body card-body-size-default"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+</div>
+`;
+
 exports[`Card: with footer 1`] = `
 <div
-  className="card"
+  className="card card-type-primary"
 >
   <div
     className="card-body card-body-size-default"
@@ -223,7 +367,7 @@ exports[`Card: with footer 1`] = `
 
 exports[`Card: with header 1`] = `
 <div
-  className="card"
+  className="card card-type-primary"
 >
   <header
     className="card-header card-header-size-default"
@@ -244,7 +388,7 @@ exports[`Card: with header 1`] = `
 
 exports[`Card: with header and footer 1`] = `
 <div
-  className="card"
+  className="card card-type-primary"
 >
   <header
     className="card-header card-header-size-default"
