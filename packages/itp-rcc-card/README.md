@@ -41,25 +41,29 @@ Card.Header & Card.Footer are optional.
 | ------------------ | -------------------------------------------------------------------------------------------------------------- | -------- | --------- | -------- |
 | href               | Link url                                                                                                       | string   | -         | No       |
 | prefixCss          | Prefix for css classNames                                                                                      | string   | 'card'    | No       |
-| size               | default, small or large                                                                                        | string   | 'default' | Yes      |
+| size               | default, small or large                                                                                        | string   | 'default' | No       |
 | styles             | imported css module (if passed, prefixed classNames will be disabled), see [styles property](#styles-property) | object   | null      | No       |
+| type               | primary, secondary or tertiary                                                                                 | string   | 'primary' | No       |
 | onClick            |                                                                                                                | Function | -         | No       |
 | target             | Link target                                                                                                    | string   | -         | No       |
 
 #### Styles property
 | Property           | Description                                           | Type   | Default | Required |
 | ------------------ | ----------------------------------------------------- | ------ | ------- | -------- |
-| card            |                                                          | string | -       | Yes      |
-| header          |                                                          | string | -       | No       |
-| headerSizeSmall |                                                          | string | -       | No       |
-| headerSizeLarge |                                                          | string | -       | No       |
 | body            |                                                          | string | -       | Yes      |
-| bodySizeSmall   |                                                          | string | -       | No       |
 | bodySizeLarge   |                                                          | string | -       | No       |
+| bodySizeSmall   |                                                          | string | -       | No       |
+| card            |                                                          | string | -       | Yes      |
 | footer          |                                                          | string | -       | No       |
-| footerSizeSmall |                                                          | string | -       | No       |
 | footerSizeLarge |                                                          | string | -       | No       |
+| footerSizeSmall |                                                          | string | -       | No       |
+| header          |                                                          | string | -       | No       |
+| headerSizeLarge |                                                          | string | -       | No       |
+| headerSizeSmall |                                                          | string | -       | No       |
 | link            |                                                          | string | -       | No       |
+| typePrimary     |                                                          | string | -       | No       |
+| typeSecondary   |                                                          | string | -       | No       |
+| typeTertiary    |                                                          | string | -       | No       |
 
 The css module should look like this:
 
