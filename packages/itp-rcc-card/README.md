@@ -79,6 +79,9 @@ The css module should look like this:
 .footerSizeSmall  { ... }
 .footerSizeLarge  { ... }
 .link             { ... }
+.typePrimary      { ... }
+.typeSecondary    { ... }
+.typeTertiary     { ... }
 ```
 
 ### Body
