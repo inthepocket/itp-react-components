@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card: css modules: default 1`] = `
+<div
+  className="cssModulesCard"
+>
+  <header
+    className="cssModulesHeader"
+  >
+    <h1>
+      Excepteur sint occaecat cupidatat
+    </h1>
+  </header>
+  <div
+    className="cssModulesBody"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+  <footer
+    className="cssModulesFooter"
+  >
+    <p>
+      Quis nostrum exercitationem ullam corporis suscipit.
+    </p>
+  </footer>
+</div>
+`;
+
+exports[`Card: css modules: size: large 1`] = `
+<div
+  className="cssModulesCard"
+>
+  <header
+    className="cssModulesHeader cssModulesHeaderSizeLarge"
+  >
+    <h1>
+      Excepteur sint occaecat cupidatat
+    </h1>
+  </header>
+  <div
+    className="cssModulesBody cssModulesBodySizeLarge"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+  <footer
+    className="cssModulesFooter cssModulesFooterSizeLarge"
+  >
+    <p>
+      Quis nostrum exercitationem ullam corporis suscipit.
+    </p>
+  </footer>
+</div>
+`;
+
+exports[`Card: css modules: size: small 1`] = `
+<div
+  className="cssModulesCard"
+>
+  <header
+    className="cssModulesHeader cssModulesHeaderSizeSmall"
+  >
+    <h1>
+      Excepteur sint occaecat cupidatat
+    </h1>
+  </header>
+  <div
+    className="cssModulesBody cssModulesBodySizeSmall"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+  <footer
+    className="cssModulesFooter cssModulesFooterSizeSmall"
+  >
+    <p>
+      Quis nostrum exercitationem ullam corporis suscipit.
+    </p>
+  </footer>
+</div>
+`;
+
+exports[`Card: default 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body card-body-size-default"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card: linked 1`] = `
+<a
+  className="card card-link"
+  href="https://inthepocket.mobi/"
+  target="_self"
+>
+  <div
+    className="card-body card-body-size-default"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+</a>
+`;
+
+exports[`Card: linked with target 1`] = `
+<a
+  className="card card-link"
+  href="https://inthepocket.mobi/"
+  target="_blank"
+>
+  <div
+    className="card-body card-body-size-default"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+</a>
+`;
+
+exports[`Card: onClick 1`] = `
+<div
+  className="card"
+  onClick={[Function]}
+>
+  <div
+    className="card-body card-body-size-default"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card: size: large 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body card-body-size-large"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card: size: small 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body card-body-size-small"
+  >
+    <h2>
+      Ullamco laboris nisi ut
+    </h2>
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card: with footer 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body card-body-size-default"
+  >
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+  <footer
+    className="card-footer card-footer-size-default"
+  >
+    <p>
+      Quis nostrum exercitationem ullam corporis suscipit.
+    </p>
+  </footer>
+</div>
+`;
+
+exports[`Card: with header 1`] = `
+<div
+  className="card"
+>
+  <header
+    className="card-header card-header-size-default"
+  >
+    <h1>
+      Excepteur sint occaecat cupidatat
+    </h1>
+  </header>
+  <div
+    className="card-body card-body-size-default"
+  >
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card: with header and footer 1`] = `
+<div
+  className="card"
+>
+  <header
+    className="card-header card-header-size-default"
+  >
+    <h1>
+      Excepteur sint occaecat cupidatat
+    </h1>
+  </header>
+  <div
+    className="card-body card-body-size-default"
+  >
+    <p>
+      Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+    </p>
+  </div>
+  <footer
+    className="card-footer card-footer-size-default"
+  >
+    <p>
+      Quis nostrum exercitationem ullam corporis suscipit.
+    </p>
+  </footer>
+</div>
+`;

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardBody: css modules: default 1`] = `
+<div
+  className="cssModulesBody"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</div>
+`;
+
+exports[`CardBody: css modules: size: large 1`] = `
+<div
+  className="cssModulesBody cssModulesBodySizeLarge"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</div>
+`;
+
+exports[`CardBody: css modules: size: small 1`] = `
+<div
+  className="cssModulesBody cssModulesBodySizeSmall"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</div>
+`;
+
+exports[`CardBody: default 1`] = `
+<div
+  className="card-body card-body-size-default"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</div>
+`;
+
+exports[`CardBody: size: large 1`] = `
+<div
+  className="card-body card-body-size-large"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</div>
+`;
+
+exports[`CardBody: size: small 1`] = `
+<div
+  className="card-body card-body-size-small"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</div>
+`;

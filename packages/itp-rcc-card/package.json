@@ -1,0 +1,43 @@
+{
+  "name": "@inthepocket/itp-rcc-card",
+  "version": "0.0.1",
+  "description": "ITP Card component",
+  "main": "dist/Card.js",
+  "types": "dist/Card.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "author": {
+    "email": "hello@inthepocket.com",
+    "name": "ITP Agency NV",
+    "url": "https://inthepocket.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "itp"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "capitalize": "^2.0.0",
+    "classnames": "^2.2.6",
+    "react": "^16.6.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.12",
+    "@types/react-test-renderer": "^16.0.3",
+    "babel-core": "^6.26.3",
+    "jest": "^23.6.0",
+    "react-test-renderer": "^16.6.3",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2"
+  }
+}

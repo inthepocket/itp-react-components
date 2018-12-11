@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardFooter: css modules: default 1`] = `
+<footer
+  className="cssModulesFooter"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</footer>
+`;
+
+exports[`CardFooter: css modules: size: large 1`] = `
+<footer
+  className="cssModulesFooter cssModulesFooterSizeLarge"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</footer>
+`;
+
+exports[`CardFooter: css modules: size: small 1`] = `
+<footer
+  className="cssModulesFooter cssModulesFooterSizeSmall"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</footer>
+`;
+
+exports[`CardFooter: default 1`] = `
+<footer
+  className="card-footer card-footer-size-default"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</footer>
+`;
+
+exports[`CardFooter: size: large 1`] = `
+<footer
+  className="card-footer card-footer-size-large"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</footer>
+`;
+
+exports[`CardFooter: size: small 1`] = `
+<footer
+  className="card-footer card-footer-size-small"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</footer>
+`;
