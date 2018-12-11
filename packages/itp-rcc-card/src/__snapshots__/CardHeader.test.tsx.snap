@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardHeader: css modules: default 1`] = `
+<header
+  className="cssModulesHeader"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</header>
+`;
+
+exports[`CardHeader: css modules: size: large 1`] = `
+<header
+  className="cssModulesHeader cssModulesHeaderSizeLarge"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</header>
+`;
+
+exports[`CardHeader: css modules: size: small 1`] = `
+<header
+  className="cssModulesHeader cssModulesHeaderSizeSmall"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</header>
+`;
+
+exports[`CardHeader: default 1`] = `
+<header
+  className="card-header card-header-size-default"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</header>
+`;
+
+exports[`CardHeader: size: large 1`] = `
+<header
+  className="card-header card-header-size-large"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</header>
+`;
+
+exports[`CardHeader: size: small 1`] = `
+<header
+  className="card-header card-header-size-small"
+>
+  <p>
+    Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem.
+  </p>
+</header>
+`;
