@@ -1,7 +1,7 @@
 {
   "name": "@inthepocket/itp-rcc-button",
   "version": "0.0.5",
-  "description": "ITP Collapse base component",
+  "description": "ITP Button component",
   "main": "dist/index.js",
   "scripts": {
     "build": "npx babel ./src/**/*.js --out-dir ./dist",
