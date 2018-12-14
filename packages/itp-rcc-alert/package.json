@@ -23,7 +23,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@inthepocket/itp-rcc-button": "0.0.5",
+    "@inthepocket/itp-rcc-button": "0.0.7",
     "capitalize": "^2.0.0",
     "classnames": "^2.2.6",
     "react": "^16.6.3"
