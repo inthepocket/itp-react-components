@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert: danger 1`] = `
+<div
+  className="alert alert-type-danger"
+>
+  <p>
+    Danger alert
+  </p>
+</div>
+`;
+
+exports[`Alert: default 1`] = `
+<div
+  className="alert alert-type-default"
+>
+  <p>
+    Default alert
+  </p>
+</div>
+`;
+
+exports[`Alert: info 1`] = `
+<div
+  className="alert alert-type-info"
+>
+  <p>
+    Info alert
+  </p>
+</div>
+`;
+
+exports[`Alert: success 1`] = `
+<div
+  className="alert alert-type-success"
+>
+  <p>
+    Success alert
+  </p>
+</div>
+`;
+
+exports[`Alert: with css module: danger 1`] = `
+<div
+  className="cssModuleAlert cssModuleTypeDanger"
+>
+  <p>
+    Danger alert
+  </p>
+</div>
+`;
+
+exports[`Alert: with css module: default 1`] = `
+<div
+  className="cssModuleAlert cssModuleTypeDefault"
+>
+  <p>
+    Default alert
+  </p>
+</div>
+`;
+
+exports[`Alert: with css module: info 1`] = `
+<div
+  className="cssModuleAlert cssModuleTypeInfo"
+>
+  <p>
+    Info alert
+  </p>
+</div>
+`;
+
+exports[`Alert: with css module: success 1`] = `
+<div
+  className="cssModuleAlert cssModuleTypeSuccess"
+>
+  <p>
+    Success alert
+  </p>
+</div>
+`;
+
+exports[`Alert: with css module: with dismiss button 1`] = `
+<div
+  className="cssModuleAlert cssModuleTypeDefault"
+>
+  <p>
+    Dismissible alert
+  </p>
+  <button
+    aria-label="Dismiss"
+    className="cssModuleDismissButton"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+    >
+      ×
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Alert: with css module: with dismiss button and dismiss icon 1`] = `
+<div
+  className="cssModuleAlert cssModuleTypeDefault"
+>
+  <p>
+    Dismissible alert
+  </p>
+  <button
+    aria-label="Dismiss"
+    className="cssModuleDismissButton"
+    onClick={[Function]}
+    type="button"
+  >
+    <span>
+      dismiss icon
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Alert: with css module: with dismiss button, dismiss icon and aria label 1`] = `
+<div
+  className="cssModuleAlert cssModuleTypeDefault"
+>
+  <p>
+    Dismissible alert
+  </p>
+  <button
+    aria-label="Dismiss label"
+    className="cssModuleDismissButton"
+    onClick={[Function]}
+    type="button"
+  >
+    <span>
+      dismiss icon
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Alert: with dismiss button 1`] = `
+<div
+  className="alert alert-type-default alert--dismissible"
+>
+  <p>
+    Dismissible alert
+  </p>
+  <button
+    aria-label="Dismiss"
+    className="alert-dismiss-button"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+    >
+      ×
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Alert: with dismiss button and dismiss icon 1`] = `
+<div
+  className="alert alert-type-default alert--dismissible"
+>
+  <p>
+    Dismissible alert
+  </p>
+  <button
+    aria-label="Dismiss"
+    className="alert-dismiss-button"
+    onClick={[Function]}
+    type="button"
+  >
+    <span>
+      dismiss icon
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Alert: with dismiss button, dismiss icon and aria label 1`] = `
+<div
+  className="alert alert-type-default alert--dismissible"
+>
+  <p>
+    Dismissible alert
+  </p>
+  <button
+    aria-label="Dismiss label"
+    className="alert-dismiss-button"
+    onClick={[Function]}
+    type="button"
+  >
+    <span>
+      dismiss icon
+    </span>
+  </button>
+</div>
+`;
