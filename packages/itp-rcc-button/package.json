@@ -1,13 +1,11 @@
 {
   "name": "@inthepocket/itp-rcc-button",
-  "version": "0.0.4",
-  "description": "ITP Collapse base component",
-  "main": "lib/index.js",
+  "version": "0.0.5",
+  "description": "ITP Button component",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "webpack --config webpack.dev.config.js",
-    "watch": "npm run build -- --watch",
-    "transpile": "webpack --config webpack.prod.config.js",
-    "prepublishOnly": "npm run transpile",
+    "build": "npx babel ./src/**/*.js --out-dir ./dist",
+    "prepublishOnly": "npm run build",
     "test": "jest"
   },
   "keywords": [
@@ -21,10 +19,10 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "webpack": "^4.17.1",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.7",
-    "webpack-merge": "^4.1.4"
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/preset-react": "^7.0.0"
   },
   "peerDependencies": {
     "react": "^16.4.1"
