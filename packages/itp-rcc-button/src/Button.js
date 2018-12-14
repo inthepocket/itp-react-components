@@ -78,7 +78,7 @@ export default class Button extends Component {
       clearTimeout(this.delayTimeout);
     }
 
-    if (typeof loading !== 'boolean' && loading && loading.delay) {
+    if (typeof window !== 'undefined' && typeof loading !== 'boolean' && loading && loading.delay) {
       this.delayTimeout = window.setTimeout(
         // eslint-disable-line no-undef
         () => this.setState({ loading }),
