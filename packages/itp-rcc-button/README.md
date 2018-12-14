@@ -17,10 +17,19 @@ Inspired by [ant-design button](https://github.com/ant-design/ant-design/blob/ma
 
 ## Custom API
 
-| Property | Description                                                                                                    | Type   | Default |
-| -------- | -------------------------------------------------------------------------------------------------------------- | ------ | ------- |
-| color    | can be set to `primary` `secondary` `tertiary` or omitted                                                      | string | -       |
-| styles   | imported css module (if passed, prefixed classNames will be disabled), see [styles property](#styles-property) | object | null    |
+| Property  | Description                                                                                                    | Type     | Default   |
+| --------- | -------------------------------------------------------------------------------------------------------------- | -------- | --------- |
+| block     | block state                                                                                                    | Boolean  | false     |
+| color     | can be set to `primary` `secondary` `tertiary` or omitted                                                      | string   | -         |
+| ghost     | ghost state                                                                                                    | Boolean  | false     |
+| htmlType  | 'submit', 'button' or 'reset'                                                                                  | string   | 'button'  |
+| loading   | loading state                                                                                                  | Boolean  | false     |
+| onClick   | onClick handler                                                                                                | Function | () => {}  |
+| prefixCls | prefix css class name                                                                                          | string   | ''        |
+| shape     | 'circle' or 'circle-outline'                                                                                   | string   | null      |
+| size      | 'default', 'small' or 'large'                                                                                  | string   | null      |
+| styles    | imported css module (if passed, prefixed classNames will be disabled), see [styles property](#styles-property) | object   | null      |
+| type      | 'default', 'primary', 'ghost', 'dashed' or 'danger'                                                            | string   | 'default' |
 
 ### Styles property
 | Property           | Description                                              | Type   | Default | Required |
@@ -31,7 +40,6 @@ Inspired by [ant-design button](https://github.com/ant-design/ant-design/blob/ma
 | colorPrimary       |                                                          | string | -       | No       |
 | colorSecondary     |                                                          | string | -       | No       |
 | colorTertiary      |                                                          | string | -       | No       |
-| iconOnly           |                                                          | string | -       | No       |
 | loading            |                                                          | string | -       | No       |
 | shapeCircle        |                                                          | string | -       | No       |
 | shapeCircleOutline |                                                          | string | -       | No       |
@@ -53,7 +61,6 @@ The css module should look like this:
 .colorPrimary { ... }
 .colorSecondary { ... }
 .colorTertiary { ... }
-.iconOnly { ... }
 .loading { ... }
 .shapeCircle { ... }
 .shapeCircleOutline { ... }
