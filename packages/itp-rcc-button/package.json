@@ -1,6 +1,6 @@
 {
   "name": "@inthepocket/itp-rcc-button",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "ITP Button component",
   "main": "dist/index.js",
   "scripts": {
@@ -22,6 +22,7 @@
     "@babel/cli": "^7.2.0",
     "@babel/core": "^7.2.0",
     "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/preset-env": "^7.2.0",
     "@babel/preset-react": "^7.0.0"
   },
   "peerDependencies": {
