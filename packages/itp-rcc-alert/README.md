@@ -18,7 +18,7 @@ JSX
 ```jsx
 <Alert>
   <p>Alert content</p>
-</Card>
+</Alert>
 ```
 
 ## API documentation
@@ -26,53 +26,41 @@ JSX
 ```jsx
 <Alert>
   <p>Alert content</p>
-</Card>
+</Alert>
 ```
-| Property           | Description                                                                                                    | Type     | Default   | Required |
-| ------------------ | -------------------------------------------------------------------------------------------------------------- | -------- | --------- | -------- |
-| href               | Link url                                                                                                       | string   | -         | No       |
-| prefixCss          | Prefix for css classNames                                                                                      | string   | 'card'    | No       |
-| size               | default, small or large                                                                                        | string   | 'default' | No       |
-| styles             | imported css module (if passed, prefixed classNames will be disabled), see [styles property](#styles-property) | object   | null      | No       |
-| type               | primary, secondary or tertiary                                                                                 | string   | 'primary' | No       |
-| onClick            |                                                                                                                | Function | -         | No       |
-| target             | Link target                                                                                                    | string   | -         | No       |
+| Property               | Description                                                                                                    | Type                 | Default                                 | Required |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------- | --------------------------------------- | -------- |
+| dismissButtonAriaLabel | ARIA label text for dismiss button (requires hasDismissButton to be true)                                      | string               | 'Dismiss'                               | No       |
+| dismissIcon            | Icon for dismiss button (requires hasDismissButton to be true)                                                 | string / ReactNode   | <span aria-hidden="true">&times;</span> | No       |
+| hasDismissButton       | Show dismiss button                                                                                            | Boolean              | false                                   | No       |
+| onDismiss              | Dismiss button click handler (requires hasDismissButton to be true)                                            | Function             | nulla                                   | No       |
+| prefixCss              | Prefix for css classNames                                                                                      | string               | 'alert'                                 | No       |
+| styles                 | imported css module (if passed, prefixed classNames will be disabled), see [styles property](#styles-property) | object               | null                                    | No       |
+| type                   | 'default', 'success', 'danger', 'warning' or 'info'                                                            | string               | 'primary'                               | No       |
 
 #### Styles property
-| Property           | Description                                           | Type   | Default | Required |
-| ------------------ | ----------------------------------------------------- | ------ | ------- | -------- |
-| body            |                                                          | string | -       | Yes      |
-| bodySizeLarge   |                                                          | string | -       | No       |
-| bodySizeSmall   |                                                          | string | -       | No       |
-| card            |                                                          | string | -       | Yes      |
-| footer          |                                                          | string | -       | No       |
-| footerSizeLarge |                                                          | string | -       | No       |
-| footerSizeSmall |                                                          | string | -       | No       |
-| header          |                                                          | string | -       | No       |
-| headerSizeLarge |                                                          | string | -       | No       |
-| headerSizeSmall |                                                          | string | -       | No       |
-| link            |                                                          | string | -       | No       |
-| typePrimary     |                                                          | string | -       | No       |
-| typeSecondary   |                                                          | string | -       | No       |
-| typeTertiary    |                                                          | string | -       | No       |
+| Property      | Description                                           | Type   | Default | Required |
+| --------------| ----------------------------------------------------- | ------ | ------- | -------- |
+| alert         |                                                       | string | -       | Yes      |
+| button        |                                                       | string | -       | No       |
+| dismissButton |                                                       | string | -       | No       |
+| typeDanger    |                                                       | string | -       | No       |
+| typeDefault   |                                                       | string | -       | No       |
+| typeInfo      |                                                       | string | -       | No       |
+| typeSuccess   |                                                       | string | -       | No       |
+| typeWarning   |                                                       | string | -       | No       |
 
 The css module should look like this:
 
 ```css
-.card             { ... }
-.header           { ... }
-.headerSizeSmall  { ... }
-.headerSizeLarge  { ... }
-.body             { ... }
-.bodySizeSmall    { ... }
-.bodySizeLarge    { ... }
-.footer           { ... }
-.footerSizeSmall  { ... }
-.footerSizeLarge  { ... }
-.link             { ... }
-.typePrimary      { ... }
-.typeSecondary    { ... }
-.typeTertiary     { ... }
+.alert          { ... }
+.button         { ... }
+.dismissButton  { ... }
+.typeDanger     { ... }
+.typeDefault    { ... }
+.typeInfo       { ... }
+.typeSuccess    { ... }
+.typeWarning    { ... }
 ```
 
 ## Development

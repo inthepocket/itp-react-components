@@ -40,6 +40,16 @@ exports[`Alert: success 1`] = `
 </div>
 `;
 
+exports[`Alert: warning 1`] = `
+<div
+  className="alert alert-type-warning"
+>
+  <p>
+    Warning alert
+  </p>
+</div>
+`;
+
 exports[`Alert: with css module: danger 1`] = `
 <div
   className="cssModuleAlert cssModuleTypeDanger"
@@ -76,6 +86,16 @@ exports[`Alert: with css module: success 1`] = `
 >
   <p>
     Success alert
+  </p>
+</div>
+`;
+
+exports[`Alert: with css module: warning 1`] = `
+<div
+  className="cssModuleAlert cssModuleTypeWarning"
+>
+  <p>
+    Warning alert
   </p>
 </div>
 `;

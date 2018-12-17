@@ -44,7 +44,7 @@ export interface AlertStylesInterface {
 export interface AlertPropsInterface {
   children: React.ReactNode | Element;
   dismissIcon?: React.ReactNode | Element;
-  dismissButtonAriaLabel?: string;
+  dismissButtonAriaLabel?: string | React.ReactNode;
   hasDismissButton?: Boolean;
   onDismiss?: Function;
   prefixCss: string;

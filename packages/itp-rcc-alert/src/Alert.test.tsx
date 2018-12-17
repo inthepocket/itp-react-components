@@ -6,10 +6,11 @@ const cssModuleMock = {
   alert: 'cssModuleAlert',
   button: 'cssModuleButton',
   dismissButton: 'cssModuleDismissButton',
-  typeDefault: 'cssModuleTypeDefault',
-  typeSuccess: 'cssModuleTypeSuccess',
   typeDanger: 'cssModuleTypeDanger',
+  typeDefault: 'cssModuleTypeDefault',
   typeInfo: 'cssModuleTypeInfo',
+  typeSuccess: 'cssModuleTypeSuccess',
+  typeWarning: 'cssModuleTypeWarning',
 };
 
 test('Alert: default', () => {
@@ -38,6 +39,17 @@ test('Alert: danger', () => {
   const tree = create((
     <Alert type="danger">
       <p>Danger alert</p>
+    </Alert>
+  ))
+  .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+test('Alert: warning', () => {
+  const tree = create((
+    <Alert type="warning">
+      <p>Warning alert</p>
     </Alert>
   ))
   .toJSON();
@@ -120,6 +132,17 @@ test('Alert: with css module: danger', () => {
   const tree = create((
     <Alert styles={cssModuleMock} type="danger">
       <p>Danger alert</p>
+    </Alert>
+  ))
+  .toJSON();
+
+  expect(tree).toMatchSnapshot();
+});
+
+test('Alert: with css module: warning', () => {
+  const tree = create((
+    <Alert styles={cssModuleMock} type="warning">
+      <p>Warning alert</p>
     </Alert>
   ))
   .toJSON();
