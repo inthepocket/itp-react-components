@@ -1,0 +1,126 @@
+.itp-card {
+  display: block;
+  background-color: var(--colorSecondary900);
+  border-radius: 5px;
+}
+
+.itp-card + .itp-card {
+  margin-top: 1rem;
+}
+
+.itp-card-type-primary {
+  box-shadow: rgba(153, 86, 51, .15) 0 5px 20px;
+}
+
+.itp-card-type-secondary {
+  border: 1px solid var(--colorQuaternary100);
+}
+
+.itp-card-header {
+  display: block;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.itp-card-header > h1:first-child,
+.itp-card-header > h2:first-child,
+.itp-card-header > h3:first-child,
+.itp-card-header > h4:first-child,
+.itp-card-header > h5:first-child,
+.itp-card-header > h6:first-child,
+.itp-card-header > p:first-child {
+  margin-top: 0;
+}
+
+.itp-card-header > h1:last-child,
+.itp-card-header > h2:last-child,
+.itp-card-header > h3:last-child,
+.itp-card-header > h4:last-child,
+.itp-card-header > h5:last-child,
+.itp-card-header > h6:last-child,
+.itp-card-header > p:last-child {
+  margin-bottom: 0;
+}
+
+.itp-card-header-size-small {
+  padding: 0;
+}
+
+.itp-card-header-size-large {
+  padding: 4rem 4rem 0 4rem;
+}
+
+.itp-card-body {
+  display: block;
+  padding: 1.5rem;
+}
+
+.itp-card-body > h1:first-child,
+.itp-card-body > h2:first-child,
+.itp-card-body > h3:first-child,
+.itp-card-body > h4:first-child,
+.itp-card-body > h5:first-child,
+.itp-card-body > h6:first-child,
+.itp-card-body > p:first-child {
+  margin-top: 0;
+}
+
+.itp-card-body > h1:last-child,
+.itp-card-body > h2:last-child,
+.itp-card-body > h3:last-child,
+.itp-card-body > h4:last-child,
+.itp-card-body > h5:last-child,
+.itp-card-body > h6:last-child,
+.itp-card-body > p:last-child {
+  margin-bottom: 0;
+}
+
+.itp-card-body-size-small {
+  padding: 0;
+}
+
+.itp-card-body-size-large {
+  padding: 4rem;
+}
+
+.itp-card-header-size-large + .itp-card-body-size-large {
+  padding-top: 1rem;
+}
+
+.itp-card-footer {
+  display: block;
+  padding: 1.5rem;
+  background-color: var(--colorQuaternary100);
+}
+
+.itp-card-footer > h1:first-child,
+.itp-card-footer > h2:first-child,
+.itp-card-footer > h3:first-child,
+.itp-card-footer > h4:first-child,
+.itp-card-footer > h5:first-child,
+.itp-card-footer > h6:first-child,
+.itp-card-footer > p:first-child {
+  margin-top: 0;
+}
+
+.itp-card-footer > h1:last-child,
+.itp-card-footer > h2:last-child,
+.itp-card-footer > h3:last-child,
+.itp-card-footer > h4:last-child,
+.itp-card-footer > h5:last-child,
+.itp-card-footer > h6:last-child,
+.itp-card-footer > p:last-child {
+  margin-bottom: 0;
+}
+
+.itp-card-footer-size-small {
+  padding: 0;
+}
+
+.itp-card-footer-size-large {
+  padding: 1.5rem 4rem;
+}
+
+.itp-card-link {
+  color: inherit;
+  text-decoration: none;
+}
