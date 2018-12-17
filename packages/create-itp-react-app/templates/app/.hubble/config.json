@@ -6,7 +6,7 @@
     "commitMessage": "Updated assets & config",
     "uri": "inthepocket/<repo-slug-here>"
   },
-  "sketchxport": {
+  "hubble": {
     "assetsOutputDir": "design-docs/assets/images",
     "configOutputDir": ""
   }

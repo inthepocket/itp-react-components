@@ -4,10 +4,10 @@ const logTitle = require('../../lib/logTitle');
 const updateJSON = require('../../lib/updateJSON');
 
 module.exports = async ({ appName, appDir, sketchfilePath }) => {
-  // update .sketchxport config
-  logTitle('Updating .sketchxport config');
+  // update .hubble config
+  logTitle('Updating .hubble config');
   await updateJSON({
-    file: path.join(appDir, '.sketchxport', 'config.json'),
+    file: path.join(appDir, '.hubble', 'config.json'),
     updateJSON: configJSON => ({
       ...configJSON,
       commit: {
