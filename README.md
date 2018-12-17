@@ -10,6 +10,8 @@
   - [Create ITP React App](#create-itp-react-app)
   - [Design docs](#design-docs)
   - [itp-rcc-collapse](#itp-rcc-collapse)
+  - [itp-rcc-button](#itp-rcc-button)
+  - [itp-rcc-card](#itp-rcc-card)
 - [You want to contribute?](#you-want-to-contribute)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -32,6 +34,10 @@ A generator for all our ITP React Projects
 All the different components have an example page in the design docs.
 
 ## [itp-rcc-collapse](/packages/itp-rcc-collapse/README.md)
+
+## [itp-rcc-button](/packages/itp-rcc-button/README.md)
+
+## [itp-rcc-card](/packages/itp-rcc-card/README.md)
 
 # You want to contribute?
 

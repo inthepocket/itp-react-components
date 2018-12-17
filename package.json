@@ -16,7 +16,13 @@
     "react",
     "itp"
   ],
-  "author": "hello@inthepocket.com",
+  "author": "In the Pocket",
+  "contributors": [
+    { "name": "Jonathan Dierckens", "email": "jonathan.dierckens@inthepocket.com"},
+	{ "name": "Brecht Omey", "email": "brecht.omey@inthepocket.com"},
+	{ "name": "Simon Waerenbrugh", "email": "Simon.Waerenbrugh@inthepocket.com"},
+	{ "name": "Thibault Maekelbergh", "email": "thibault.maekelbergh@inthepocket.com"}
+  ],
   "license": "MIT",
   "devDependencies": {
     "@inthepocket/itp-react-scripts": "^0.47.0",
