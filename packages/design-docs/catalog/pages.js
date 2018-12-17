@@ -1,6 +1,7 @@
 import { pageLoader } from 'catalog';
 import Alert from './components/itp-rcc-alert';
 import Button from './components/itp-rcc-button';
+import Card from './components/itp-rcc-card';
 import Collapse from './components/itp-rcc-collapse';
 import root from '../root.json';
 
@@ -43,6 +44,12 @@ export default [
         content: markdownLoader('itp-rcc-alert'),
         path: '/components/itp-rcc-alert/base',
         imports: { Alert },
+      },
+      {
+        title: 'Card',
+        content: markdownLoader('itp-rcc-card'),
+        path: '/components/itp-rcc-card/base',
+        imports: { Card },
       },
       {
         title: 'Collapse',
