@@ -37,8 +37,8 @@ const stateReducer = (state, changes) => {
 const AutoComplete = ({
   autoComplete = 'new-password',
   InputComponent = Input,
-  isDisabled,
-  isLoading,
+  isDisabled = false,
+  isLoading = false,
   items,
   itemToString = item => (item && item.value) || '',
   Loader = () => (<span>Loading</span>),
