@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisableBrowserAutoComplete snapshot 1`] = `
+<form
+  autoComplete="off"
+  className="disable-browser-autocomplete"
+>
+  <input
+    autoComplete="false"
+    name="hidden"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="text"
+  />
+  <p>
+    Browser autocomplete disabled
+  </p>
+</form>
+`;

@@ -46,12 +46,12 @@ JSX
 | Property           | Description                                                                                                    | Type                     | Default                             | Required |
 | ------------------ | -------------------------------------------------------                                                        | ------------------------ | ----------------------------------- | -------- |
 | autoComplete       | translates into autocomplete attribute on input element                                                        | Boolean                  | 'new-password'                      | No       |
-| InputComponent     | Input component                                                                                                | React.ReactNode          | <input />                           | No       |
+| InputComponent     | Input component                                                                                                | React.ReactNode          | &lt;input /&gt;                     | No       |
 | isDisabled         | Disabled state                                                                                                 | Boolean                  | false                               | No       |
 | isLoading          | Loading  state                                                                                                 | Boolean                  | false                               | No       |
 | items              | Dropdown items                                                                                                 | Array<ListItemInterface> | undefined                           | No       |
 | itemsToString      | List item toString method                                                                                      | Function                 | item => (item && item.value) || '', | No       |
-| Loader             | Loading state component                                                                                        | React.ReactNode          | <span>Loading</span>                | No       |
+| Loader             | Loading state component                                                                                        | React.ReactNode          | &lt;span&gt;Loading&lt;/span&gt;    | No       |
 | onChange           | onChange event handler                                                                                         | Function                 | undefined                           | No       |
 | placeholder        | input element placeholder text                                                                                 | String                   | ''                                  | No       |
 | prefixCss          | Prefix for css classNames                                                                                      | String                   | 'auto-complete'                     | No       |
@@ -78,6 +78,21 @@ The css module should look like this:
 .loader { ... }
 .isHighlighted { ... }
 .isSelected { ... }
+```
+### DisableBrowserAutoComplete
+Disables html form input autocomplete and autofill for every child on Chrome and Firefox. Based on https://gist.github.com/niksumeiko/360164708c3b326bd1c8
+
+```javascript
+import { DisableBrowserAutoComplete } from '@inthepocket/itp-rcc-autocomplete';
+```
+
+usage:
+
+```jsx
+<DisableBrowserAutoComplete>
+  <AutoComplete />
+  <input />
+</DisableBrowserAutoComplete>
 ```
 
 ## Development

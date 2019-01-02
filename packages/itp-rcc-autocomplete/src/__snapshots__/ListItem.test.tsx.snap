@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Autocomplete ListItem snapshot 1`] = `
+<li
+  className="card__listItem"
+>
+  Amsterdam
+</li>
+`;
