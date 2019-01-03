@@ -1,5 +1,6 @@
 import { pageLoader } from 'catalog';
 import Alert from './components/itp-rcc-alert';
+import AutoComplete from './components/itp-rcc-autocomplete';
 import Button from './components/itp-rcc-button';
 import Card from './components/itp-rcc-card';
 import Collapse from './components/itp-rcc-collapse';
@@ -44,6 +45,12 @@ export default [
         content: markdownLoader('itp-rcc-alert'),
         path: '/components/itp-rcc-alert/base',
         imports: { Alert },
+      },
+      {
+        title: 'AutoComplete',
+        content: markdownLoader('itp-rcc-autocomplete'),
+        path: '/components/itp-rcc-autocomplete/base',
+        imports: { AutoComplete },
       },
       {
         title: 'Card',
