@@ -60,25 +60,47 @@ JSX
 | type               | input element type: 'email' | 'text' | 'search'                                                                | String                   | 'text'                              | No       |
 | value              | input element value                                                                                            | String                   | ''                                  | No       |
 
-### Styles property
-| Property      | Description                          | Type   | Default | Required |
-| ------------- | ------------------------------------ | ------ | ------- | -------- |
-| isHighlighted | Dropdown list item highlighted state | string | -       | No       |
-| isSelected    | Dropdown list item selected state    | string | -       | No       |
-| list          | Dropdown list                        | string | -       | Yes      |
-| listItem      | Dropdown list item                   | string | -       | Yes      |
-| loader        | Loader component                     | string | -       | No       |
+### Classnames (when not using the styles property - css module)
+```css
+.itp-autocomplete { ... } // container
+.itp-autocomplete--isLoading { ... } // container loading state
+.itp-autocomplete--isOpen { ... } // container dropdown-opened state
+.itp-autocomplete__input { ... } // text input container
+.itp-autocomplete__list { ... } // dropdown list
+.itp-autocomplete__listItem { ... } // dropdown list item
+.itp-autocomplete__listItem--isHighlighted { ... } // dropdown list item highlighted state
+.itp-autocomplete__listItem--isSelected { ... } // dropdown list item selected state
+.itp-autocomplete__loader { ... } // loader element (mounted when isLoading property is true)
+```
+
+### Styles property (when using the styles property - css module)
+| Property      | Description                                  | Type   | Default | Required |
+| ------------- | -------------------------------------------- | ------ | ------- | -------- |
+| autoComplete  | Autocomplete container                       | string | -       | No       |
+| input         | Text input container                         | string | -       | No       |
+| isHighlighted | Dropdown list item highlighted state         | string | -       | No       |
+| isLoading     | Autocomplete container loading state         | string | -       | No       |
+| isOpen        | Autocomplete container dropdown-opened state | string | -       | No       |
+| isSelected    | Dropdown list item selected state            | string | -       | No       |
+| list          | Dropdown list                                | string | -       | Yes      |
+| listItem      | Dropdown list item                           | string | -       | Yes      |
+| loader        | Loader component                             | string | -       | No       |
 
 
 The css module should look like this:
 
 ```css
+.autoComplete { ... }
+.input { ... }
+.isHighlighted { ... }
+.isLoading { ... }
+.isOpen { ... }
+.isSelected { ... }
 .list { ... }
 .listItem { ... }
 .loader { ... }
-.isHighlighted { ... }
-.isSelected { ... }
 ```
+
 ### DisableBrowserAutoComplete
 Disables html form input autocomplete and autofill for every child on Chrome and Firefox. Based on https://gist.github.com/niksumeiko/360164708c3b326bd1c8
 
