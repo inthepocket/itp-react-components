@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { default as Downshift } from 'downshift';
+import classnames from 'classnames';
 import AutoCompleteContext from './AutoCompleteContext';
 import AutoCompleteStylesInterface from './AutoCompleteStylesInterface';
 import { ListItemInterface } from './ListItem';
@@ -54,6 +55,8 @@ const AutoComplete = ({
   const containerClassName = styles ? styles.autoComplete : prefixCss;
   const inputClassName = styles ? styles.input : `${prefixCss}__input`;
   const loaderClassName = styles ? styles.loader : `${prefixCss}__loader`;
+  const openClassName = styles ? styles.isOpen : `${prefixCss}--isOpen`;
+  const loadingClassName = styles ? styles.isLoading : `${prefixCss}--isLoading`;
 
   return (
     <Downshift
@@ -69,37 +72,45 @@ const AutoComplete = ({
         highlightedIndex,
         isOpen,
         selectedItem,
-      }) => (
-        <div className={containerClassName}>
-          <Provider value={{ prefixCss, styles }}>
-            <span className={inputClassName}>
-              <InputComponent
-                {...getInputProps()}
-                autoComplete={autoComplete}
-                disabled={isDisabled}
-                name={name}
-                placeholder={placeholder}
-                size={size}
-                type={type}
-                value={value}
-              />
-            </span>
-            {!isDisabled && !isLoading && isOpen && (
-              <List
-                getItemProps={getItemProps}
-                getMenuProps={getMenuProps}
-                highlightedIndex={highlightedIndex}
-                inputValue={value}
-                items={items}
-                selectedItem={selectedItem}
-              />
-            )}
-            {isLoading && isOpen && (
-              <span className={loaderClassName}><Loader /></span>
-            )}
-          </Provider>
-        </div>
-      )}
+      }) => {
+        const className = classnames({
+          [`${containerClassName}`]: containerClassName,
+          [`${openClassName}`]: !isDisabled && !isLoading && isOpen && openClassName,
+          [`${loadingClassName}`]: isLoading && loadingClassName,
+        });
+
+        return (
+          <div className={className}>
+            <Provider value={{ prefixCss, styles }}>
+              <span className={inputClassName}>
+                <InputComponent
+                  {...getInputProps()}
+                  autoComplete={autoComplete}
+                  disabled={isDisabled}
+                  name={name}
+                  placeholder={placeholder}
+                  size={size}
+                  type={type}
+                  value={value}
+                />
+              </span>
+              {!isDisabled && !isLoading && isOpen && (
+                <List
+                  getItemProps={getItemProps}
+                  getMenuProps={getMenuProps}
+                  highlightedIndex={highlightedIndex}
+                  inputValue={value}
+                  items={items}
+                  selectedItem={selectedItem}
+                />
+              )}
+              {isLoading && isOpen && (
+                <span className={loaderClassName}><Loader /></span>
+              )}
+            </Provider>
+          </div>
+        );
+      }}
     </Downshift>
   );
 };
