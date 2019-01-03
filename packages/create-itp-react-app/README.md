@@ -17,9 +17,6 @@ $ npm start
 * redux-saga
 * react-redux
 * normalize.css
-* css modules (react-app-rewired)
-* postcss (react-app-rewired)
-* postcss-preset-env (react-app-rewired)
 * @inthepocket itp-react-scripts
 * @inthepocket sketchxport
 * @inthepocket design docs
@@ -80,9 +77,3 @@ $ ulimit -n 65536
 ```
 
 Jira ref: DESSSYS-26
-
-## Roadmap
-- example files (in progress)
-- remove example files script
-- documentation: react-app-rewired, css-modules, postcss, postcss-preset-env, .browserlistrc
-- editorconfig
