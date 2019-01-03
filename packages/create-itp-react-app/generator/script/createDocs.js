@@ -31,7 +31,7 @@ module.exports = async ({ appName, appDir, docsTemplateDir }) => {
   });
 
   // update package.json
-  logTitle('Updating package.json');
+  logTitle('Updating docs package.json');
   await updateJSON({
     file: path.join(appDir, 'package.json'),
     updateJSON: packageJSON => ({

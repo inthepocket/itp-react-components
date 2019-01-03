@@ -6,7 +6,12 @@ const { CREATE_REACT_APP_VERSION } = require('../config.json');
  * @param  {String} appName
  * @return {Promise}
  */
-module.exports = ({ appName }) =>
-  new Promise(resolve => {
-    shell.exec(`npx create-react-app@${CREATE_REACT_APP_VERSION} ${appName}`, resolve);
+module.exports = async ({ appName }) =>
+  new Promise((resolve, reject) => {
+    shell.exec(`npx create-react-app@${CREATE_REACT_APP_VERSION} ${appName}`, (code, stdout, stderr) => {
+      if (code !== 0) {
+        reject(new Error(stderr));
+      }
+      resolve(stdout);
+    });
   });

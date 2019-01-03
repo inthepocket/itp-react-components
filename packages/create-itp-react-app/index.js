@@ -36,7 +36,7 @@ const init = async () => {
       throw err;
     }
 
-    runGenerator({
+    await runGenerator({
       appName,
       appDir: `${process.cwd()}/${appName}`,
       appTemplateDir,
