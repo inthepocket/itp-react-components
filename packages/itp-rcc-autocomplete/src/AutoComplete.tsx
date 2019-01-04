@@ -35,28 +35,36 @@ const stateReducer = (state, changes) => {
   }
 }
 
+/**
+ * We're using this method for input name attributes
+ * as another workaround for Chrome's stubborn autofill / autocomplete features
+ */
+const randomString = (prefix: string) => `${prefix}-${Math.random()}`;
+
 const AutoComplete = ({
   autoComplete = 'new-password',
+  hasRandomizedName = true,
   InputComponent = Input,
   isDisabled = false,
   isLoading = false,
   items,
   itemToString = item => (item && item.value) || '',
   Loader = () => (<span>Loading</span>),
+  name,
   onChange,
   placeholder = '',
   prefixCss = 'auto-complete',
   size = 'default',
+  styles = null,
   type = 'text',
   value = '',
-  name,
-  styles = null,
 }) => {
   const containerClassName = styles ? styles.autoComplete : prefixCss;
   const inputClassName = styles ? styles.input : `${prefixCss}__input`;
   const loaderClassName = styles ? styles.loader : `${prefixCss}__loader`;
   const openClassName = styles ? styles.isOpen : `${prefixCss}--isOpen`;
   const loadingClassName = styles ? styles.isLoading : `${prefixCss}--isLoading`;
+  const inputName = hasRandomizedName ? randomString(name) : name;
 
   return (
     <Downshift
@@ -87,7 +95,7 @@ const AutoComplete = ({
                   {...getInputProps()}
                   autoComplete={autoComplete}
                   disabled={isDisabled}
-                  name={name}
+                  name={inputName}
                   placeholder={placeholder}
                   size={size}
                   type={type}
@@ -117,9 +125,10 @@ const AutoComplete = ({
 
 export interface AutoCompletePropsInterface {
   autoComplete?: 'on' | 'off' | 'new-password';
+  hasRandomizedName?: boolean;
   InputComponent?: React.ReactNode | Element;
-  isDisabled?: Boolean;
-  isLoading?: Boolean;
+  isDisabled?: boolean;
+  isLoading?: boolean;
   items?: Array<ListItemInterface>;
   itemToString?: Function;
   loader?: React.ReactNode | Element;

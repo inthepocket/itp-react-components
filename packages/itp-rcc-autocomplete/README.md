@@ -45,10 +45,11 @@ JSX
 ```
 | Property           | Description                                                                                                    | Type                     | Default                             | Required |
 | ------------------ | -------------------------------------------------------                                                        | ------------------------ | ----------------------------------- | -------- |
-| autoComplete       | translates into autocomplete attribute on input element                                                        | Boolean                  | 'new-password'                      | No       |
+| autoComplete       | translates into autocomplete attribute on input element                                                        | boolean                  | 'new-password'                      | No       |
+| hasRandomizedName  | randomizes the input's name attribute as a workaround for Chrome's stubborn autofill / autocompletion          | boolean                  | true                                | No       |
 | InputComponent     | Input component                                                                                                | React.ReactNode          | &lt;input /&gt;                     | No       |
-| isDisabled         | Disabled state                                                                                                 | Boolean                  | false                               | No       |
-| isLoading          | Loading  state                                                                                                 | Boolean                  | false                               | No       |
+| isDisabled         | Disabled state                                                                                                 | boolean                  | false                               | No       |
+| isLoading          | Loading  state                                                                                                 | boolean                  | false                               | No       |
 | items              | Dropdown items                                                                                                 | Array<ListItemInterface> | undefined                           | No       |
 | itemsToString      | List item toString method                                                                                      | Function                 | item => (item && item.value) || '', | No       |
 | Loader             | Loading state component                                                                                        | React.ReactNode          | &lt;span&gt;Loading&lt;/span&gt;    | No       |
