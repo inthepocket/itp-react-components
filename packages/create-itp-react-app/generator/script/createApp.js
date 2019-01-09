@@ -25,6 +25,9 @@ module.exports = async ({ appName, appDir, appTemplateDir }) => {
 
   shell.cd(appDir);
 
+  logTitle('Npm install, instead of yarn');
+  await new Promise(resolve => shell.exec('npm i', resolve));
+
   // cleanup React App
   logTitle('Cleanup React App');
   await cleanupReactApp({ appDir });
