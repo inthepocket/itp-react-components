@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const changeCase = require('change-case');
 
-const hubble_JSON_PATH = path.join('hubble.json');
+const hubble_JSON_PATH = path.join('hst.json');
 const ROOT_JSON_APP_PATH = path.join('src', 'root.json');
 const ROOT_JSON_DD_PATH = path.join('design-docs', 'root.json');
 
