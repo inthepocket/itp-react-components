@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { default as Downshift } from 'downshift';
 import classnames from 'classnames';
+import randomString from './randomString';
 import AutoCompleteContext from './AutoCompleteContext';
 import AutoCompleteStylesInterface from './AutoCompleteStylesInterface';
 import { ListItemInterface } from './ListItem';
@@ -9,6 +10,9 @@ import List from './List';
 
 const { Provider } = AutoCompleteContext;
 
+/**
+ * Handle Downshift state change
+ */
 const handleStateChange = onChange => (changes) => {
   if (changes.hasOwnProperty('selectedItem')) {
     onChange({value: changes.selectedItem.value})
@@ -34,12 +38,6 @@ const stateReducer = (state, changes) => {
       return changes;
   }
 }
-
-/**
- * We're using this method for input name attributes
- * as another workaround for Chrome's stubborn autofill / autocomplete features
- */
-const randomString = (prefix: string) => `${prefix}-${Math.random()}`;
 
 const AutoComplete = ({
   autoComplete = 'new-password',
