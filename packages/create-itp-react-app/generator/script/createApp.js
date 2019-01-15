@@ -90,10 +90,6 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
       'to-css',
       '@inthepocket/itp-react-scripts',
       '@inthepocket/hubble-mirror',
-      'react-app-rewired',
-      'react-app-rewire-postcss',
-      'react-app-rewire-css-modules-extensionless',
-      'postcss-preset-env',
     ],
     options: {
       devDependencies: true,
@@ -119,9 +115,7 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
         license: 'MIT',
         scripts: {
           ...scriptsToKeep,
-          start: 'react-app-rewired start',
-          build: 'react-app-rewired build',
-          test: 'react-app-rewired test --env=jsdom',
+          'test:ci': 'CI=true react-scripts test --env=jsdom --coverage',
           'create-root-css': 'node ./scripts/createRootCSS.js',
         },
       };
