@@ -11,7 +11,7 @@ const updateJSON = require('../../lib/updateJSON');
 const installNPMPackages = require('../../lib/installNPMPackages');
 const appendToFile = require('../../lib/appendToFile');
 
-module.exports = async ({ appName, appDir, appTemplateDir }) => {
+module.exports = async ({appName, appDir, appTemplateDir}) => {
   shell.exec('clear');
   console.log(chalk.white.bgBlue.bold(`Create ITP React App: ${appName}`));
   console.log('Learn more about create-itp-react-app at https://github.com/');
@@ -21,20 +21,29 @@ module.exports = async ({ appName, appDir, appTemplateDir }) => {
 
   // create React App
   logTitle('Create React App');
-  await createReactApp({ appName });
+  await createReactApp({appName});
 
   shell.cd(appDir);
 
+  logTitle('Npm install, instead of yarn');
+  await new Promise(resolve => shell.exec('npm i', resolve));
+
   // cleanup React App
   logTitle('Cleanup React App');
-  await cleanupReactApp({ appDir });
+  await cleanupReactApp({appDir});
 
   // copy templates
   logTitle('Copying app templates');
-  await copyDirectory({ targetDir: appDir, srcDir: appTemplateDir });
+  await copyDirectory({
+    targetDir: appDir,
+    srcDir: appTemplateDir,
+    options: {
+      dot: true, // to copy .hubble-mirror.json
+    },
+  });
 
   logTitle('Inject project name');
-  await injectProjectName({ appDir, appName });
+  await injectProjectName({appDir, appName});
 
   // update local packages package.json
   await updateJSON({
@@ -66,7 +75,7 @@ module.exports = async ({ appName, appDir, appTemplateDir }) => {
       'redux',
       'src/common',
       'src/core',
-      '@inthepocket/itp-rcc-button'
+      '@inthepocket/itp-rcc-button',
     ],
   });
 
@@ -80,6 +89,7 @@ module.exports = async ({ appName, appDir, appTemplateDir }) => {
       'shelljs',
       'to-css',
       '@inthepocket/itp-react-scripts',
+      '@inthepocket/hubble-mirror',
       'react-app-rewired',
       'react-app-rewire-postcss',
       'react-app-rewire-css-modules-extensionless',
@@ -102,7 +112,7 @@ module.exports = async ({ appName, appDir, appTemplateDir }) => {
   await updateJSON({
     file: path.join(appDir, 'package.json'),
     updateJSON: packageJSON => {
-      const { eject, ...scriptsToKeep } = packageJSON.scripts;
+      const {eject, ...scriptsToKeep} = packageJSON.scripts;
       return {
         ...packageJSON,
         author: 'In The Pocket',

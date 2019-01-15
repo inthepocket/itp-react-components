@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const changeCase = require('change-case');
 
-const SKETCHXPORT_JSON_PATH = path.join('sketchxport.json');
+const hubble_JSON_PATH = path.join('hst.json');
 const ROOT_JSON_APP_PATH = path.join('src', 'root.json');
 const ROOT_JSON_DD_PATH = path.join('design-docs', 'root.json');
 
@@ -37,11 +37,11 @@ const writeJSON = ({
 }) => writeFile({ filePath, data: JSON.stringify(jsonData, null, 2) });
 
 const mapRootJSON = ({
-  sketchXportJSON,
+  hubbleJSON,
   rootJSON,
 }) => new Promise((resolve, reject) => {
   try {
-    sketchXportJSON.colors.forEach(importedColor => {
+    hubbleJSON.colors.forEach(importedColor => {
       const colorVariableName = changeCase.camelCase(`color-${importedColor.id}`);
       rootJSON[colorVariableName] = `#${importedColor.hex}`;
     });
@@ -54,12 +54,12 @@ const mapRootJSON = ({
 
 const getRootJSON = ({
   rootJSONPath,
-  sketchXportJSON,
+  hubbleJSON,
 }) => new Promise(async(resolve, reject) => {
   try {
     const rootJSON = await readJSON({ filePath: rootJSONPath });
     const jsonData = await mapRootJSON({
-      sketchXportJSON,
+      hubbleJSON,
       rootJSON,
     });
 
@@ -71,16 +71,16 @@ const getRootJSON = ({
 
 const postProcess = async () => {
   try {
-    const sketchXportJSON = await readJSON({ filePath: SKETCHXPORT_JSON_PATH });
+    const hubbleJSON = await readJSON({ filePath: hubble_JSON_PATH });
 
     const appRootJSON = await getRootJSON({
       rootJSONPath: ROOT_JSON_APP_PATH,
-      sketchXportJSON,
+      hubbleJSON,
     });
 
     const ddRootJSON = await getRootJSON({
       rootJSONPath: ROOT_JSON_DD_PATH,
-      sketchXportJSON,
+      hubbleJSON,
     });
 
     await writeJSON({

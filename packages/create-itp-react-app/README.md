@@ -21,7 +21,7 @@ $ npm start
 * postcss (react-app-rewired)
 * postcss-preset-env (react-app-rewired)
 * @inthepocket itp-react-scripts
-* @inthepocket sketchxport
+* @inthepocket hubble
 * @inthepocket design docs
 * @inthepocket common components
 

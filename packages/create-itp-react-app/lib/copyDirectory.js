@@ -1,4 +1,3 @@
-const shell = require('shelljs');
 var copy = require('recursive-copy');
 
 /**

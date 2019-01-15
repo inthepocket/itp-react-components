@@ -3,7 +3,7 @@ const changeCase = require('change-case');
 
 module.exports = () =>
   new Promise((resolve, reject) => {
-    const prompts = ['sketchfilePath'];
+    const prompts = ['bucketName'];
     let appName = process.argv[2];
 
     if (!appName) {
