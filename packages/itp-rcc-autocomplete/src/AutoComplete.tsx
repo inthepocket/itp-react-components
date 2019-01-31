@@ -15,7 +15,7 @@ const { Provider } = AutoCompleteContext;
  */
 const handleStateChange = onChange => (changes) => {
   if (changes.hasOwnProperty('selectedItem')) {
-    onChange({value: changes.selectedItem.value})
+    onChange({ ...changes.selectedItem })
   } else if (changes.hasOwnProperty('inputValue')) {
     onChange({value: changes.inputValue})
   }
