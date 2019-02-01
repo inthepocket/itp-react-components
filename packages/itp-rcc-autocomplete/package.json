@@ -1,6 +1,6 @@
 {
   "name": "@inthepocket/itp-rcc-autocomplete",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ITP Autocomplete component",
   "main": "dist/AutoComplete.js",
   "types": "dist/AutoComplete.d.ts",
