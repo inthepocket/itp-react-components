@@ -33,7 +33,11 @@ const stateReducer = (state, changes) => {
         ...changes,
         inputValue: state.inputValue,
       };
-    break;
+    case Downshift.stateChangeTypes.mouseUp:
+      return !changes.selectedItem ? {
+        ...changes,
+        inputValue: state.inputValue,
+      } : changes;
     default:
       return changes;
   }
