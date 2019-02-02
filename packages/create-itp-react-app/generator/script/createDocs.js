@@ -9,7 +9,7 @@ const appendToFile = require('../../lib/appendToFile');
 module.exports = async ({ appName, appDir, docsTemplateDir }) => {
   // install design-docs
   logTitle('Installing design-docs');
-  const designDocsName = `${appName}-design-docs`;
+  const designDocsName = `design-docs`;
   const targetDir = `${appDir}/${designDocsName}`;
 
   // TODO JDI copy paste catalog, and install..
