@@ -9,7 +9,7 @@ const appendToFile = require('../../lib/appendToFile');
 module.exports = async ({ appName, appDir, docsTemplateDir }) => {
   // install design-docs
   logTitle('Installing design-docs');
-  const designDocsName = 'design-docs';
+  const designDocsName = `${appName}-design-docs`;
   const targetDir = `${appDir}/${designDocsName}`;
 
   // TODO JDI copy paste catalog, and install..
@@ -27,7 +27,7 @@ module.exports = async ({ appName, appDir, docsTemplateDir }) => {
   await appendToFile({
     directory: appDir,
     fileName: '.gitignore',
-    data: `\n${designDocsName}/node_modules`,
+    data: `\n${designDocsName}/node_modules\n${designDocsName}/catalog/build`,
   });
 
   // update package.json
@@ -41,7 +41,7 @@ module.exports = async ({ appName, appDir, docsTemplateDir }) => {
       scripts: {
         ...packageJSON.scripts,
         'docs:start': `cd ${designDocsName} && npm run start`,
-        'docs:build': `cd ${designDocsName} && npm run build`,
+        'docs:build': `cd ${designDocsName} && npm i && npm run build`,
       },
     }),
   });

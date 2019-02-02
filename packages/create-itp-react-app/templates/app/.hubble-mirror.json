@@ -2,11 +2,15 @@
     "source": {
       "dir": ".hubble/src",
       "assets": ".hubble/src/<BUCKET_NAME>/assets",
-      "hst": ".hubble/src/<BUCKET_NAME>/hubble.json"
+      "hst": ".hubble/src/<BUCKET_NAME>/hubble-data.json"
     },
     "postProcess": ".hubble/postprocess.sh",
     "target": {
       "assets": "/design-docs/assets/images",
       "hst": "./hst.json"
+    },
+    "deployPreview": {
+      "publishDirectory": "/design-docs/catalog/build",
+      "previewUrl": "<APP_NAME>"
     }
   }
