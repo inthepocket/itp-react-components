@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Autocomplete List snapshot 1`] = `
+<ul
+  className="card__list"
+>
+  <li
+    className="card__listItem"
+  >
+    Amsterdam
+  </li>
+  <li
+    className="card__listItem"
+  >
+    Bangkok
+  </li>
+  <li
+    className="card__listItem"
+  >
+    Brussels
+  </li>
+  <li
+    className="card__listItem"
+  >
+    London
+  </li>
+  <li
+    className="card__listItem"
+  >
+    New York
+  </li>
+  <li
+    className="card__listItem"
+  >
+    Paris
+  </li>
+</ul>
+`;

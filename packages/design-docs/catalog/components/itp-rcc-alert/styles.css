@@ -1,0 +1,99 @@
+/**
+ * Alert
+ */
+ .itp-alert {
+  position: relative;
+  display: block;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.itp-alert a:hover {
+  text-decoration: none;
+}
+
+.itp-alert p:first-child {
+  margin-top: 0;
+}
+
+.itp-alert p:last-of-type {
+  margin-bottom: 0;
+}
+
+.itp-alert + .itp-alert {
+  margin-top: 1rem;
+}
+
+/**
+ * Dismissible alert
+ */
+.itp-alert-dismiss-button {
+  position: absolute;
+  top: .25rem;
+  right: .25rem;
+  font-size: 1.1em;
+  color: currentColor;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+/**
+ * Default type
+ */
+.itp-alert-type-default {
+  border: 1px solid var(--colorQuaternary100);
+}
+
+/**
+ * Success type
+ */
+.itp-alert-type-success {
+  color: var(--colorSuccess300);
+  background-color: var(--colorSuccess100);
+}
+
+.itp-alert-type-success a,
+.itp-alert-type-success strong {
+  font-weight: 700;
+  color: var(--colorSuccess700);
+}
+
+/**
+ * Danger type
+ */
+.itp-alert-type-danger {
+  color: var(--colorDanger300);
+  background-color: var(--colorDanger100);
+}
+
+.itp-alert-type-danger a {
+  font-weight: 700;
+  color: var(--colorDanger700);
+}
+
+/**
+ * Warning type
+ */
+ .itp-alert-type-warning {
+  color: var(--colorWarning300);
+  background-color: var(--colorWarning100);
+}
+
+.itp-alert-type-warning a {
+  font-weight: 700;
+  color: var(--colorWarning700);
+}
+
+/**
+ * Info type
+ */
+.itp-alert-type-info {
+  color: var(--colorInfo300);
+  background-color: var(--colorInfo100);
+}
+
+.itp-alert-type-info a {
+  font-weight: 700;
+  color: var(--colorInfo700);
+}
