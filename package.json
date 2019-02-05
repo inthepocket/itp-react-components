@@ -1,6 +1,6 @@
 {
   "name": "@inthepocket/itp-react-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Common and unstyled base components used by In the Pocket",
   "main": "index.js",
   "scripts": {
@@ -18,10 +18,22 @@
   ],
   "author": "In the Pocket",
   "contributors": [
-    { "name": "Jonathan Dierckens", "email": "jonathan.dierckens@inthepocket.com"},
-	{ "name": "Brecht Omey", "email": "brecht.omey@inthepocket.com"},
-	{ "name": "Simon Waerenbrugh", "email": "Simon.Waerenbrugh@inthepocket.com"},
-	{ "name": "Thibault Maekelbergh", "email": "thibault.maekelbergh@inthepocket.com"}
+    {
+      "name": "Jonathan Dierckens",
+      "email": "jonathan.dierckens@inthepocket.com"
+    },
+    {
+      "name": "Brecht Omey",
+      "email": "brecht.omey@inthepocket.com"
+    },
+    {
+      "name": "Simon Waerenbrugh",
+      "email": "Simon.Waerenbrugh@inthepocket.com"
+    },
+    {
+      "name": "Thibault Maekelbergh",
+      "email": "thibault.maekelbergh@inthepocket.com"
+    }
   ],
   "license": "MIT",
   "devDependencies": {

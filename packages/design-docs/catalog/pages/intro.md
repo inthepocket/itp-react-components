@@ -1,6 +1,9 @@
 # Components overview
 
 - [Button](/components/itp-rcc-button/base)
+- [Alert](/components/itp-rcc-alert/base)
+- [Autocomplete](/components/itp-rcc-autocomplete/base)
+- [Card](/components/itp-rcc-card/base)
 - [Collapse](/components/itp-rcc-collapse/base)
 
 # Theme

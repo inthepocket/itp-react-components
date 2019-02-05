@@ -41,4 +41,4 @@ All the different components have an example page in the design docs.
 
 # You want to contribute?
 
-When checking out the repo, make sure to install lerna and run `lerna bootstrap --hoist` to have everything up and running.
+When checking out the repo, make sure to install lerna and run `npx lerna bootstrap --hoist` to have everything up and running.

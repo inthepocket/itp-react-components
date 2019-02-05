@@ -8,7 +8,7 @@ module.exports = async ({ appName, appDir, appTemplateDir, docsTemplateDir, buck
   await createApp({ appName, appDir, appTemplateDir });
   await createDocs({ appName, appDir, docsTemplateDir });
   await createRootCSS({ appName, appDir });
-  await updateHubbleConfig({ appDir, bucketName });
+  await updateHubbleConfig({ appDir, bucketName, appName });
   await initGit();
 
   console.log(' ');
