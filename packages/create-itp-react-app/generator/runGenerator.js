@@ -4,11 +4,11 @@ const createDocs = require('./script/createDocs');
 const createRootCSS = require('./script/createRootCSS');
 const updateHubbleConfig = require('./script/updateHubbleConfig');
 
-module.exports = async ({ appName, appDir, appTemplateDir, docsTemplateDir, bucketName }) => {
+module.exports = async ({ appName, appDir, appTemplateDir, docsTemplateDir }) => {
   await createApp({ appName, appDir, appTemplateDir });
   await createDocs({ appName, appDir, docsTemplateDir });
   await createRootCSS({ appName, appDir });
-  await updateHubbleConfig({ appDir, bucketName, appName });
+  await updateHubbleConfig({ appDir, appName });
   await initGit();
 
   console.log(' ');
