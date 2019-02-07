@@ -29,7 +29,7 @@
 
 A generator for all our ITP React Projects
 
-## [Design docs](/packages/design-docs/README.md)
+## [Design docs](/packages/design-docs)
 
 All the different components have an example page in the design docs.
 
