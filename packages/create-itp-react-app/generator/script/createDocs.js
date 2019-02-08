@@ -12,7 +12,6 @@ module.exports = async ({ appName, appDir, docsTemplateDir }) => {
   const designDocsName = `design-docs`;
   const targetDir = `${appDir}/${designDocsName}`;
 
-  // TODO JDI copy paste catalog, and install..
   await copyDirectory({ targetDir, srcDir: docsTemplateDir });
   await exec(`cd ${targetDir} && npm i && cd ${process.cwd()}`);
 

@@ -3,7 +3,7 @@ const path = require('path');
 const logTitle = require('../../lib/logTitle');
 const updateJSON = require('../../lib/updateJSON');
 
-module.exports = async ({ appDir, bucketName, appName }) => {
+module.exports = async ({ appDir, appName }) => {
   logTitle('Updating package.json for hubble config');
 
   await updateJSON({
@@ -27,11 +27,6 @@ module.exports = async ({ appDir, bucketName, appName }) => {
     file: path.join(appDir, '.hubble-mirror.json'),
     updateJSON: configJSON => ({
       ...configJSON,
-      source: {
-        ...configJSON.source,
-        assets: configJSON.source.assets.replace('<BUCKET_NAME>', bucketName),
-        hst: configJSON.source.hst.replace('<BUCKET_NAME>', bucketName),
-      },
       deployPreview: {
         ...configJSON.deployPreview,
         previewUrl: configJSON.deployPreview.previewUrl.replace('<APP_NAME>', appName)

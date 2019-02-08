@@ -18,7 +18,7 @@ const verifyIfExists = async dir =>
 
 const init = async () => {
   try {
-    const { appName, bucketName } = await setupGenerator();
+    const { appName } = await setupGenerator();
 
     const docsTemplateDir = path.resolve(__dirname, 'templates', 'design-docs');
     const appTemplateDir = path.resolve(__dirname, 'templates', 'app');
@@ -40,8 +40,7 @@ const init = async () => {
       appName,
       appDir: `${process.cwd()}/${appName}`,
       appTemplateDir,
-      docsTemplateDir,
-      bucketName,
+      docsTemplateDir
     });
   } catch (error) {
     if (error.message === 'appNameNotValid') {
