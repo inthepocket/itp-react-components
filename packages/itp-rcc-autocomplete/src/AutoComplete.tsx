@@ -34,6 +34,7 @@ const stateReducer = (state, changes) => {
         inputValue: state.inputValue,
       };
     case Downshift.stateChangeTypes.mouseUp:
+    case Downshift.stateChangeTypes.touchEnd:
       return !changes.selectedItem ? {
         ...changes,
         inputValue: state.inputValue,
