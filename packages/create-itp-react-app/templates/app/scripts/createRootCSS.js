@@ -15,15 +15,13 @@ const writeFile = ({
   fs.writeFile(filePath, data, 'utf8', resolve);
 });
 
-const mapRootCSS = (rootJSON) => toCss(Object.keys(rootJSON).reduce((rootCSS, property) => {
-  return {
-    ...rootCSS,
-    ':root': {
-      ...rootCSS[':root'],
-      [`--${property}`]: rootJSON[property],
-    },
-  };
-}, { ':root' : {} }));
+const mapRootCSS = (rootJSON) => toCss(Object.keys(rootJSON).reduce((rootCSS, property) => ({
+  ...rootCSS,
+  ':root': {
+    ...rootCSS[':root'],
+    [`--${property}`]: rootJSON[property],
+  },
+}), { ':root' : {} }));
 
 const createRootCSS = async () => {
   const appRootCSS = mapRootCSS(appRootJSON);

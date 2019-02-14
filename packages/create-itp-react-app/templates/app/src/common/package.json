@@ -7,6 +7,7 @@
     "react": "*"
   },
   "dependencies": {
-    "prop-types": "*"
+    "prop-types": "*",
+    "@inthepocket/itp-rcc-button": "0.0.7"
   }
 }

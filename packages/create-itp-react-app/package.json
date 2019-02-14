@@ -27,7 +27,7 @@
     "prompt": "^1.0.0",
     "replace-in-file": "^3.4.2",
     "shelljs": "^0.8.2",
-    "recursive-copy": "^2.0.9"
+    "recursive-copy": "^2.0.9",
   },
   "publishConfig": {
     "access": "public"
