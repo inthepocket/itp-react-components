@@ -3,17 +3,17 @@ const rewirePostCss = require('react-app-rewire-postcss');
 
 module.exports = {
   webpack: (config, env) => {
-    config = rewireCssModules.webpack(config, env, {
+    let newConfig = rewireCssModules.webpack(config, env, {
       test: /\.module.css$/
     });
 
-    config = rewirePostCss(config, {
-      plugins: loader => [
-        require('postcss-preset-env')(),
+    newConfig = rewirePostCss(newConfig, {
+      plugins: loader => [ // eslint-disable-line no-unused-vars
+        require('postcss-preset-env')(), // eslint-disable-line global-require
       ],
     });
 
-    return config;
+    return newConfig;
   },
   jest: config => rewireCssModules.jest(config),
 };

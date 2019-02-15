@@ -71,10 +71,14 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
       'normalize.css',
       'prop-types',
       'react-redux',
+      'react-app-rewire-postcss',
+      'react-app-rewire-css-modules-extensionless',
+      'postcss-preset-env',
       'redux-saga',
       'redux',
       'src/common',
       'src/core',
+      'to-css',
       '@inthepocket/itp-rcc-button',
     ],
   });
@@ -87,13 +91,9 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
     npmPackages: [
       'change-case',
       'shelljs',
-      'to-css',
       '@inthepocket/itp-react-scripts',
       '@inthepocket/hubble-mirror',
       'react-app-rewired',
-      'react-app-rewire-postcss',
-      'react-app-rewire-css-modules-extensionless',
-      'postcss-preset-env',
     ],
     options: {
       devDependencies: true,
@@ -123,6 +123,8 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
           build: 'react-app-rewired build',
           test: 'react-app-rewired test --env=jsdom',
           'create-root-css': 'node ./scripts/createRootCSS.js',
+          lint: 'itp-react-scripts lint',
+          'lint:fix': 'npm run lint – --fix',
         },
       };
     },
