@@ -14,7 +14,7 @@ const appendToFile = require('../../lib/appendToFile');
 module.exports = async ({appName, appDir, appTemplateDir}) => {
   shell.exec('clear');
   console.log(chalk.white.bgBlue.bold(`Create ITP React App: ${appName}`));
-  console.log('Learn more about create-itp-react-app at https://github.com/');
+  console.log('Learn more about create-itp-react-app at https://github.com/inthepocket/itp-react-components/tree/develop/packages/create-itp-react-app');
 
   // remove application dir
   shell.rm('-rf', appDir);
