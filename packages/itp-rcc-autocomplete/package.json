@@ -26,17 +26,17 @@
   "dependencies": {
     "capitalize": "^2.0.0",
     "classnames": "^2.2.6",
-    "downshift": "^3.2.2",
+    "downshift": "^3.2.2"
+  },
+  "peerDependencies": {
     "react": "^16.6.3"
   },
   "devDependencies": {
     "@types/jest": "^23.3.10",
-    "@types/node": "^10.12.12",
+    "@types/node": "^10.12.14",
     "@types/react-test-renderer": "^16.0.3",
     "babel-core": "^6.26.3",
-    "jest": "^23.6.0",
     "jest-dom": "^3.0.0",
-    "react-test-renderer": "^16.7.0",
     "react-testing-library": "^5.4.1",
     "ts-jest": "^23.10.5",
     "typescript": "^3.2.2"

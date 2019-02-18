@@ -3,13 +3,11 @@
   "description": "ITP React component docs",
   "dependencies": {
     "@inthepocket/itp-rcc-alert": "0.0.1",
-    "@inthepocket/itp-rcc-autocomplete": "0.0.3",
+    "@inthepocket/itp-rcc-autocomplete": "0.0.4",
     "@inthepocket/itp-rcc-button": "0.0.7",
     "@inthepocket/itp-rcc-card": "0.0.3",
     "@inthepocket/itp-rcc-collapse": "^0.0.2",
-    "catalog": "^3.6.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "catalog": "^3.6.0"
   },
   "scripts": {
     "start": "catalog start",
