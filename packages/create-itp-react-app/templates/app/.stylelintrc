@@ -1,0 +1,6 @@
+{
+  "extends": "stylelint-config-itp",
+  "ignoreFiles": ["src/root.css"],
+  "plugins": [],
+  "rules": {}
+}
