@@ -5,6 +5,11 @@
     "tslint-config-airbnb"
   ],
   "jsRules": {},
+  "linterOptions": {
+    "exclude": [
+      "src/serviceWorker.ts"
+    ]
+  },
   "rules": {
     // This rule is here for now because of https://github.com/palantir/tslint-react/issues/120
     "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
