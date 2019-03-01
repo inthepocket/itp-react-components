@@ -8,5 +8,5 @@ const { CREATE_REACT_APP_VERSION } = require('../config.json');
  */
 module.exports = ({ appName }) =>
   new Promise(resolve => {
-    shell.exec(`npx create-react-app@${CREATE_REACT_APP_VERSION} ${appName}`, resolve);
+    shell.exec(`npx create-react-app@${CREATE_REACT_APP_VERSION} ${appName} --typescript`, resolve);
   });

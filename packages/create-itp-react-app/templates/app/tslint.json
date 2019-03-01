@@ -1,0 +1,14 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint-react",
+    "tslint-config-airbnb"
+  ],
+  "jsRules": {},
+  "rules": {
+    // This rule is here for now because of https://github.com/palantir/tslint-react/issues/120
+    "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"],
+    "jsx-no-multiline-js": false
+  },
+  "rulesDirectory": []
+}

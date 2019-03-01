@@ -6,7 +6,7 @@ const replaceInFile = require('replace-in-file');
  */
 module.exports = ({ appDir, appName }) =>
   replaceInFile({
-    files: `${appDir}/**/*.js`,
+    files: `${appDir}/**/*.ts*`,
     from: /<PROJECT-NAME>/g,
     to: appName,
   });
