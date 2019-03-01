@@ -62,6 +62,14 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
     }),
   });
 
+  await updateJSON({
+    file: path.join(appDir, 'src', '__mockdata__', 'package.json'),
+    updateJSON: packageJSON => ({
+      ...packageJSON,
+      name: `${appName}-mock`,
+    }),
+  });
+
   // install npm packages
   logTitle('Installing npm dependencies');
   await installNPMPackages({
@@ -69,11 +77,12 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
     dir: appDir,
     npmPackages: [
       '@inthepocket/itp-css',
-      '@inthepocket/itp-rcc-button',
+      'normalizr',
       'react-redux',
+      'redux-react-hook',
       'redux-saga',
       'redux',
-      'normalize.css',
+      'src/__mockdata__',
       'src/common',
       'src/core',
       'to-css',
@@ -88,11 +97,13 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
     npmPackages: [
       '@inthepocket/hubble-mirror',
       '@inthepocket/itp-react-scripts',
+      '@types/react-test-renderer',
       'change-case',
       'postcss-preset-env',
-      'react-app-rewire-css-modules-extensionless',
       'react-app-rewire-postcss',
       'react-app-rewired',
+      'react-test-renderer',
+      'redux-saga-test-plan@v4.0.0-beta.2',
       'shelljs',
       'stylelint-config-itp',
       'stylelint',
@@ -126,10 +137,29 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
           ...scriptsToKeep,
           start: 'react-app-rewired start',
           build: 'react-app-rewired build',
-          test: 'react-app-rewired test --env=jsdom',
+          test: 'react-scripts test --env=jsdom',
+          'test:coverage': 'react-scripts test --env=jsdom --coverage',
           'create-root-css': 'node ./scripts/createRootCSS.js',
-          lint: 'itp-react-scripts lint',
-          'lint:fix': 'npm run lint – --fix',
+          lint: 'npm run lint:ts && npm run lint:css',
+          'lint:ts': `tslint -c tslint.json --project tsconfig.json 'src/**/*.ts' 'src/**/*.tsx'`,
+          'lint:css': `stylelint 'src/**/*.css'`,
+        },
+        jest: {
+          coverageThreshold: {
+            global: {
+              statements: 90,
+              branches: 90,
+              functions: 90,
+              lines: 90,
+            },
+          },
+          collectCoverageFrom: [
+            'src/**/*.{ts,tsx,js,jsx}',
+            '!**/node_modules/**',
+            '!src/__mockdata__/**',
+            '!src/index.tsx',
+            '!src/serviceWorker.ts',
+          ],
         },
       };
     },
