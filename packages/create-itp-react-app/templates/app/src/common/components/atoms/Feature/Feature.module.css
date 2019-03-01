@@ -1,0 +1,18 @@
+.Feature {
+  display: inline-block;
+  margin-right: 5px;
+  color: var(--colorSecondary900);
+}
+
+.Feature:hover {
+  text-decoration: none;
+}
+
+.Feature::after {
+  content: ",";
+}
+
+.Feature:last-child::after {
+  display: none;
+  content: "";
+}

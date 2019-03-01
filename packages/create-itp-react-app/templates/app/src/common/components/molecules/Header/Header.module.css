@@ -1,0 +1,7 @@
+.header {
+  position: relative;
+  z-index: 1;
+  width: 55vw;
+  padding: 10% 0 0 7.5rem;
+  color: var(--colorSecondary900);
+}

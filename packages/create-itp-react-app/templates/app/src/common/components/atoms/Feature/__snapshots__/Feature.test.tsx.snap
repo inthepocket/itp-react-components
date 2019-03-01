@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Feature snapshot: default 1`] = `
+<span
+  className="Feature"
+>
+  foo:bar
+</span>
+`;
+
+exports[`Feature snapshot: with url 1`] = `
+<a
+  className="Feature"
+  href="https://foo.bar/"
+  target="_blank"
+>
+  foo:bar
+</a>
+`;
