@@ -1,6 +1,17 @@
+import { FeatureInterface } from '<PROJECT-NAME>-core/types/Feature';
 import { features } from './features';
 
-const entitiesState = (collection: any) => collection.reduce(
+interface EntitiesStateArgsInterface {
+  collection: FeatureInterface[];
+}
+
+interface UiStateArgsInterface {
+  collection: FeatureInterface[];
+}
+
+const entitiesState = (
+  { collection = [] }: EntitiesStateArgsInterface,
+) => collection.reduce(
   (state: any, object: any) => ({
     ...state,
     [object.id]: object,
@@ -8,20 +19,22 @@ const entitiesState = (collection: any) => collection.reduce(
   {},
 );
 
-const uiState = (collection: any = []) => ({
+const uiState = (
+  { collection = [] } : UiStateArgsInterface,
+) => ({
   items: collection.map((object: any) => object.id),
 });
 
 export default {
   entities: {
-    features: entitiesState(features),
+    features: entitiesState({ collection: features }),
   },
   ui: {
     features: {
       error: null,
       isAddingFeature: false,
       isFetchingFeatures: false,
-      ...uiState(features),
+      ...uiState({ collection: features }),
     },
   },
 };

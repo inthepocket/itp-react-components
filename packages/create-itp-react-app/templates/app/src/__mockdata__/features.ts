@@ -1,4 +1,6 @@
-export const features = [
+import { FeatureInterface } from '<PROJECT-NAME>-core/types/Feature';
+
+export const features: FeatureInterface[] = [
   {
     id: 'reactScripts',
     title: 'react-scripts',
