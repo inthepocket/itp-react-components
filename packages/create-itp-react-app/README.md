@@ -78,8 +78,8 @@ $ npm start
 
 The generated project comes with some example files that demonstrate:
 
- * state management with [redux](https://github.com/reduxjs/redux), [redux-saga](https://github.com/redux-saga/redux-saga), [normalizr](https://github.com/paularmstrong/normalizr) & [redux-react-hook](https://github.com/facebookincubator/redux-react-hook)
- * testing with jest, react-test-renderer, redux-saga-test-plan and using mock data
+ * state management with [redux](https://github.com/reduxjs/redux), [redux-saga](https://github.com/redux-saga/redux-saga), [typesafe-actions](https://github.com/piotrwitek/typesafe-actions), [normalizr](https://github.com/paularmstrong/normalizr) & [redux-react-hook](https://github.com/facebookincubator/redux-react-hook)
+ * testing with [jest](https://github.com/facebook/jest), [react-test-renderer](https://reactjs.org/docs/test-renderer.html), [redux-saga-test-plan](https://github.com/jfairbank/redux-saga-test-plan) and using mock data
 
 ## Development (running the generator locally)
 
