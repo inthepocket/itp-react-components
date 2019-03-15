@@ -82,6 +82,7 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
       'redux-react-hook',
       'redux-saga',
       'redux',
+      'typesafe-actions',
       'src/__mockdata__',
       'src/common',
       'src/core',
@@ -147,10 +148,10 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
         jest: {
           coverageThreshold: {
             global: {
-              statements: 90,
-              branches: 90,
-              functions: 90,
-              lines: 90,
+              statements: 100,
+              branches: 100,
+              functions: 100,
+              lines: 100,
             },
           },
           collectCoverageFrom: [

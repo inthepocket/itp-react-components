@@ -21,6 +21,7 @@ $ npm start
 * [redux-saga](https://github.com/redux-saga/)
 * [react-redux](https://github.com/reduxjs/react-redux)
 * [redux-react-hook](https://github.com/facebookincubator/redux-react-hook)
+* [typesafe-actions](https://github.com/piotrwitek/typesafe-actions)
 * [react-test-renderer](https://reactjs.org/docs/test-renderer.html)
 * [redux-saga-test-plan](https://github.com/jfairbank/redux-saga-test-plan)
 * [typescript](https://github.com/Microsoft/TypeScript)
