@@ -66,6 +66,7 @@ $ npm start
         ├── schemas
         ├── selectors
         └── services
+        └── types
 ```
 
 ### Local packages
