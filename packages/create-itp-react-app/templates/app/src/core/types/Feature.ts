@@ -10,7 +10,16 @@ export interface FeaturesEntitiesInterface {
 
 export interface FeaturesUIInterface {
   error?: any;
-  isAddingFeature: boolean;
   isFetchingFeatures: boolean;
   items: string[];
+}
+
+export interface FeaturesPayloadInterface {
+  entities: { features: FeaturesEntitiesInterface; };
+  result: string[];
+}
+
+export interface FeaturesStateInterface {
+  readonly entities?: FeaturesEntitiesInterface;
+  readonly ui?: FeaturesUIInterface;
 }

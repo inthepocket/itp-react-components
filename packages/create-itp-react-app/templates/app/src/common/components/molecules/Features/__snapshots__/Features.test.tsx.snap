@@ -46,6 +46,13 @@ exports[`Features snapshot: default 1`] = `
   </a>
   <a
     className="Feature"
+    href="https://github.com/piotrwitek/typesafe-actions"
+    target="_blank"
+  >
+    typesafe-actions
+  </a>
+  <a
+    className="Feature"
     href="https://github.com/css-modules/css-modules"
     target="_blank"
   >

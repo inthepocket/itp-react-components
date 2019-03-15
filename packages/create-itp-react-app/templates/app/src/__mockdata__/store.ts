@@ -1,4 +1,4 @@
-import { createStore, DeepPartial } from 'redux';
+import { createStore } from 'redux';
 import {
   FeaturesEntitiesInterface,
   FeaturesUIInterface,
@@ -18,5 +18,5 @@ interface StateInterface {
   ui?: UIInterface;
 }
 
-export const createMockStore = (mockedState: DeepPartial<StateInterface>) =>
-  createStore(rootReducer(), mockedState);
+export const createMockStore = (mockedState: StateInterface) =>
+  createStore(rootReducer, mockedState);

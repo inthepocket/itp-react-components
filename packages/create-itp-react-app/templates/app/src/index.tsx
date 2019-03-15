@@ -20,7 +20,8 @@ const composeEnhancer: typeof compose =
 
 // Redux store
 const store = createStore(
-  rootReducer(),
+  rootReducer,
+  {},
   composeEnhancer(
     applyMiddleware(
       sagaMiddleware,

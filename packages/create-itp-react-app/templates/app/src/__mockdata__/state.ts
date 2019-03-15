@@ -32,7 +32,6 @@ export default {
   ui: {
     features: {
       error: null,
-      isAddingFeature: false,
       isFetchingFeatures: false,
       ...uiState({ collection: features }),
     },

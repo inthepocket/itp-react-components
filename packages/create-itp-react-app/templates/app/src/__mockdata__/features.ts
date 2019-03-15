@@ -27,6 +27,11 @@ export const features: FeatureInterface[] = [
     url: 'https://github.com/facebookincubator/redux-react-hook',
   },
   {
+    id: 'typesafeActions',
+    title: 'typesafe-actions',
+    url: 'https://github.com/piotrwitek/typesafe-actions',
+  },
+  {
     id: 'cssModules',
     title: 'CSS Modules',
     url: 'https://github.com/css-modules/css-modules',

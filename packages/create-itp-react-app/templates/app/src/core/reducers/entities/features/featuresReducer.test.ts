@@ -9,6 +9,9 @@ test('Reducer: entities: features: default', () => {
 test('Reducer: entities: features: FEATURES_FETCH_SUCCESS', () => {
   expect(reducer({}, {
     type: FEATURES_FETCH_SUCCESS,
-    payload: { entities: mockState.entities },
+    payload: {
+      entities: mockState.entities,
+      result: mockState.ui.features.items,
+    },
   })).toEqual(mockState.entities.features);
 });

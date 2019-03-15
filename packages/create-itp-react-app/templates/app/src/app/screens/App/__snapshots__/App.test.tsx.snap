@@ -63,6 +63,13 @@ exports[`App snapshot: default 1`] = `
     </a>
     <a
       className="Feature"
+      href="https://github.com/piotrwitek/typesafe-actions"
+      target="_blank"
+    >
+      typesafe-actions
+    </a>
+    <a
+      className="Feature"
       href="https://github.com/css-modules/css-modules"
       target="_blank"
     >
@@ -89,6 +96,32 @@ exports[`App snapshot: default 1`] = `
     >
       @inthepocket/itp-css
     </a>
+  </p>
+</div>
+`;
+
+exports[`App snapshot: rerender to test useEffect hook 1`] = `
+<div
+  className="App"
+>
+  <svg
+    className="Logo"
+  >
+    logo-itp-white.svg
+  </svg>
+  <div
+    className="header"
+  >
+    <h1
+      className="Title"
+    >
+      Welcome to your generated itp-react-app.
+    </h1>
+  </div>
+  <p
+    className="isLoading"
+  >
+    Loading features...
   </p>
 </div>
 `;

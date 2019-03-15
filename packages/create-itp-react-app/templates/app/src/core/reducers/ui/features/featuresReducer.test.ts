@@ -6,6 +6,11 @@ import {
   FEATURES_FETCH_REQUEST,
 } from '<PROJECT-NAME>-core/actions/types';
 
+const initialState = {
+  isFetchingFeatures: false,
+  items: [],
+};
+
 test('Reducer: UI: default', () => {
   expect(reducer({}, {}))
     .toEqual({});
@@ -15,8 +20,7 @@ test('Reducer: UI: default', () => {
 });
 
 test('Reducer: UI: FEATURES_FETCH_REQUEST', () => {
-  expect(reducer({ items: [] }, {
-    payload: {},
+  expect(reducer(initialState, {
     type: FEATURES_FETCH_REQUEST,
   })).toEqual({
     isFetchingFeatures: true,
@@ -26,21 +30,22 @@ test('Reducer: UI: FEATURES_FETCH_REQUEST', () => {
 });
 
 test('Reducer: UI: FEATURES_FETCH_FAILURE', () => {
-  expect(reducer({ items: [] }, {
+  expect(reducer(initialState, {
     payload: {
-      error: 'foo:bar',
+      error: new Error('foo:bar'),
     },
     type: FEATURES_FETCH_FAILURE,
   })).toEqual({
     isFetchingFeatures: false,
     items: [],
-    error: 'foo:bar',
+    error: new Error('foo:bar'),
   });
 });
 
 test('Reducer: UI: FEATURES_FETCH_SUCCESS', () => {
-  expect(reducer({ items: [] }, {
+  expect(reducer(initialState, {
     payload: {
+      entities: mockState.entities,
       result: mockState.ui.features.items,
     },
     type: FEATURES_FETCH_SUCCESS,

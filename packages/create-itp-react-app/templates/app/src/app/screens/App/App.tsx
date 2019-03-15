@@ -23,7 +23,7 @@ const App = () => {
 
   useEffect(
     () => {
-      dispatch(fetchFeatures());
+      dispatch(fetchFeatures.request());
     },
     featuresState,
   );

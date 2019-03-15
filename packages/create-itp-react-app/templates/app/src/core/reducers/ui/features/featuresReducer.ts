@@ -1,8 +1,7 @@
-import {
-  FEATURES_FETCH_FAILURE,
-  FEATURES_FETCH_REQUEST,
-  FEATURES_FETCH_SUCCESS,
-} from '<PROJECT-NAME>-core/actions/types';
+import { getType } from 'typesafe-actions';
+import * as featureActions from '<PROJECT-NAME>-core/actions/feature/featureActions';
+import { FeaturesUIInterface } from '<PROJECT-NAME>-core/types/Feature';
+import { FeatureActionType } from '<PROJECT-NAME>-core/types/Action';
 
 const initialState = {
   error: null,
@@ -11,29 +10,29 @@ const initialState = {
 };
 
 export default (
-  state: any = initialState,
-  { type = '', payload = {} } : { type: string, payload: any},
+  state: FeaturesUIInterface = initialState,
+  action : FeatureActionType,
 ) => {
-  switch (type) {
-    case FEATURES_FETCH_REQUEST: {
+  switch (action.type) {
+    case getType(featureActions.fetchFeatures.request): {
       return {
         ...state,
         error: null,
         isFetchingFeatures: true,
       };
     }
-    case FEATURES_FETCH_FAILURE: {
+    case getType(featureActions.fetchFeatures.failure): {
       return {
         ...state,
-        error: payload.error,
+        error: action.payload.error,
         isFetchingFeatures: false,
       };
     }
-    case FEATURES_FETCH_SUCCESS: {
+    case getType(featureActions.fetchFeatures.success): {
       return {
         ...state,
         isFetchingFeatures: false,
-        items: payload.result,
+        items: action.payload.result,
       };
     }
     default:
