@@ -3,7 +3,7 @@ import * as featureActions from '<PROJECT-NAME>-core/actions/feature/featureActi
 import { FeaturesUIInterface } from '<PROJECT-NAME>-core/types/Feature';
 import { FeatureActionType } from '<PROJECT-NAME>-core/types/Action';
 
-const initialState = {
+export const initialState = {
   error: null,
   isFetchingFeatures: false,
   items: [],
