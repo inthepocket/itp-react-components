@@ -1,35 +1,29 @@
-import { AnyAction } from 'redux';
 import { all, put, takeLatest, call, select } from 'redux-saga/effects';
 import { normalize } from 'normalizr';
 import { featureListSchema } from '<PROJECT-NAME>-core/schemas/feature';
 import { fetchFeatures } from '<PROJECT-NAME>-core/services/feature';
-import {
-  FEATURES_FETCH_FAILURE,
-  FEATURES_FETCH_SUCCESS,
-  FEATURES_FETCH_REQUEST,
-} from '<PROJECT-NAME>-core/actions/types';
+import { fetchFeatures as fetchFeaturesAction } from '<PROJECT-NAME>-core/actions/feature/featureActions';
 
 /**
  * AnyAction: https://github.com/redux-saga/redux-saga/issues/1188#issuecomment-425717322
  */
-export function* fetchFeaturesSaga({}: AnyAction) {
+export function* fetchFeaturesSaga(
+  {}: ReturnType<typeof fetchFeaturesAction.request>,
+): Generator {
   try {
     const data = yield call(fetchFeatures);
     const features = normalize(data, featureListSchema);
 
-    yield put({
-      payload: { ...features },
-      type: FEATURES_FETCH_SUCCESS,
-    });
+    yield put(fetchFeaturesAction.success({ ...features }));
   } catch (error) {
-    yield put({
-      type: FEATURES_FETCH_FAILURE,
-    });
+    yield put(fetchFeaturesAction.failure({
+      error,
+    }));
   }
 }
 
 export default function* featuresSaga() {
   yield all([
-    yield takeLatest(FEATURES_FETCH_REQUEST, fetchFeaturesSaga),
+    yield takeLatest(fetchFeaturesAction.request, fetchFeaturesSaga),
   ]);
 }

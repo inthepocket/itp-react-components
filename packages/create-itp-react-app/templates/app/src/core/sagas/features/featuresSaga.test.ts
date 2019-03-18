@@ -1,5 +1,6 @@
 import { expectSaga, testSaga } from 'redux-saga-test-plan';
 import * as matchers from 'redux-saga-test-plan/matchers';
+import { throwError } from 'redux-saga-test-plan/providers';
 import { normalize } from 'normalizr';
 import { features as mockFeatures } from '<PROJECT-NAME>-mock/features';
 import { fetchFeatures } from '<PROJECT-NAME>-core/services/feature';
@@ -31,11 +32,13 @@ test('featuresSaga: fetchFeaturesSaga', () => {
 });
 
 test('featuresSaga: fetchFeaturesSaga: error', () => {
+  const error = new Error('foo:bar');
   expectSaga(fetchFeaturesSaga, { payload: {} })
     .provide([
-      [matchers.call.fn(fetchFeatures), () => { throw new Error('foo:bar'); }],
+      [matchers.call.fn(fetchFeatures), throwError(error)],
     ])
     .put({
+      payload: { error },
       type: FEATURES_FETCH_FAILURE,
     })
     .run();
