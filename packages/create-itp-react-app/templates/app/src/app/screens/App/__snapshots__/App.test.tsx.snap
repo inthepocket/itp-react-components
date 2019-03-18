@@ -100,32 +100,6 @@ exports[`App snapshot: default 1`] = `
 </div>
 `;
 
-exports[`App snapshot: rerender to test useEffect hook 1`] = `
-<div
-  className="App"
->
-  <svg
-    className="Logo"
-  >
-    logo-itp-white.svg
-  </svg>
-  <div
-    className="header"
-  >
-    <h1
-      className="Title"
-    >
-      Welcome to your generated itp-react-app.
-    </h1>
-  </div>
-  <p
-    className="isLoading"
-  >
-    Loading features...
-  </p>
-</div>
-`;
-
 exports[`App snapshot: update tree to test useEffect hook 1`] = `
 <div
   className="App"
