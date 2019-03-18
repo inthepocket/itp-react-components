@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Flama Semicondensed";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./common/assets/fnt/FlamaSemicondensed-Book.woff") format("woff");
+}
+@font-face {
+  font-family: "Flama Semicondensed";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("./common/assets/fnt/FlamaSemicondensed-Semibold.woff")
+    format("woff");
+}
+
+/* stylelint-disable */
+html,
+body,
+#root {
+  height: 100%;
+}
+/* stylelint-enable */
+
+body {
+  font-family: "Flama Semicondensed", sans-serif;
+}

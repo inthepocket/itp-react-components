@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Features snapshot: default 1`] = `
+<p
+  className="Features"
+>
+  <span
+    className="title"
+  >
+    Features:
+  </span>
+  <a
+    className="Feature"
+    href="https://github.com/facebook/create-react-app"
+    target="_blank"
+  >
+    react-scripts
+  </a>
+  <a
+    className="Feature"
+    href="https://www.typescriptlang.org/"
+    target="_blank"
+  >
+    Typescript
+  </a>
+  <a
+    className="Feature"
+    href="https://redux.js.org/"
+    target="_blank"
+  >
+    redux
+  </a>
+  <a
+    className="Feature"
+    href="https://github.com/redux-saga/redux-saga"
+    target="_blank"
+  >
+    redux-saga
+  </a>
+  <a
+    className="Feature"
+    href="https://github.com/facebookincubator/redux-react-hook"
+    target="_blank"
+  >
+    redux-react-hook
+  </a>
+  <a
+    className="Feature"
+    href="https://github.com/piotrwitek/typesafe-actions"
+    target="_blank"
+  >
+    typesafe-actions
+  </a>
+  <a
+    className="Feature"
+    href="https://github.com/css-modules/css-modules"
+    target="_blank"
+  >
+    CSS Modules
+  </a>
+  <a
+    className="Feature"
+    href="https://github.com/inthepocket/hubble-mirror"
+    target="_blank"
+  >
+    @inthepocket/hubble-mirror
+  </a>
+  <a
+    className="Feature"
+    href="https://github.com/inthepocket/itp-react-scripts/"
+    target="_blank"
+  >
+    @inthepocket/itp-react-scripts
+  </a>
+  <a
+    className="Feature"
+    href="https://bitbucket.org/inthepocket/itp-css/"
+    target="_blank"
+  >
+    @inthepocket/itp-css
+  </a>
+</p>
+`;
+
+exports[`Features snapshot: loading state 1`] = `
+<p
+  className="isLoading"
+>
+  Loading features...
+</p>
+`;

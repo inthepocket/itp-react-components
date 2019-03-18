@@ -1,0 +1,15 @@
+.Features,
+.isLoading {
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 3.5rem 0 0 7.5rem;
+  line-height: 1.5em;
+  color: var(--colorSecondary900);
+}
+
+.title {
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: 700;
+}
