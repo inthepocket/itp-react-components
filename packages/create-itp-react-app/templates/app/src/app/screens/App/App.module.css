@@ -1,7 +1,9 @@
+@import '@inthepocket/itp-css/properties/breakpoints.css';
+
 .App {
   position: relative;
-  height: calc(100% - 3.75rem - 3.75rem);
-  padding: 3.75rem;
+  height: calc(100% - 2.5rem - 2.5rem);
+  padding: 2.5rem;
   background-color: var(--colorPrimary100);
 }
 
@@ -19,4 +21,11 @@
 
 .content {
   margin: 2rem 0 0;
+}
+
+@media (--bp3) {
+  .App {
+    height: calc(100% - 3.75rem - 3.75rem);
+    padding: 3.75rem;
+  }
 }

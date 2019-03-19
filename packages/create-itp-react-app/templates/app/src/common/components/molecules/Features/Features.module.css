@@ -1,15 +1,31 @@
+@import "@inthepocket/itp-css/properties/breakpoints.css";
+
 .Features,
 .isLoading {
   position: relative;
   z-index: 1;
   display: block;
-  padding: 3.5rem 0 0 7.5rem;
+  padding: 1.5rem 0 0 0;
+  font-size: .85em;
   line-height: 1.5em;
   color: var(--colorSecondary900);
 }
 
 .title {
-  display: inline-block;
-  margin-right: 5px;
+  display: block;
+  margin: 0 0 10px 0;
   font-weight: 700;
+}
+
+@media (--bp3) {
+  .Features,
+  .isLoading {
+    padding: 3.5rem 0 0 7.5rem;
+    font-size: 1em;
+  }
+
+  .title {
+    display: inline-block;
+    margin: 0 5px 0 0;
+  }
 }

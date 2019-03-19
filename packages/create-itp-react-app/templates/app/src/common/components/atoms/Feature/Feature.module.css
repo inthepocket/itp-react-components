@@ -1,6 +1,8 @@
+@import "@inthepocket/itp-css/properties/breakpoints.css";
+
 .Feature {
-  display: inline-block;
-  margin-right: 5px;
+  display: block;
+  margin: 0 0 5px 0;
   color: var(--colorSecondary900);
 }
 
@@ -8,11 +10,18 @@
   text-decoration: none;
 }
 
-.Feature::after {
-  content: ",";
-}
+@media (--bp3) {
+  .Feature {
+    display: inline-block;
+    margin: 0 5px 0 0;
+  }
 
-.Feature:last-child::after {
-  display: none;
-  content: "";
+  .Feature::after {
+    content: ",";
+  }
+
+  .Feature:last-child::after {
+    display: none;
+    content: "";
+  }
 }
