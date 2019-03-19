@@ -111,6 +111,8 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
       'tslint',
       'tslint-config-airbnb',
       'tslint-react',
+      'postcss-custom-media',
+      'postcss-import',
     ],
     options: {
       devDependencies: true,
