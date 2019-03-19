@@ -1,11 +1,14 @@
 const rewirePostCss = require('react-app-rewire-postcss');
+const postcssCustomMedia = require('postcss-custom-media');
+const postcssImport = require('postcss-import');
 
-module.exports = {
-  webpack: (config, env) => rewirePostCss(config, {
-    plugins: loader => [ // eslint-disable-line no-unused-vars
-      require('postcss-preset-env')({
-        stage: 1,
-      }), // eslint-disable-line global-require
+module.exports = config => {
+  const nextConfig = rewirePostCss(config, {
+    plugins: () => [
+      postcssImport(),
+      postcssCustomMedia(),
     ],
-  }),
+  });
+
+  return nextConfig;
 };

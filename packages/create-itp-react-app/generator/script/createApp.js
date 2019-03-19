@@ -82,11 +82,11 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
       'redux-react-hook',
       'redux-saga',
       'redux',
-      'typesafe-actions',
       'src/__mockdata__',
       'src/common',
       'src/core',
       'to-css',
+      'typesafe-actions',
     ],
   });
 
@@ -100,7 +100,8 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
       '@inthepocket/itp-react-scripts',
       '@types/react-test-renderer',
       'change-case',
-      'postcss-preset-env',
+      'postcss-custom-media',
+      'postcss-import',
       'react-app-rewire-postcss',
       'react-app-rewired',
       'react-test-renderer',
@@ -108,9 +109,9 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
       'shelljs',
       'stylelint-config-itp',
       'stylelint',
-      'tslint',
       'tslint-config-airbnb',
       'tslint-react',
+      'tslint',
     ],
     options: {
       devDependencies: true,

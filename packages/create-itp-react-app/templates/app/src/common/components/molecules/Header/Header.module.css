@@ -1,7 +1,15 @@
+@import '@inthepocket/itp-css/properties/breakpoints.css';
+
 .header {
   position: relative;
   z-index: 1;
-  width: 55vw;
-  padding: 10% 0 0 7.5rem;
+  padding: 10% 0 0 0;
   color: var(--colorSecondary900);
+}
+
+@media (--bp3) {
+  .header {
+    padding: 10% 0 0 7.5rem;
+    width: 55vw;
+  }
 }
