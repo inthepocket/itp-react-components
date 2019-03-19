@@ -1,4 +1,7 @@
 # create-itp-react-app
+[![version][version-badge]][package]
+[![MIT License][license-badge]][license]
+
 Generates an ITP-ready React App.
 
 Uses [create-react-app](https://github.com/facebook/create-react-app/) under the hood. Adds some [extra features](#features) and [example files](#example-files) within our common directory structure.
@@ -111,3 +114,8 @@ $ ulimit -n 65536
 ```
 
 Jira ref: DESSSYS-26
+
+[license-badge]: https://img.shields.io/npm/l/@inthepocket/create-itp-react-app.svg?style=flat-square
+[license]: https://github.com/inthepocket/itp-react-components/blob/master/packages/create-itp-react-app/LICENSE
+[package]: https://www.npmjs.com/package/@inthepocket/create-itp-react-app
+[version-badge]: https://img.shields.io/npm/v/@inthepocket/create-itp-react-app.svg?style=flat-square
