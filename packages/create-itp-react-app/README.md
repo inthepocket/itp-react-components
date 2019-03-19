@@ -36,7 +36,7 @@ $ npm start
 * [@inthepocket/hubble-mirror](https://github.com/inthepocket/hubble-mirror)
 * [@inthepocket/design-docs](https://github.com/inthepocket/itp-react-components/tree/develop/packages/design-docs)
 * [@inthepocket/common-components](https://github.com/inthepocket/itp-react-components)
-* [@inthepocket/itp-css](https://bitbucket.org/inthepocket/itp-css/)
+* [@inthepocket/itp-css](https://github.com/inthepocket/itp-css)
 
 <sup>1</sup> should be replaced by eslint in the near future, [as pointed out by @thibmaek](https://github.com/inthepocket/itp-react-components/pull/41#issuecomment-468187783)
 
