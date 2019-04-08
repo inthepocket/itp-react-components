@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import pascalCase from 'pascal-case';
 
 function insertSpace(child) {
   if (child == null) {
@@ -14,10 +15,6 @@ function insertSpace(child) {
   }
 
   return child; // eslint-disable-line consistent-return
-}
-
-function capitalize(word) {
-  return word && word.charAt(0).toUpperCase() + word.slice(1);
 }
 
 export default class Button extends Component {
@@ -136,10 +133,10 @@ export default class Button extends Component {
     const className = styles ?
       classNames({
         [styles[prefixCls]] : styles[prefixCls],
-        [styles[`color${capitalize(color)}`]] : styles[`color${capitalize(color)}`],
-        [styles[`type${capitalize(type)}`]] : type && styles[`type${capitalize(type)}`],
-        [styles[`shape${capitalize(shape)}`]] : shape && styles[`shape${capitalize(shape)}`],
-        [styles[`size${capitalize(size)}`]] : size && styles[`size${capitalize(size)}`],
+        [styles[`color${pascalCase(color)}`]] : styles[`color${pascalCase(color)}`],
+        [styles[`type${pascalCase(type)}`]] : type && styles[`type${pascalCase(type)}`],
+        [styles[`shape${pascalCase(shape)}`]] : shape && styles[`shape${pascalCase(shape)}`],
+        [styles[`size${pascalCase(size)}`]] : size && styles[`size${pascalCase(size)}`],
         [styles.loading]: styles.loading && loading,
         [styles.backgroundGhost]: styles.backgroundGhost && ghost,
         [styles.block]: styles.block && block,
