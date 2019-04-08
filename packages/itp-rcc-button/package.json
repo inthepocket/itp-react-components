@@ -1,6 +1,6 @@
 {
   "name": "@inthepocket/itp-rcc-button",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "ITP Button component",
   "main": "dist/index.js",
   "scripts": {
