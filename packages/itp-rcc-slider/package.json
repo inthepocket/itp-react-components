@@ -28,7 +28,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {},
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react-compound-slider": "^1.2.1"
+  },
   "peerDependencies": {
     "react": "^16.6.3"
   },

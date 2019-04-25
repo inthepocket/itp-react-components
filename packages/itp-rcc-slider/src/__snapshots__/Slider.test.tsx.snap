@@ -1,3 +1,252 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Slider: default 1`] = `<div />`;
+exports[`Slider css modules 1`] = `
+<div
+  className="cssModuleSlider"
+  style={Object {}}
+>
+  <div
+    className="cssModuleRail"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  />
+  <div
+    className="cssModuleHandle"
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    role="slider"
+    style={
+      Object {
+        "left": "75%",
+      }
+    }
+  />
+  <div
+    className="cssModuleTrack"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "left": "0%",
+        "width": "75%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Slider multiple values 1`] = `
+<div
+  className="Slider"
+  style={Object {}}
+>
+  <div
+    className="Slider__Rail"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  />
+  <div
+    className="Slider__Handle"
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    role="slider"
+    style={
+      Object {
+        "left": "25%",
+      }
+    }
+  />
+  <div
+    className="Slider__Handle"
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    role="slider"
+    style={
+      Object {
+        "left": "50%",
+      }
+    }
+  />
+  <div
+    className="Slider__Handle"
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    role="slider"
+    style={
+      Object {
+        "left": "75%",
+      }
+    }
+  />
+  <div
+    className="Slider__Track"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "left": "0%",
+        "width": "25%",
+      }
+    }
+  />
+  <div
+    className="Slider__Track"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "left": "25%",
+        "width": "25%",
+      }
+    }
+  />
+  <div
+    className="Slider__Track"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "left": "50%",
+        "width": "25%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Slider single value 1`] = `
+<div
+  className="Slider"
+  style={Object {}}
+>
+  <div
+    className="Slider__Rail"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  />
+  <div
+    className="Slider__Handle"
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    role="slider"
+    style={
+      Object {
+        "left": "25%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Slider single value, left + right track 1`] = `
+<div
+  className="Slider"
+  style={Object {}}
+>
+  <div
+    className="Slider__Rail"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  />
+  <div
+    className="Slider__Handle"
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    role="slider"
+    style={
+      Object {
+        "left": "25%",
+      }
+    }
+  />
+  <div
+    className="Slider__Track"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "left": "25%",
+        "width": "75%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Slider single value, left track 1`] = `
+<div
+  className="Slider"
+  style={Object {}}
+>
+  <div
+    className="Slider__Rail"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  />
+  <div
+    className="Slider__Handle"
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    role="slider"
+    style={
+      Object {
+        "left": "25%",
+      }
+    }
+  />
+  <div
+    className="Slider__Track"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "left": "0%",
+        "width": "25%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Slider single value, right track 1`] = `
+<div
+  className="Slider"
+  style={Object {}}
+>
+  <div
+    className="Slider__Rail"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  />
+  <div
+    className="Slider__Handle"
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    role="slider"
+    style={
+      Object {
+        "left": "25%",
+      }
+    }
+  />
+  <div
+    className="Slider__Track"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "left": "25%",
+        "width": "75%",
+      }
+    }
+  />
+</div>
+`;
