@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Track: css module 1`] = `
+<div
+  className="cssModuleTrack"
+  style={
+    Object {
+      "left": "75%",
+      "width": "25%",
+    }
+  }
+/>
+`;
+
+exports[`Track: default 1`] = `
+<div
+  className="Slider__Track"
+  style={
+    Object {
+      "left": "75%",
+      "width": "25%",
+    }
+  }
+/>
+`;

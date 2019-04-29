@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Handle: css module 1`] = `
+<div
+  className="cssModuleHandle"
+  role="slider"
+  style={
+    Object {
+      "left": "75%",
+    }
+  }
+/>
+`;
+
+exports[`Handle: default 1`] = `
+<div
+  className="Slider__Handle"
+  role="slider"
+  style={
+    Object {
+      "left": "75%",
+    }
+  }
+/>
+`;

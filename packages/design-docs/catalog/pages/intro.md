@@ -5,6 +5,7 @@
 - [Autocomplete](/components/itp-rcc-autocomplete/base)
 - [Card](/components/itp-rcc-card/base)
 - [Collapse](/components/itp-rcc-collapse/base)
+- [Slider](/components/itp-rcc-slider/base)
 
 # Theme
 

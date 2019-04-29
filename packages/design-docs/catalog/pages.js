@@ -4,6 +4,7 @@ import AutoComplete from './components/itp-rcc-autocomplete';
 import Button from './components/itp-rcc-button';
 import Card from './components/itp-rcc-card';
 import Collapse from './components/itp-rcc-collapse';
+import Slider from './components/itp-rcc-slider';
 import root from '../root.json';
 
 const filterAndMapThemeColor = name =>
@@ -62,6 +63,12 @@ export default [
         title: 'Collapse',
         content: Collapse,
         path: '/components/itp-rcc-collapse/base',
+      },
+      {
+        title: 'Slider',
+        content: markdownLoader('itp-rcc-slider'),
+        path: '/components/itp-rcc-slider/base',
+        imports: { Slider },
       },
     ],
   },
