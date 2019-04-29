@@ -1,6 +1,6 @@
 {
   "name": "@inthepocket/itp-rcc-slider",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ITP Slider component",
   "main": "dist/Slider.js",
   "types": "dist/Slider.d.ts",
