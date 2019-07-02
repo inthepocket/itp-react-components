@@ -21,16 +21,16 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "webpack": "^4.17.1",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.2.1",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2",
     "webpack-merge": "^4.1.4"
   },
   "peerDependencies": {
     "react": "^16.6.3"
   },
   "dependencies": {
-    "rc-collapse": "^1.10.0"
+    "rc-collapse": "^1.11.3"
   },
   "publishConfig": {
     "access": "public"

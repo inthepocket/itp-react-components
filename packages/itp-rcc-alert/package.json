@@ -31,12 +31,12 @@
     "react": "^16.6.3"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.10",
-    "@types/node": "^10.12.14",
-    "@types/react-test-renderer": "^16.0.3",
+    "@types/jest": "^23.3.14",
+    "@types/node": "^10.14.10",
+    "@types/react-test-renderer": "^16.8.2",
     "babel-core": "^6.26.3",
-    "react-test-renderer": "^16.6.3",
+    "react-test-renderer": "^16.8.6",
     "ts-jest": "^23.10.5",
-    "typescript": "^3.2.2"
+    "typescript": "^3.5.2"
   }
 }
