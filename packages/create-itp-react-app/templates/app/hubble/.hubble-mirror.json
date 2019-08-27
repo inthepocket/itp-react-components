@@ -1,0 +1,12 @@
+{
+  "postProcess": "postprocess.sh",
+  "target": {
+    "assets": "./hubble-assets",
+    "hst": "./hst.json"
+  },
+  "deployPreview": {
+    "publishDirectory": "/docs/public",
+    "previewUrl": "itp-react-app",
+    "baseUrl": "inthepocket.design"
+  }
+}

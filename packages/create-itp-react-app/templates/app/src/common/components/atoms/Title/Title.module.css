@@ -1,5 +1,8 @@
+@import "../../../../hubble/variables.css";
+
 .Title {
   font-family: "Flama Semicondensed", sans-serif;
   font-size: 4.5vw;
-  font-weight: 400;
+  line-height: var(--lineHeightFontHeader1);
+  font-weight: var(--weightFontHeader1);
 }

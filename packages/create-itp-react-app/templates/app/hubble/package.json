@@ -1,0 +1,16 @@
+{
+  "name": "hubble-integration",
+  "version": "0.0.0",
+  "description": "Hubble integration",
+  "scripts": {
+    "hubble:process": "hubble-mirror:process",
+    "hubble:postProcess": "hubble-mirror:postProcess",
+    "hubble:postProcess:web": "hubble-mirror:postProcess:web",
+    "hubble:buildPreview": "npm run docs:build",
+    "hubble:deployPreview": "hubble-mirror:deployPreview",
+    "hubble:createPR": "hubble-mirror:createPR"
+  },
+  "dependencies": {
+    "@inthepocket/hubble-mirror": "latest"
+  }
+}

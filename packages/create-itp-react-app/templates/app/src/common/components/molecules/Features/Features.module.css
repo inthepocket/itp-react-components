@@ -1,3 +1,4 @@
+@import "../../../../hubble/variables.css";
 @import "@inthepocket/itp-css/properties/breakpoints.css";
 
 .Features,
@@ -8,7 +9,7 @@
   padding: 1.5rem 0 0 0;
   font-size: .85em;
   line-height: 1.5em;
-  color: var(--colorSecondary900);
+  color: var(--colorBaseSecondary900);
 }
 
 .title {

@@ -1,0 +1,233 @@
+{
+  "color": {
+    "base": {
+      "primary100": {
+        "value": "#100697"
+      },
+      "primary200": {
+        "value": "#100698"
+      },
+      "primary300": {
+        "value": "#100699"
+      },
+      "primary400": {
+        "value": "#10069a"
+      },
+      "primary500": {
+        "value": "#10069b"
+      },
+      "primary600": {
+        "value": "#10069c"
+      },
+      "primary700": {
+        "value": "#10069d"
+      },
+      "primary800": {
+        "value": "#10069e"
+      },
+      "primary900": {
+        "value": "#00006b"
+      },
+      "secondary100": {
+        "value": "#bbb"
+      },
+      "secondary200": {
+        "value": "#bcbcbc"
+      },
+      "secondary300": {
+        "value": "#ccc"
+      },
+      "secondary400": {
+        "value": "#cdcdcd"
+      },
+      "secondary500": {
+        "value": "#ddd"
+      },
+      "secondary600": {
+        "value": "#dedede"
+      },
+      "secondary700": {
+        "value": "#eee8ee"
+      },
+      "secondary800": {
+        "value": "#efefef"
+      },
+      "secondary900": {
+        "value": "#fff"
+      },
+      "tertiary100": {
+        "value": "#888"
+      },
+      "tertiary200": {
+        "value": "#777"
+      },
+      "tertiary300": {
+        "value": "#666"
+      },
+      "tertiary400": {
+        "value": "#555"
+      },
+      "tertiary500": {
+        "value": "#444"
+      },
+      "tertiary600": {
+        "value": "#333"
+      },
+      "tertiary700": {
+        "value": "#222"
+      },
+      "tertiary800": {
+        "value": "#111"
+      },
+      "tertiary900": {
+        "value": "#000"
+      }
+    }
+  },
+  "font": {
+    "typo": {
+      "caption": {
+        "value": "flamaSemicondensedBook"
+      },
+      "header1": {
+        "value": "flamaSemicondensedSemibold"
+      },
+      "header2": {
+        "value": "flamaSemicondensedSemibold"
+      },
+      "header3": {
+        "value": "flamaSemicondensedSemibold"
+      },
+      "header4": {
+        "value": "flamaSemicondensedSemibold"
+      },
+      "header5": {
+        "value": "flamaSemicondensedSemibold"
+      },
+      "header6": {
+        "value": "flamaSemicondensedSemibold"
+      },
+      "label": {
+        "value": "flamaSemicondensedBook"
+      },
+      "paragraph": {
+        "value": "flamaSemicondensedBook"
+      }
+    }
+  },
+  "lineHeight": {
+    "font": {
+      "caption": {
+        "value": 21
+      },
+      "header1": {
+        "value": 51
+      },
+      "header2": {
+        "value": 45
+      },
+      "header3": {
+        "value": 45
+      },
+      "header4": {
+        "value": 39
+      },
+      "header5": {
+        "value": 36
+      },
+      "header6": {
+        "value": 27
+      },
+      "label": {
+        "value": 19.5
+      },
+      "paragraph": {
+        "value": 24
+      }
+    }
+  },
+  "size": {
+    "font": {
+      "caption": {
+        "value": 14
+      },
+      "header1": {
+        "value": 34
+      },
+      "header2": {
+        "value": 30
+      },
+      "header3": {
+        "value": 30
+      },
+      "header4": {
+        "value": 26
+      },
+      "header5": {
+        "value": 24
+      },
+      "header6": {
+        "value": 18
+      },
+      "label": {
+        "value": 13
+      },
+      "paragraph": {
+        "value": 16
+      }
+    }
+  },
+  "weight": {
+    "fontFamily": {
+      "flamaSemicondensedSemibold": {
+        "value": 700
+      },
+      "flamaSemicondensedBook": {
+        "value": 400
+      }
+    },
+    "font": {
+      "caption": {
+        "value": 400
+      },
+      "header1": {
+        "value": 700
+      },
+      "header2": {
+        "value": 700
+      },
+      "header3": {
+        "value": 400
+      },
+      "header4": {
+        "value": 700
+      },
+      "header5": {
+        "value": 700
+      },
+      "header6": {
+        "value": 700
+      },
+      "label": {
+        "value": 500
+      },
+      "paragraph": {
+        "value": 400
+      }
+    }
+  },
+  "asset": {
+    "font": {
+      "flamaSemicondensedBook": {
+        "name": {
+          "value": "FlamaSemicondensed-Book"
+        }
+      },
+      "flamaSemicondensedSemibold": {
+        "name": {
+          "value": "FlamaSemicondensed-Semibold"
+        }
+      }
+    }
+  }
+}
