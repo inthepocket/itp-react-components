@@ -1,10 +1,11 @@
+@import '../../../hubble/variables.css';
 @import '@inthepocket/itp-css/properties/breakpoints.css';
 
 .App {
   position: relative;
   height: calc(100% - 2.5rem - 2.5rem);
   padding: 2.5rem;
-  background-color: var(--colorPrimary100);
+  background-color: var(--colorBasePrimary100);
 }
 
 .App::before {
@@ -16,7 +17,7 @@
   width: 55vw;
   height: 60vh;
   content: "";
-  background-color: var(--colorPrimary900);
+  background-color: var(--colorBasePrimary900);
 }
 
 .content {

@@ -1,6 +1,6 @@
 {
   "extends": "stylelint-config-itp",
-  "ignoreFiles": ["src/root.css"],
+  "ignoreFiles": ["hubble/*.css"],
   "plugins": [],
   "rules": {}
 }

@@ -1,6 +1,6 @@
 {
   "name": "@inthepocket/itp-react-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Common and unstyled base components used by In the Pocket",
   "main": "index.js",
   "scripts": {

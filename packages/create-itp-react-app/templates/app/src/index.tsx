@@ -6,7 +6,7 @@ import { StoreContext } from 'redux-react-hook';
 import { default as rootReducer } from '<PROJECT-NAME>-core/reducers';
 import { default as rootSaga } from '<PROJECT-NAME>-core/sagas';
 import '@inthepocket/itp-css/normalize.css';
-import './root.css';
+import './hubble/variables.css';
 import './index.css';
 import App from './app/screens/App/App';
 import * as serviceWorker from './serviceWorker';

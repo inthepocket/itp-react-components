@@ -1,9 +1,10 @@
+@import "../../../../hubble/variables.css";
 @import "@inthepocket/itp-css/properties/breakpoints.css";
 
 .Feature {
   display: block;
   margin: 0 0 5px 0;
-  color: var(--colorSecondary900);
+  color: var(--colorBaseSecondary900);
 }
 
 .Feature:hover {

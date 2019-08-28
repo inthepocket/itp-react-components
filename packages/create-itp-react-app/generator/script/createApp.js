@@ -38,7 +38,7 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
     targetDir: appDir,
     srcDir: appTemplateDir,
     options: {
-      dot: true, // to copy .hubble-mirror.json
+      dot: true,
     },
   });
 
@@ -96,7 +96,6 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
     appDir,
     dir: appDir,
     npmPackages: [
-      '@inthepocket/hubble-mirror',
       '@inthepocket/itp-react-scripts',
       '@types/react-test-renderer',
       'change-case',
@@ -141,7 +140,6 @@ module.exports = async ({appName, appDir, appTemplateDir}) => {
           build: 'react-app-rewired build',
           test: 'react-scripts test --env=jsdom',
           'test:coverage': 'react-scripts test --env=jsdom --coverage',
-          'create-root-css': 'node ./scripts/createRootCSS.js',
           lint: 'npm run lint:ts && npm run lint:css',
           'lint:ts': `tslint -c tslint.json --project tsconfig.json 'src/**/*.ts' 'src/**/*.tsx'`,
           'lint:css': `stylelint 'src/**/*.css'`,

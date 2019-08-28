@@ -1,4 +1,4 @@
-import { all, put, takeLatest, call, select } from 'redux-saga/effects';
+import { all, put, takeLatest, call } from 'redux-saga/effects';
 import { normalize } from 'normalizr';
 import { featureListSchema } from '<PROJECT-NAME>-core/schemas/feature';
 import { fetchFeatures } from '<PROJECT-NAME>-core/services/feature';
@@ -12,7 +12,7 @@ export function* fetchFeaturesSaga(
 ): Generator {
   try {
     const data = yield call(fetchFeatures);
-    const features = normalize(data, featureListSchema);
+    const features: any = normalize(data, featureListSchema);
 
     yield put(fetchFeaturesAction.success({ ...features }));
   } catch (error) {

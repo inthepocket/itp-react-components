@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'FlamaSemicondensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('FlamaSemicondensed'), local('FlamaSemicondensed-Book'), url(../../assets/fonts/FlamaSemicondensed-Book.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'FlamaSemicondensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('FlamaSemicondensed'), local('FlamaSemicondensed-Semibold'), url(../../assets/fonts/FlamaSemicondensed-Semibold.ttf) format('truetype');
+}
