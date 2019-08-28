@@ -53,7 +53,7 @@ function main() {
     mkdir -p "$HUBBLE_INPUT_DIR"
   fi
   map_images
-  npm run hubble:postProcess:web -- -i "$HUBBLE_OUTPUT_IMAGES_DIR" -o "${HUBBLE_OUTPUT_ROOT_DIR}"
+  npm run hubble:postProcess:web -- -i "$HUBBLE_OUTPUT_IMAGES_DIR" -o "$HUBBLE_OUTPUT_ROOT_DIR"
 
   rm -rf "$HUBBLE_INPUT_DIR"
 }
