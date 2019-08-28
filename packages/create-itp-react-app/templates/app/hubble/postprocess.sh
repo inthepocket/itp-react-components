@@ -50,7 +50,7 @@ function main() {
 
   echo "Verify HUBBLE_INPUT_DIR exists"
   if [ ! -d "$HUBBLE_INPUT_DIR" ]; then
-  mkdir -p "$HUBBLE_INPUT_DIR"
+    mkdir -p "$HUBBLE_INPUT_DIR"
   fi
   map_images
   npm run hubble:postProcess:web -- -i "$HUBBLE_OUTPUT_IMAGES_DIR" -o "${HUBBLE_OUTPUT_ROOT_DIR}"
