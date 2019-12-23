@@ -1,0 +1,21 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "packages/create-itp-react-app/package.json",
+        "packages/create-itp-react-app/templates/app/hubble/package.json",
+        "packages/create-itp-react-app/templates/app/src/__mockdata__/package.json",
+        "packages/create-itp-react-app/templates/app/src/common/package.json",
+        "packages/create-itp-react-app/templates/app/src/core/package.json",
+        "packages/design-docs/package.json",
+        "packages/itp-rcc-alert/package.json",
+        "packages/itp-rcc-autocomplete/package.json",
+        "packages/itp-rcc-button/package.json",
+        "packages/itp-rcc-card/package.json",
+        "packages/itp-rcc-collapse/package.json",
+        "packages/itp-rcc-slider/package.json"
+      ]
+    }
+  }
+}
