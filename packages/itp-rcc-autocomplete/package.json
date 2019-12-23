@@ -26,19 +26,19 @@
   "dependencies": {
     "capitalize": "^2.0.0",
     "classnames": "^2.2.6",
-    "downshift": "^3.2.12"
+    "downshift": "^4.0.0"
   },
   "peerDependencies": {
     "react": "^16.6.3"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.14",
-    "@types/node": "^10.14.15",
+    "@types/jest": "^24.0.24",
+    "@types/node": "^12.12.21",
     "@types/react-test-renderer": "^16.9.0",
     "babel-core": "^6.26.3",
-    "jest-dom": "^3.5.0",
-    "react-testing-library": "^5.9.0",
-    "ts-jest": "^23.10.5",
+    "jest-dom": "^4.0.0",
+    "react-testing-library": "^8.0.1",
+    "ts-jest": "^24.2.0",
     "typescript": "^3.5.3"
   }
 }
